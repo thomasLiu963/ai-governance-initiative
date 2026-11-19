@@ -2,7 +2,7 @@
 
 Record of candidate contributions for the AI Governance Initiative. An empty row is not a finding. Acceptance is recorded only when an external body has actually decided, and only with evidence linked from `evidence/`.
 
-Last updated: 2026-11-18. Audits under `audits/` are complete. Local drafting of C-001–C-005 remains in progress. C-007 is a local draft for review by 2026-11-23. No submission has been approved or sent. No acceptance exists.
+Last updated: 2026-11-18. Audits under `audits/` are complete. C-001, C-002, C-003, and C-005 were submitted on 2026-11-18 as GitHub user `thomasLiu963`. They are not merged, published, or accepted. C-004, C-006, and C-007 were not sent. URLs are in `execution/SUBMISSION_LOG.md`.
 
 The analysis behind this register is `audits/SUMMARY.md`. Temporary labels T001–T005 map to C-001–C-005. IDs are not reused.
 
@@ -30,11 +30,11 @@ Draft C-001 through C-005 under `contributions/`, one directory per ID. Leave ev
 
 | ID | Status | Deliverable | External result criterion |
 | --- | --- | --- | --- |
-| C-001 | `in-review` | `contributions/T001-AISVS/` (`ISSUE.md`, `REVIEW.md`, `9.5.8.patch`). Not sent. | Merge into AISVS `1.02-dev` of that requirement. |
-| C-002 | `in-review` | `contributions/T002-Exchange/` (`pull-request.md`, `0001-unreachable-policy-engine-denies-the-action.patch`). Not sent. | Merge that removes the fail-open choice and denies the action when the policy engine is unreachable. |
-| C-003 | `candidate` | `contributions/T003-DPV-Membership/` (`COMMENT.md`, `README.md`, `reproduce.py`). Not sent. | Published primer text stating the membership relation for each serialisation, with the `pd:BloodType` example. |
+| C-001 | `submitted` | `contributions/T001-AISVS/` (`ISSUE.md`, `REVIEW.md`, `9.5.8.patch`). Issue https://github.com/OWASP/AISVS/issues/1232. No pull request. | Merge into AISVS `1.02-dev` of that requirement. |
+| C-002 | `submitted` | `contributions/T002-Exchange/` (`pull-request.md`, `0001-unreachable-policy-engine-denies-the-action.patch`). Pull request https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287. | Merge that removes the fail-open choice and denies the action when the policy engine is unreachable. |
+| C-003 | `submitted` | `contributions/T003-DPV-Membership/` (`COMMENT.md`, `README.md`, `reproduce.py`). Comment https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608. | Published primer text stating the membership relation for each serialisation, with the `pd:BloodType` example. |
 | C-004 | `candidate` | `contributions/T004-DPV-Rights/` (`COMMENT.md`, `README.md`, `reproduce.py`). Not sent. Recommends the 9 September action: parent `dpv:FulfilmentOfObligation`. | Vocabulary commit that parents `dpv:RightsFulfilment` on a purpose. |
-| C-005 | `candidate` | `contributions/T005-GPC-WPT/ISSUE.md`. WPT patch held. Not sent. | An editor decision on whether an already loaded document keeps `gpcAtNavigation`. A later merged test, or a later spec edit, follows that decision. |
+| C-005 | `submitted` | `contributions/T005-GPC-WPT/ISSUE.md`. Issue https://github.com/w3c/gpc/issues/165. WPT patch held. | An editor decision on whether an already loaded document keeps `gpcAtNavigation`. A later merged test, or a later spec edit, follows that decision. |
 | C-006 | `candidate` | Existing USAC resolution draft. Read it. Do not mail it. | Council minutes showing adoption of that resolution. |
 | C-007 | `in-review` | `contributions/C-007-FCC/` (`COMMENT.md`, `APPENDIX.md`, `reproduce.py`). Not sent. | A later order in CG Docket No. 02-278 that defines honoring as a permission record, cancellation of communications still in the caller's control, and a send-time read, or that conditions a category-limited informational revocation on a same-interaction all-categories method. |
 
@@ -44,11 +44,11 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 
 | ID | Audit | Status | Document status | Source | Policy check | Themes | Review by | Submission | Acceptance | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| C-001 | `audits/owasp-aisvs` | `in-review` | `draft` | AISVS 1.02-dev, commit `092232f012ec10d654c1ca345fa10d5a5a8be12a` (2026-11-11), C9 and glossary. https://github.com/OWASP/AISVS/tree/092232f012ec10d654c1ca345fa10d5a5a8be12a/1.02-dev/en | checked | authorization, AI reliability | 2026-11-30 | none | none | none |
-| C-002 | `audits/owasp-exchange` | `in-review` | `community-guidance` | OWASP AI Exchange, commit `c68371ed56051a3d7c894e36c20c3bcbc22eb441` (2026-11-16), `#LEAST MODEL PRIVILEGE`. https://owaspai.org/go/leastmodelprivilege | checked | authorization, AI reliability | 2026-11-30 | none | none | none |
-| C-003 | `audits/w3c-dpv` | `candidate` | `community-guidance` | DPV 2.3 Final Community Group Report, 25 February 2026, primer section 4, issue #484. https://w3c-cg.github.io/dpv/primer | checked | transparency, privacy, AI reliability | 2026-11-30 | none | none | none |
+| C-001 | `audits/owasp-aisvs` | `submitted` | `draft` | AISVS 1.02-dev, commit `092232f012ec10d654c1ca345fa10d5a5a8be12a` (2026-11-11), C9 and glossary. https://github.com/OWASP/AISVS/tree/092232f012ec10d654c1ca345fa10d5a5a8be12a/1.02-dev/en | checked | authorization, AI reliability | 2026-11-30 | 2026-11-18, GitHub issue, https://github.com/OWASP/AISVS/issues/1232 | none | `execution/SUBMISSION_LOG.md` |
+| C-002 | `audits/owasp-exchange` | `submitted` | `community-guidance` | OWASP AI Exchange, commit `c68371ed56051a3d7c894e36c20c3bcbc22eb441` (2026-11-16), `#LEAST MODEL PRIVILEGE`. https://owaspai.org/go/leastmodelprivilege | checked | authorization, AI reliability | 2026-11-30 | 2026-11-18, GitHub pull request, https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287 | none | `execution/SUBMISSION_LOG.md` |
+| C-003 | `audits/w3c-dpv` | `submitted` | `community-guidance` | DPV 2.3 Final Community Group Report, 25 February 2026, primer section 4, issue #484. https://w3c-cg.github.io/dpv/primer | checked | transparency, privacy, AI reliability | 2026-11-30 | 2026-11-18, comment on issue #484, https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608 | none | `execution/SUBMISSION_LOG.md` |
 | C-004 | `audits/w3c-dpv` | `candidate` | `community-guidance` | DPV 2.3, `dpv:RightsFulfilment` parent, issue #486, still present in `2.4-dev` on 2026-11-18. https://github.com/w3c-cg/dpv/issues/486 | checked | privacy, authorization | 2026-11-30 | none | none | none |
-| C-005 | `audits/w3c-gpc` | `candidate` | `draft` | GPC Working Draft, 24 September 2026, caching rule; WPT `gpc/` as read 2026-11-18. https://www.w3.org/TR/2026/WD-gpc-20260924/ | checked | privacy, human agency | 2026-11-30 | none | none | none |
+| C-005 | `audits/w3c-gpc` | `submitted` | `draft` | GPC Working Draft, 24 September 2026, caching rule; WPT `gpc/` as read 2026-11-18. https://www.w3.org/TR/2026/WD-gpc-20260924/ | checked | privacy, human agency | 2026-11-30 | 2026-11-18, GitHub issue, https://github.com/w3c/gpc/issues/165 | none | `execution/SUBMISSION_LOG.md` |
 | C-006 | `audits/university-policy` | `candidate` | `proposed-change` | Interim 2026 UCLA Student Conduct Code and Divisional Regulation A-306, read 2026-11-18. Draft: `audits/university-policy/usac-resolution-draft.md` | checked for USAC; UCSA vote threshold `not-checked` | human oversight, AI reliability, transparency, privacy, authorization | 2026-11-30 | none | none | none |
 | C-007 | `audits/fcc` | `in-review` | `proposed-change` | FCC 26-67, released 2026-10-01; Further Notice, 91 FR 67239, comments due 2026-11-25. https://docs.fcc.gov/public/attachments/FCC-26-67A1.pdf | checked | human agency, authorization, human oversight, privacy, transparency, AI reliability | 2026-11-23 | none | none | none |
 
@@ -70,11 +70,13 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 - **Dependencies:** `9.5.8` was confirmed unused on 2026-11-18, and `main` was still `092232f`. Re-read C9.5 if `main` moves before filing. Open PR #1227 edits C9.3 and Appendix B and does not take `9.5.8`; regenerate the patch if it merges before a leader asks for one. No dependency on D1, D2, incident files, C-002, or the 9.5.6 wording. Do not resubmit #1196.
 - **Effort:** A few hours. No paid API.
 - **Review path:** GitHub issue on OWASP/AISVS. A pull request only if a leader asks. Closest samples: #683 (same control, merged the day agreement was reached) and #1204 (an editing loss restored; issue 2026-10-21, merge 2026-11-04).
-- **Internal review:** Drafted 2026-11-18. Status `in-review`. The text is not approved for sending. The realistic product by 2026-11-30 is an approved issue. A merge by that date requires a leader's agreement to the exact row, which is not yet recorded.
-- **External submission:** none
+- **Internal review:** Approved and sent 2026-11-18.
+- **External submission:** 2026-11-18, GitHub issue by `thomasLiu963`, https://github.com/OWASP/AISVS/issues/1232. The `1.02` label could not be applied because that account cannot add labels. No pull request.
+- **External feedback:** none
 - **External result criterion:** A merge commit on `1.02-dev` that adds this Level 2 requirement. An encouraging comment is not acceptance. Inclusion in a numbered 1.02 release is a separate, unpublished event.
 - **Acceptance:** none
-- **Evidence:** none
+- **Next action:** Wait. Do not open a pull request unless a maintainer asks. Do not reply automatically.
+- **Evidence:** `execution/SUBMISSION_LOG.md`
 - **Not verified:** A quoted reason for deleting this predicate inside #934. The chapter rewrite was intentional; a decision that this failure should stop being a requirement is not in the record. Slack. Whether current agent frameworks already time out closed. Any commit on `main` after `092232f`. The OWASP AI Testing Guide.
 
 ### C-002 — AI Exchange single rule when the policy engine is unreachable
@@ -93,11 +95,13 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 - **Dependencies:** Re-read the two sentences at the current commit before opening a pull request. No dependency on C-001, D1, D2, or incident files. Do not attach this edit to issue 188 or issue 222.
 - **Effort:** About two hours. No paid API.
 - **Review path:** Pull request to `OWASP/www-project-ai-security-and-privacy-guide`. Sample: pull request 225, about fourteen hours to approval; pull request 192, about three minutes; pull request 216, no review from 2026-09-03 through 2026-11-18. Same-week merges in the sample are small plain diffs that Rob van der Veer reviewed.
-- **Internal review:** Drafted 2026-11-18. Status `in-review`. The text is not approved for sending. An external decision by 2026-11-30 is possible and is not the success criterion.
-- **External submission:** none
+- **Internal review:** Approved and sent 2026-11-18.
+- **External submission:** 2026-11-18, GitHub pull request by `thomasLiu963`, https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287. One file, one line. Commit `38276bc`.
+- **External feedback:** none
 - **External result criterion:** A merge commit whose rendered `#LEAST MODEL PRIVILEGE` text no longer offers a fail-open choice, and whose limitations paragraph denies the action when the policy engine is unreachable. The permalink https://owaspai.org/go/leastmodelprivilege quoting that clause is the public check.
 - **Acceptance:** none
-- **Evidence:** none
+- **Next action:** Wait for a review. Do not reply automatically.
+- **Evidence:** `execution/SUBMISSION_LOG.md`
 - **Not verified:** The live site was not clicked through. ISO/IEC and EU AI Act claims inside the Exchange were not re-read. Private Slack and workstreams. Who will merge a future pull request.
 
 ### C-003 — DPV concept-membership test for issue #484
@@ -116,11 +120,13 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 - **Dependencies:** The SPARQL run is in `contributions/T003-DPV-Membership/results/report.txt`. Re-run `reproduce.py` before posting. No dependency on C-004 other than using two separate comments. The 25 November 2026 public agenda does not name #484. The 18 November minutes put parent changes, v2.4 commits, and other items from that day on that meeting. Do not ask for agenda time.
 - **Effort:** About two days. No paid API.
 - **Review path:** Comment on #484. Decisions are taken in DPVCG meetings. Documentation fixes in the sample merged the same week or after about eight weeks, usually after a comment by `coolharsh55`. A first pull request without an issue (#86) was closed and redirected.
-- **Internal review:** 2026-11-30 for the draft. Posting waits for explicit approval. The chair's proposed December commit window is a hope recorded in the 18 November minutes, not a resolution.
-- **External submission:** none
+- **Internal review:** Approved and sent 2026-11-18.
+- **External submission:** 2026-11-18, comment by `thomasLiu963` on issue #484, https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608. No new issue and no pull request.
+- **External feedback:** none
 - **External result criterion:** The published primer states, with a worked `pd:BloodType` example, which relation answers category membership in the RDFS+SKOS serialisation and which relation answers it in the OWL serialisation. A merged documentation commit or the v2.4 primer, and a closed issue that points at that text, is the record. The help-wanted label is not acceptance. Our comment is not acceptance.
 - **Acceptance:** none
-- **Evidence:** none
+- **Next action:** Wait. Do not send a follow-up comment if there is no reply. Do not open a pull request.
+- **Evidence:** `execution/SUBMISSION_LOG.md`
 - **Not verified:** Online spreadsheets. The repository CSV export was read. An OWL reasoner was not run; subclass results are SPARQL property paths. Whether `primer/index.html` is generated. The 25 November join link. The Advisory Board LLM document. HTML other than the primer and the SKOS guide.
 
 ### C-004 — DPV purpose parent for issue #486
@@ -162,11 +168,13 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 - **Dependencies:** The ChromeDriver session is recorded. `./wpt run` was not started. Service-worker assertions wait on an editor answer to https://github.com/w3c/gpc/issues/146 . C-005 does not wait on the combined-header algorithm in issue #114. The first GPC test landing was reverted the same day (`f564d65` added, `3c910a5` reverted, `d5d5da0` re-landed, all on 2025-10-30 and 2025-10-31).
 - **Effort:** The issue is drafted. No paid API.
 - **Review path:** A new issue on `w3c/gpc`. The held WPT pull request is a second step, and only if an editor keeps § 3.2. Closest later sample would be wpt#54446: opened 2025-08-21, first human comment 2025-09-04, approved and merged 2025-09-22 by `jgraham`, for a Mozilla author.
-- **Internal review:** 2026-11-30 for the unsubmitted issue. The issue is not approved for sending.
-- **External submission:** none
+- **Internal review:** Approved and sent 2026-11-18.
+- **External submission:** 2026-11-18, GitHub issue by `thomasLiu963`, https://github.com/w3c/gpc/issues/165. The WPT patch was not submitted.
+- **External feedback:** none
 - **External result criterion:** A comment by an editor on the filed issue that either keeps § 3.2 for an already loaded top-level document or replaces that caching rule. A merged WPT file is a later result, and only if the editor keeps the rule. An encouraging comment that does not choose is not acceptance. The local ChromeDriver session is not acceptance.
 - **Acceptance:** none
-- **Evidence:** none
+- **Next action:** Wait for an editor. Do not open a Web Platform Test pull request or a Chromium bug until an editor answers. Do not reply automatically.
+- **Evidence:** `execution/SUBMISSION_LOG.md`
 - **Not verified:** `./wpt run` was not started. Firefox and WebKit were not launched. `PrefChangeIsReflectedImmediately` was read and not executed. Why wpt.fyi Chrome 158 accepts the existing testdriver command when local Chrome 157, with no flag, rejects it. The Chromium code review linked from GPC #151.
 
 ### C-006 — USAC resolution on generative-AI detection evidence
@@ -252,16 +260,19 @@ Do not assign an ID and do not draft. Reasons are in `audits/SUMMARY.md`.
 
 ## Submission log
 
-External submissions require explicit approval before they are sent. None have been approved or sent.
+External submissions require explicit approval before they are sent. The four Wave 1 items were approved and sent on 2026-11-18. None is accepted.
 
 | Date | Candidate | Channel | Approval | Locator | Result |
 | --- | --- | --- | --- | --- | --- |
-| — | — | — | — | — | — |
+| 2026-11-18 | C-001 | GitHub issue, `thomasLiu963` | approved, whole batch | https://github.com/OWASP/AISVS/issues/1232 | Open. No maintainer reply. `1.02` label not applied; the account cannot add labels. |
+| 2026-11-18 | C-002 | GitHub pull request, `thomasLiu963` | approved, whole batch | https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287 | Open. One line in one file. No review yet. |
+| 2026-11-18 | C-003 | Comment on existing issue, `thomasLiu963` | approved, whole batch | https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608 | Posted. No reply. |
+| 2026-11-18 | C-005 | GitHub issue, `thomasLiu963` | approved, whole batch | https://github.com/w3c/gpc/issues/165 | Open. No editor reply. WPT patch not sent. |
 
 ## Evidence index
 
-Files placed in `evidence/` are listed here. None yet.
+Files placed in `evidence/` are listed here. The submission log records the public URLs. It does not prove acceptance.
 
 | Path | What it proves | Related ID |
 | --- | --- | --- |
-| — | — | — |
+| `execution/SUBMISSION_LOG.md` | The four public URLs existed on 2026-11-18 and were opened by `thomasLiu963`. | C-001, C-002, C-003, C-005 |

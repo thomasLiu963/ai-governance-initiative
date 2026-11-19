@@ -54,7 +54,8 @@ The default row is not a pass. The attribute is absent and the command is reject
 | Environment | Why the caching assertions were not decided there |
 | --- | --- |
 | Chrome 157 with no GPC feature flag | DevTools returns "Global Privacy Control is disabled." `navigator.globalPrivacyControl` is `undefined`. This is the binary's default. |
-| `./wpt run` and ChromeDriver `POST /session/{id}/privacy` | Not run. The DevTools method was called directly. A browser whose ChromeDriver does not implement the WPT endpoint would error in `get_global_privacy_control` before the cache assertions. |
+| `./wpt run` | Not started. No official testharness log exists for `navigation-cache.https.html`. |
+| ChromeDriver `POST /session/{id}/privacy` | Run separately. See the section below. It is not this DevTools shim and it is not `./wpt run`. |
 | Firefox | Not installed. `executormarionette.py` turns an unsupported `GPC:SetGlobalPrivacyControl` into `NotImplementedError`. Gecko's IDL exposes the attribute only when `privacy.globalprivacycontrol.functionality.enabled` is set. The pref default and the caching behavior were not run. |
 | Safari 17.6 on macOS 14.6.1 | Not run. Current WebKit source marks `WKWebpagePreferences.globalPrivacyControlEnabled` available starting in macOS 27. WebKit's test runner stores the testdriver value and applies it in `decidePolicyForNavigationAction`. That path was read and not executed. |
 | Workers | The patch does not start a worker. No worker result was collected. Issue #146 is still open and uncommented. |

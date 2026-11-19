@@ -2,6 +2,8 @@
 
 Status of this packet: proposed change, prepared for internal review. Not submitted. No pull request has been opened, and `9.5.8.patch` has not been sent anywhere.
 
+`ISSUE.md` was shortened on 2026-11-18 for filing. This file remains the longer defense. The public issue does not include an AI-assistance banner: AISVS allows a drafted issue when the filer can defend every sentence, and it does not require a banner. The historical `9.7.4` sentence was re-read the same day in `1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md` at `19e6410889`.
+
 Inspected source: OWASP AISVS `1.02-dev`, commit `092232f012ec10d654c1ca345fa10d5a5a8be12a` (merge of #1225, 2026-11-11). That commit was still `main` on 2026-11-18. `1.0/` and `1.01/` are locked published releases. The requirement text below is from the draft. The issue and the patch are local proposals.
 
 Decision: the gap survives. File the issue in `ISSUE.md` after you have read it and can defend every sentence. Do not file a pull request with the patch unless a project leader asks for one.
