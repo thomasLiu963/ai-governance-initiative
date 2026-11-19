@@ -76,12 +76,6 @@ Safari on this Mac is 17.6 (19618.3.11.11.5) on macOS 14.6.1. The system WebKit 
 
 The 23 October 2026 comment by `autoCAT6` links a 20-case Node observation suite in `autoCAT6/gpc-header-observations`. This patch does not copy those cases, that script, or those results. `support/sec-gpc-value.py` reports the single `sec-gpc` field value on one request, or JSON `null` when the field is absent, so the navigation test can see what the user agent sent.
 
-## Not verified
+## Not verified in this first pass
 
-- `./wpt lint` and `./wpt run`.
-- Whether ChromeDriver forwards `POST /session/{id}/privacy` to `Browser.setGlobalPrivacyControl`. The local run called the DevTools method directly.
-- A Firefox build, including whether Gecko caches `gpcAtNavigation`.
-- A WebKit or Safari build new enough to expose the API.
-- wpt.fyi results for the existing `gpc/` files.
-- Shipping defaults for Edge or for Chrome channels other than the local 157.0.8103.79 binary.
-- Any worker runtime behavior.
+The follow-up is [upstream-check.md](upstream-check.md). It records a ChromeDriver 157 session, the current Chromium getter, Firefox and WebKit source, and wpt.fyi counts for the existing `gpc/` files. `./wpt run` is still not started. Firefox and WebKit were still not launched. `PrefChangeIsReflectedImmediately` was read and not executed. No worker was run.

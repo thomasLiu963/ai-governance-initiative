@@ -1,10 +1,24 @@
 # Submission route
 
-Do not open the pull request, push a branch, or comment on a GitHub issue until Thomas approves that specific action. This file is the route and the requirements. It is not an approval.
+Do not open the issue, the pull request, push a branch, or comment until Thomas approves that specific action. This file is the route. It is not an approval.
 
-## Destination
+## Destination now
 
-Repository: [web-platform-tests/wpt](https://github.com/web-platform-tests/wpt), branch `master`.
+One new issue on [w3c/gpc](https://github.com/w3c/gpc). The title and body are in [ISSUE.md](ISSUE.md). The evidence behind them is [upstream-check.md](upstream-check.md).
+
+That issue asks the editors whether an already loaded top-level document keeps `gpcAtNavigation` after the session preference changes. It does not propose specification text. `w3c/gpc` `CONTRIBUTING.md` requires Working Group participation or a non-member patent licensing commitment for a substantive specification change. This workspace has neither, which is why the issue contains no patch.
+
+Do not open a second thread for the same question. In particular, do not also file:
+
+- a pull request to `web-platform-tests/wpt` for [patch/0001-gpc-navigation-cache.patch](patch/0001-gpc-navigation-cache.patch)
+- a Chromium bug asking to change `PrefChangeIsReflectedImmediately`
+- a comment on [w3c/gpc#146](https://github.com/w3c/gpc/issues/146) that restates the issue, because #146 is the worker question and already has no decision
+
+After an editor answers, one follow-up is enough. If § 3.2 stays, the held patch is the WPT pull request described below. If § 3.2 is edited so the loaded document updates immediately, delete the patch and do not file a browser bug.
+
+## Held destination
+
+Repository: [web-platform-tests/wpt](https://github.com/web-platform-tests/wpt), branch `master`. Open this only after an editor confirms § 3.2.
 
 Directory: `gpc/`. This is not a change to [w3c/gpc](https://github.com/w3c/gpc). A specification edit would be a different contribution. `w3c/gpc` `CONTRIBUTING.md` requires Working Group participation or a non-member patent licensing commitment for substantive specification changes. The WPT contributing file that was read does not state that patent commitment. This patch has no specification text.
 
@@ -18,7 +32,7 @@ Source: [`docs/writing-tests/submission-process.md`](https://github.com/web-plat
 2. Create a feature branch from current `master`.
 3. Add the three files from `patch/gpc/`, or run `git apply patch/0001-gpc-navigation-cache.patch` from the checkout root.
 4. Run the repository `lint` script on the new files. This packet did not run it.
-5. Run the test with `./wpt run` in a browser that implements the testdriver commands. The local execution in [local-results.md](local-results.md) used Chrome's DevTools methods through a shim. It is not a substitute for `./wpt run`, because that run is what shows whether ChromeDriver accepts `POST /session/{id}/privacy`.
+5. Run the test with `./wpt run` before opening the pull request. ChromeDriver 157.0.8103.79 already accepts `POST /session/{id}/privacy` when `GlobalPrivacyControlApi` is enabled, and that session updated the loaded document. That session is recorded in [upstream-check.md](upstream-check.md). It is not `./wpt run` and it did not execute this file. The DevTools shim in [local-results.md](local-results.md) is a third, separate procedure.
 6. Commit as the human who will answer review. Suggested message, for that person to edit:
 
     ```
@@ -39,7 +53,7 @@ Source: [`docs/writing-tests/submission-process.md`](https://github.com/web-plat
 
 The pull request should cite Working Draft § 3.2, § 3.3, and § 3.4. It should say that workers are omitted because [w3c/gpc#146](https://github.com/w3c/gpc/issues/146) has no decision. It should not say that the pull request fixes #146 or #114.
 
-Expect the same-document assertion to fail on a Chrome build that matches `PrefChangeIsReflectedImmediately`. Say that in the pull request so the failure is read as the conformance result, not as a broken harness. If the editors change the caching sentence to require an immediate update, withdraw the patch.
+Use this section only if the issue in [ISSUE.md](ISSUE.md) has an editor answer that keeps § 3.2. Expect the same-document assertion to fail on a Chrome build that matches `PrefChangeIsReflectedImmediately`, and on the ChromeDriver 157 session in [upstream-check.md](upstream-check.md). Say that in the pull request so the failure is read as the conformance result. If the editors instead change the caching sentence to require an immediate update, withdraw the patch and do not open the pull request.
 
 ## License
 

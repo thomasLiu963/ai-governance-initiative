@@ -28,7 +28,7 @@ The navigation rule can be tested without any of those choices. `navigation-cach
 
 The caching sentences are already `MUST` requirements in the Working Draft. A `.tentative` name would mean the behavior is not specified yet. The file is `gpc/navigation-cache.https.html`, alongside the other secure `gpc/` tests.
 
-Chrome 157 with the API flag fails the same-document assertion, and Chromium's `PrefChangeIsReflectedImmediately` expects that failure. That conflict is a reason to read the result as a browser bug against the current draft, and a reason for the human reviewer to expect that discussion. It is not a reason to encode the immediate update in the test. If the Working Group changes § 3.2 so a preference change is visible in the loaded document, this patch should be dropped rather than landed.
+ChromeDriver 157 with the API flag updates the loaded document immediately, and Chromium's `PrefChangeIsReflectedImmediately` expects that update for the profile setting. The test file still encodes § 3.2. It is held until an editor says that sentence remains the requirement. If the Working Group changes § 3.2 so a preference change is visible in the loaded document, this patch should be dropped rather than landed. Filing it before that answer would ask WPT to decide the question posed in `ISSUE.md`.
 
 The should-level reload prompt is not asserted. The test also does not assert that the session preference and the loaded document match before the set. It records the document, sets the opposite boolean, and requires the document to keep the recorded value.
 

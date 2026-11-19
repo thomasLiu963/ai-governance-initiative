@@ -23,7 +23,7 @@ If only one external send is approved before 2026-11-30, send C-002. It is the o
 These stay out of the November external set.
 
 - **C-006.** USAC resolution on detection scores. The draft, the evidence brief, and the memorandum already exist under `audits/university-policy/`. Internal reading can finish by 2026-11-30. The November 24, 2026 meeting is not a vehicle: the draft has no sponsors, and the audit could not confirm that the meeting will be held.
-- **C-007.** FCC consent-revocation comment. **Dropped.** Comments on the Further Notice are due 2026-11-25, before this project's internal-review date. A reply due 2026-12-28 can address only points already filed by someone else.
+- **C-007.** FCC consent-revocation comment. Reopened for local drafting. The Further Notice comment date is 2026-11-25. Internal review of this item is 2026-11-23, earlier than the 2026-11-30 horizon that caused the drop. The draft is `contributions/C-007-FCC/`. Submission stays `none`.
 - **Incident evidence.** No candidate. `research/incident-evidence/` has no files. No completed audit reads the AI Incident Database or any other incident corpus.
 - **D1 and D2.** No candidate. Both directories are empty. Designs RR-1 through RR-5 in the research-reuse audit stay blocked until author records exist.
 
@@ -159,18 +159,11 @@ Themes: human oversight, AI reliability, transparency, privacy, authorization.
 
 ### C-007 — FCC consent revocation
 
-FCC 26-67 is a Report and Order and a Further Notice, released 2026-10-01, published in the Federal Register on 2026-10-26. The Further Notice comment date is 2026-11-25. Reply comments are due 2026-12-28. The project's internal-review date is 2026-11-30.
+FCC 26-67 is a Report and Order and a Further Notice, released 2026-10-01, published in the Federal Register on 2026-10-26. Comments are due 2026-11-25. Reply comments are due 2026-12-28. The earlier drop used 2026-11-30 as the review date. This item is now drafted for review on 2026-11-23. That change of date does not approve a filing.
 
-The audit's three recommended definitions — what "honor" consists of, when a category-limited revocation is available, and that the disclosed reply path is the path that writes the permission record — answer questions the Further Notice actually asks. They are locally supported by `audits/fcc/sim_revocation.py`, which passed 9 cases and 0 failed assertions on 2026-11-18. That script shows a local model of four separate operations. It does not show carrier behavior, a reasonable-person finding, or a cost.
+The comment in `contributions/C-007-FCC/COMMENT.md` keeps the ten-business-day maximum and asks the Commission to define honoring as a permission record at receipt, cancellation of communications the caller still controls, and a read of that record at origination. It conditions a category-limited informational revocation on a disclosed limit and an all-categories method in the same interaction. It does not recommend seven business days, a ban on one-way informational texting, an extension of 47 CFR 64.1200(d)(5), or the affiliate paragraph in footnote 84. `reproduce.py` reran `audits/fcc/sim_revocation.py` on 2026-11-18: 9 cases, 0 failed assertions. The report states that those assertions are local objects, not carrier behavior, a reasonable-person finding, or a cost.
 
-The filing path fails its dependencies:
-
-- Internal review cannot finish before 2026-11-25 without skipping the review the project requires.
-- 47 CFR 1.419 was not read in full, so the filing-policy check is `not-checked` and blocks submission on its own.
-- After the comment date, further comments wait for the Commission to request them. A reply may respond only to matters already raised.
-- The audit did not request approval to file.
-
-C-007 is dropped. The memorandum and the fixture remain the local record. Reopening requires a new Commission window and an explicit approval. The four-stage communications example is not an OWASP patch. The Exchange audit already covers oversight and least privilege, and it tells this project not to add a control identifier.
+47 CFR 1.415, 1.419, 1.49, and 1.1206 were read. The policy check is no longer `not-checked`. 47 CFR 1.419(e) still requires a filer name and mailing address, which the draft leaves blank. 47 CFR 1.415(d) still bars a late comment unless the Commission authorizes it. Submission remains `none`. The four-stage example is not an OWASP patch.
 
 ### D1 and D2
 

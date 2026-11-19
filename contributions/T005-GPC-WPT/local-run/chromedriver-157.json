@@ -1,0 +1,26 @@
+{
+  "note": "ChromeDriver 157.0.8103.79 session on 2026-11-18. This is POST and GET /session/{id}/privacy. It is not ./wpt run and not the DevTools shim in harness-result.json.",
+  "chromedriver": "ChromeDriver 157.0.8103.79 (6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f-refs/branch-heads/8103@{#1574})",
+  "browser": "Google Chrome 157.0.8103.79",
+  "default": {
+    "get_privacy": "unknown error: Global Privacy Control is disabled.",
+    "set_privacy": "unknown error: Global Privacy Control is disabled.",
+    "navigator": {"exposed": false, "type": "undefined", "value": null}
+  },
+  "global_privacy_control_api_enabled": {
+    "args": ["--enable-features=GlobalPrivacyControlApi", "--enable-blink-features=GlobalPrivacyControlApi"],
+    "get_privacy_initial": {"gpc": false},
+    "same_document_before": {"attr": false, "header": null},
+    "set_privacy": {"gpc": true},
+    "same_document_after_set_no_navigation": {"attr": true, "header": "1"},
+    "get_privacy_after": {"gpc": true},
+    "after_navigation": {"attr": true, "header": "1"},
+    "http": [
+      ["/page", null],
+      ["/echo", null],
+      ["/echo", "1"],
+      ["/page", "1"],
+      ["/echo", "1"]
+    ]
+  }
+}

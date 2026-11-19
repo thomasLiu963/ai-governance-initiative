@@ -1,0 +1,42 @@
+LIMITATIONS
+This report is the output of a local specification fixture. Each case
+constructs Python objects and checks them against assertions written in
+audits/fcc/sim_revocation.py. A passing assertion means those objects
+matched that case. It does not mean a carrier, a messaging provider, a
+dialer, a handset, a campaign platform, or a person was observed.
+
+The recognizer is an exact match on strings fixed in the script. It is
+not a reasonable-person test and it is not a model. The script does not
+call a network service or a paid API. The flag in_caller_control is set
+by the case. It is not a report from a provider. The store key is the
+called number, the caller name, and the category. The script has no
+channel field. The detail field forced_policy_blocks_fraud is the
+literal True in the script's report dictionary. The assertion for that
+case calls blocks(); the printed literal is not a second measurement.
+
+The empty string is labeled silence and does not change the store. The
+blocking store in that case is a separate object revoked by a direct
+function call. The empty string is not the input to that call. A
+pending message whose kind is confirmation is sent even when the store
+blocks the number. The confirmation case sends one such message. It
+does not contain a second confirmation, so it does not show a one-message
+limit.
+
+utc=2026-11-19T03:11:55Z
+python=3.14.6
+command=/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/thomas/Desktop/ai-governance-initiative/audits/fcc/sim_revocation.py
+sha256=d2f6abc922452317b093fc56b0f94de558b846723ea402d8c463a836835af719
+fixture_exit=0
+
+FIXTURE STDOUT
+PASS	recognition_without_write	{'case': 'recognition_without_write', 'passed': True, 'label': 'standardized', 'store_blocks': False, 'send': 'sent'}
+PASS	write_cancels_local_and_suppresses_later	{'case': 'write_cancels_local_and_suppresses_later', 'passed': True, 'scope': 'all', 'cancelled': ['local'], 'handed_state': 'pending', 'later': 'suppressed'}
+PASS	confirmation_once_then_suppress	{'case': 'confirmation_once_then_suppress', 'passed': True, 'confirmation': 'sent', 'follow': 'suppressed', 'session_followup': 'suppressed'}
+PASS	scope_follows_policy_not_the_word_stop	{'case': 'scope_follows_policy_not_the_word_stop', 'passed': True, 'narrow_fraud_sent': 'sent', 'stop_all_fraud': 'suppressed'}
+PASS	exclusive_means_label_does_not_write	{'case': 'exclusive_means_label_does_not_write', 'passed': True, 'label': 'ordinary_language', 'written': False, 'send': 'sent'}
+PASS	silence_writes_only_if_a_policy_says_so	{'case': 'silence_writes_only_if_a_policy_says_so', 'passed': True, 'default_blocks': False, 'forced_policy_blocks_fraud': True}
+PASS	number_scope_is_not_account_scope	{'case': 'number_scope_is_not_account_scope', 'passed': True, 'number_policy': 'sent', 'account_policy': 'suppressed'}
+PASS	affiliate_follows_stored_caller_key	{'case': 'affiliate_follows_stored_caller_key', 'passed': True, 'same_caller': 'suppressed', 'unlisted_affiliate': 'sent', 'listed_affiliate': 'suppressed'}
+PASS	send_time_reread_not_schedule_time_clearance	{'case': 'send_time_reread_not_schedule_time_clearance', 'passed': True, 'cached_clearance': 'sent', 'reread': 'suppressed'}
+cases=9 failed=0
+

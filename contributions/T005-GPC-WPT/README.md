@@ -4,25 +4,29 @@ Status: local draft, 2026-11-18. Nothing in this directory has been submitted. N
 
 ## Conclusion
 
-A conformance test for preference caching is technically required by the current Global Privacy Control Working Draft, and it is absent from the Web Platform Tests `gpc/` directory and from the open pull requests checked on 2026-11-18.
+The Working Draft still requires a top-level document to keep the GPC value from when it began loading. Chromium updates that document immediately. Both of those statements were checked against current public source on 18 November 2026, and the Chromium side was also observed through ChromeDriver on this machine. The details are in [upstream-check.md](upstream-check.md).
 
-The draft says a preference change during or after a top-level navigation is not reflected until the next navigation. `gpcAtNavigation` is fixed when that browsing context's active document begins loading. `navigator.globalPrivacyControl` and `Sec-GPC` are both defined from that boolean. The existing tests call `test_driver.set_global_privacy_control` and only then open a new document, so they never observe the document that was already loaded.
+§ 3.2 says a preference change during or after a top-level navigation is not reflected until the next navigation. `navigator.globalPrivacyControl` and `Sec-GPC` follow `gpcAtNavigation`. The editor's draft matches the 24 September 2026 Working Draft, and no open issue asks the group to change that sentence. Issue #146 is about workers.
 
-The patch adds that missing observation and a new top-level document as the positive control. It does not create a worker. Worker behavior stays with the unresolved question in [w3c/gpc#146](https://github.com/w3c/gpc/issues/146). The `Sec-GPC` receiver algorithm in [w3c/gpc#114](https://github.com/w3c/gpc/issues/114) is unchanged and is not part of this patch. The 20-case Node header suite linked from that issue is not reused.
+Chromium's `PrefChangeIsReflectedImmediately` expects a profile-pref toggle to change `navigator.globalPrivacyControl` and `Sec-GPC` in the already loaded document, with no reload. The Blink getter reads the current renderer preferences on each access. ChromeDriver 157.0.8103.79, which is the endpoint `./wpt run chrome` would call, was run here with `GlobalPrivacyControlApi` enabled. `POST /session/{id}/privacy` `{"gpc": true}` returned `{"gpc": true}`, and the loaded document changed from false and no header to true and `Sec-GPC: 1` before the next navigation. Default Chrome 157 rejects the command. That ChromeDriver session is not the earlier DevTools shim, and it is not `./wpt run`. The shim failed the same attribute assertion. The two runs agree and are recorded separately.
 
-On this machine the test file was executed in Chrome 157.0.8103.79 with `GlobalPrivacyControlApi` enabled. The loaded document's attribute changed immediately (`expected false but got true`). The new top-level document passed and carried `Sec-GPC: 1`. That is a failure of the Working Draft's caching rule. Chromium's in-tree browser test `PrefChangeIsReflectedImmediately` expects the immediate update. The patch follows the Working Draft.
+Firefox was not run. On current Firefox source, the Marionette set command writes `privacy.globalprivacycontrol.enabled`, and both the attribute and `Sec-GPC` read that preference when they are produced. WebKit was not run. Its test runner copies a stored boolean onto the navigation's website policies. Safari here is 17.6. The API annotation in current WebKit starts at macOS 27.
 
-Default Chrome 157, Firefox, and Safari 17.6 on this Mac did not provide an implementation in which the caching assertions could be decided. Those runs are listed in [local-results.md](local-results.md).
+wpt.fyi at revision `71b58bb191` shows Chrome 158 and Firefox 160 passing the existing `gpc/` tests. Those tests set the preference and then open a new document. They do not show whether the loaded document keeps the old value. Safari 27.2 does not report passing signal subtests.
+
+The external step that matches this evidence is one question to the Privacy Working Group, drafted in [ISSUE.md](ISSUE.md). The Web Platform Test patch stays local. It is the follow-up if an editor keeps § 3.2. It is dropped if an editor changes § 3.2 so the loaded document updates immediately. A Chromium bug is the same question asked in a second tracker, and it waits for that answer too.
 
 ## Packet
 
 | File | Contents |
 | --- | --- |
-| [verification.md](verification.md) | Specification text, current tests, issue #146, open pull requests, and browser support that were checked. |
-| [rationale.md](rationale.md) | Why this test matches the draft, why workers are separate, and why the parser issue is deferred. |
-| [submission.md](submission.md) | Where the patch would go, the license, the AI-assistance rules, and the reviewers. |
-| [local-results.md](local-results.md) | Which runs executed the test and which configurations are still waiting. |
-| [patch/0001-gpc-navigation-cache.patch](patch/0001-gpc-navigation-cache.patch) | Three new files, ready for `git apply` on `web-platform-tests/wpt`. |
+| [upstream-check.md](upstream-check.md) | Spec, Chromium test, ChromeDriver session, Firefox and WebKit source, and wpt.fyi counts checked on 18 November 2026. |
+| [ISSUE.md](ISSUE.md) | The only submission-ready text. A question for `w3c/gpc`. Not posted. |
+| [verification.md](verification.md) | First-pass specification text, current tests, issue #146, and browser notes. |
+| [rationale.md](rationale.md) | Why the held test matches the draft, why workers are separate, and why the parser issue is deferred. |
+| [submission.md](submission.md) | Why the issue comes first, and the WPT route that stays closed until an editor answers. |
+| [local-results.md](local-results.md) | DevTools shim, separate from the ChromeDriver session. |
+| [patch/0001-gpc-navigation-cache.patch](patch/0001-gpc-navigation-cache.patch) | Three new files. Held. Not the current submission. |
 
 The same three files are also present as a tree under `patch/gpc/` so they can be read without applying the diff.
 
@@ -32,4 +36,4 @@ Privacy and human agency. The cached boolean is how a person's do-not-sell-or-sh
 
 ## Not done
 
-`MASTER_TRACKER.md` was not edited. `./wpt lint` and `./wpt run` were not used. No official Web Platform Tests result exists for this file.
+`./wpt lint` and `./wpt run` were not used. No testharness result exists for `navigation-cache.https.html` under the official runner. The ChromeDriver session covered the WebDriver command that runner would send, on Chrome 157 with the API flag, and did not execute this file. Firefox and WebKit were not launched. `PrefChangeIsReflectedImmediately` was read and not executed.

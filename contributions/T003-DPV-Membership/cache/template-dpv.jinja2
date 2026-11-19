@@ -1,0 +1,400 @@
+{% from 'macro_term_table.jinja2' import index_concepts, list_items, list_hierarchy, table_properties %}
+{% from 'macro_example.jinja2' import example_aside %}
+{% from 'macro_dpv_document_family.jinja2' import dpv_document_family, sotd, funding_acknowledgements, ref_dedicated_documentation, language_selector, contributors_list, authors_list %}
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{data[vocab_name+'-metadata']['dct:title']}}{% endblock title %}</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+  {% block RESPEC %}
+  <script class="remove">
+   // All config options at https://respec.org/docs/ 
+   var respecConfig = {
+    shortName: "dpv",
+    title: "{{data[vocab_name+'-metadata']['dct:title']}}",
+    subtitle: "version {{data[vocab_name+'-metadata']['schema:version']}}",
+    publishDate: "{{data[vocab_name+'-metadata']['dct:modified']}}",
+    specStatus: "{{vocab_name|get_document_status}}",
+    group: "dpvcg",
+    latestVersion: "https://w3id.org/dpv/",
+    canonicalUri: "https://w3id.org/dpv/",
+    edDraftURI: "https://dev.dpvcg.org/dpv",
+    github: "w3c/dpv",
+    subjectPrefix: "[dpv]",
+    doJsonLd: true,
+    lint: { "no-unused-dfns": false, "local-refs-exist": true },
+    editors: [
+    {
+      name: "Harshvardhan J. Pandit",
+      url: "https://harshp.com/",
+      "company": "{{ "Harshvardhan J. Pandit" | generate_author_affiliation }}",
+    }
+    ],
+    authors: {{authors_list(data, vocab_name)}},
+    otherLinks: [
+      {
+        "key": "This Release",
+        "data": [
+            {
+              "value": "https://w3id.org/dpv/{{DPV_VERSION}}",
+              "href": "https://w3id.org/dpv/{{DPV_VERSION}}"
+            }
+        ]
+      },
+      {
+        "key": "Previous Release",
+        "data": [
+            {
+              "value": "https://w3id.org/dpv/{{DPV_PREVIOUS_VERSION}}",
+              "href": "https://w3id.org/dpv/{{DPV_PREVIOUS_VERSION}}"
+            }
+        ]
+      },
+      {
+        "key": "Changelog",
+        "data": [
+            {
+              "value": "Changelog for v{{DPV_VERSION}}",
+              "href": "../changelog"
+            }
+        ]
+      },
+      {
+        "key": "Key Publications",
+        "data": [
+            {
+              "value": "Data Privacy Vocabulary (DPV) -- Version 2.0 (2024)",
+              "href": "https://doi.org/10.1007/978-3-031-77847-6_10"
+            },
+            {
+              "value": "Creating a Vocabulary for Data Privacy (2019)",
+              "href": "https://doi.org/10.1007/978-3-030-33246-4_44"
+            }
+        ]
+      }
+    ],
+    localBiblio: {%  include 'references.json' %}
+  };
+</script>
+{% endblock RESPEC %}
+  <link rel="stylesheet" type="text/css" href="../diagrams/common.css">
+<link rel="shortcut icon" href="../diagrams/favicon-16x16.png" type="image/x-icon" sizes="16x16" />
+  <link rel="shortcut icon" href="../diagrams/favicon-32x32.png" type="image/x-icon" sizes="32x32" />
+  <style>
+    .concept-item { font-size: 0.9rem; }
+    .concept-hide { display: none; }
+    .concept-show { display: block; }
+    }
+  </style>
+</head>
+<body>
+  {{ contributors_list(data, vocab_name) }}
+</section>
+{% block ABSTRACT %}
+    {# {{ language_selector(lang) }} #}
+    <section id="abstract">
+      <p>The Data Privacy Vocabulary [[DPV]] enables expressing machine-readable metadata about the use and processing of (personal or otherwise) data and technologies, and supports legislative requirements such as the General Data Protection Regulation [[GDPR]]. This document describes the DPV specification along with its data model. The canonical URL for DPV is <a href="https://w3id.org/dpv">https://w3id.org/dpv</a> which contains (this) specification. The namespace for DPV terms is <a href="https://w3id.org/dpv#"><code>https://w3id.org/dpv#</code></a>, the suggested prefix is <code>dpv</code>, and this document along with source and releases are available at <a href="https://github.com/w3c/dpv">https://github.com/w3c/dpv</a>. A changelog this version is provided in the <a href="#changelog">appendix</a>.</p>
+    </section>
+{% endblock ABSTRACT %}
+      {{ sotd(DPV_VERSION=DPV_VERSION, metadata=data[vocab_name+'-metadata']) }}
+      {{ dpv_document_family(document='dpv-spec') }}
+{% block INTRODUCTION %}
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <aside class="note" title="The PRIMER is essential to understanding the DPV">
+      <p><em>This document assumes the reader is familiar with DPV through the [[[PRIMER]]], and thus focuses on providing a topically structured documentation of concepts defined by DPV.</em></p>
+    </aside>
+      
+     <p>The motivation of DPV is to provide a '<i>data model</i>' or an '<i>ontology</i>' of concepts for interoperable representation and exchange of information about processing of (personal) data and the use of technologies. For this, the DPV specification defines concepts and relationships using the [[RDF]] standard, and which can additionally be implemented and applied using technologies appropriate to a use-case's specific requirements.</p>
+     <p>The DPV specification contains several distinct groups of concepts, some of which are provided with a taxonomy of concepts to support practical use-cases. In addition to these, 'extensions' to the DPV are also provided which further extend one or more DPV concepts or enable separation of concepts - such as for distinguishing between different jurisdictions and laws. The figure below shows an overview of the DPV concepts along with its extensions.</p>
+     <figure id="overview-2">
+       <img src="../diagrams/overview-dpv-2.0.svg">
+       <figcaption>Overview showing core concepts and relations in DPV with their further expansion as taxonomies and as extensions</figcaption>
+     </figure>
+      <p>DPV and its extensions (collectively DPV vocabularies) consists of certain 'core concepts' that are intended to be independent representations of specific information, and are distinct from other core concepts. For example, the [=Purpose=] refers only to the <i>purpose of why personal data is processed</i> and is independent as a concept from the other concepts (e.g. [=PersonalData=] or [=LegalBasis=]). The structuring of DPV is based on providing rich and comprehensive taxonomies that group concepts together based on each core concept, e.g. taxonomy of purposes, taxonomy of legal basis. 'Extensions' are a separate group of concepts that expand the 'core' vocabulary or provide concepts focused on a particular topic e.g. [[PD]] for personal data categories and [[RISK]] for risk management. Extensions allow allow modelling legally relevant but jurisdictionally applicable concepts e.g. [[EU-GDPR]] for concepts from EU's GDPR.</p>
+    
+  </section>
+
+{% endblock INTRODUCTION %}
+{% block VOCAB %}
+  <section>
+    <h2>DPV</h2>
+    <aside class="note" title="Refer to the PRIMER for modelling, semantics, and uses">
+      <p><em>This document assumes the reader is familiar with DPV through the [[[PRIMER]]], and focuses on providing an overview of the DPV and its extensions.</em></p>
+    </aside>
+      <p>The Data Privacy Vocabulary (DPV) provides the following core concepts which have been grouped into 'modules'. Each module has its own documentation page which provides the full definition for involved concepts, provides guidance and examples, and illustrates ongoing discussions on future additions and changes. The modules in DPV are:</p>
+      <ul>
+        <li><a href="./modules/purposes">Purposes</a> that justify the (end) goal for which data is processed or technologies are used</li> 
+        <li><a href="./modules/personal_data">Data and Personal Data</a> categories</li>
+        <li><a href="./modules/processing">Processing</a> operations over data</li>
+        <li><a href="./modules/entities">Entities</a> for actors and the roles they can take</li>
+        <li><a href="./modules/legal_basis">Legal Basis</a> such as consent or contract that justify the process</li>
+        <li><a href="./modules/risk">Risk</a> for assessment and management of risks and impacts</li>
+        <li><a href="./modules/TOM">Technical &amp; Organisational Measures</a></li>
+        <li><a href="./modules/rights">Rights</a></li>
+        <li><a href="./modules/context">Contextual information</a> such as location and automation</li>
+        <li><a href="./modules/rules">Rules</a> such as permissions and prohibitions</li>
+        <li><a href="./modules/process">Process</a> to describe organsiation of concepts into a logical and coherent unit to represent business processes and services</li>
+      </ul>
+
+<section id="extensions">
+  <h3>Extensions</h3>
+    <p>Extensions reflect additional concepts that extend the core concepts present in DPV and also provide a way to group related concepts that relate to the same topic. Currently, the following extensions are provided. A 'draft' status represents evolving modelling and concepts as they are actively being refined.</p>
+
+    <p>[[[PD]]] ([[PD]]) provides additional concepts that extend the DPV's personal data taxonomy based on an opinionated structure contributed by R. Jason Cronk from <a href="https://enterprivacy.com/">EnterPrivacy</a>. This separation is to enable adopters to decide whether the extension's concepts are useful to them, or to use other external vocabularies, or define their own.</p>
+      
+    <p>[[[LOC]]] ([[LOC]]) provides additional concepts regarding locations such as countries and regions based on the ISO 3166 standards.</p>
+  
+    <p>[[[RISK]]] ([[RISK]]) extends [[DPV]]'s risk assessment concepts based on ISO standards and provides taxonomies relevant to impact assessments.</p>
+
+    <p>[[[TECH]]] ([[TECH]]) extends the DPV's terms to represent further specific details regarding technologies, their management, and relevance to actual real-world tools and systems. The [[[AI]]] ([[AI]]) extension further extends [[TECH]] to provide concepts specifically regarding AI techniques, capabilities, risks, data and documentation.</p>
+
+    <p>[[[JUSTIFICATIONS]]] ([[JUSTIFICATIONS]]) provides concepts for use as 'justifications' with DPV. For example, where a right cannot be fulfilled, a justification such as 'identity could not be verified' is represented using a specific concept.</p>
+  
+    <p>[[[LEGAL]]] ([[LEGAL]]) provides concepts to represent laws, authorities, and other legal concepts in various jurisdictions. It is structured to create a separate namespace for each country or jurisdiction by using the ISO 3166-2 code, for example <code>IE</code> represents Ireland and <code>EU</code> represents the European Union. Within this namespace, the specific laws and authorities for that jurisdiction are defined.</p>
+
+    <p>Within [[LEGAL]], the following Members States of the European Union are defined in their individual namespaces, with [[LEGAL-EU]] as an additional namespace for representing laws and concepts at EU-level:
+        [[LEGAL-AT]] for Austria, [[LEGAL-BE]] for Belgium, [[LEGAL-BG]] for Bulgaria, [[LEGAL-CY]] for Cyprus, [[LEGAL-CZ]] for Czech Republic, [[LEGAL-DE]] for Germany, [[LEGAL-DK]] for Denmark, [[LEGAL-EE]] for Estonia, [[LEGAL-ES]] for Spain, [[LEGAL-FI]] for Finland, [[LEGAL-FR]] for France, [[LEGAL-GR]] for Greece, [[LEGAL-HR]] for Croatia, [[LEGAL-HU]] for Hungary, [[LEGAL-IE]] for Ireland, [[LEGAL-IS]] for Iceland, [[LEGAL-IT]] for Italy, [[LEGAL-LI]] for Liechtenstein, [[LEGAL-LT]] for Lithuania, [[LEGAL-LU]] for Luxembourg, [[LEGAL-LV]] for Latvia, [[LEGAL-MT]] for Malta, [[LEGAL-NL]] for Netherlands, [[LEGAL-NO]] for Norway, [[LEGAL-PL]] for Poland, [[LEGAL-PT]] for Portugal, [[LEGAL-RO]] for Romania, [[LEGAL-SE]] for Sweden, [[LEGAL-SI]] for Slovenia, [[LEGAL-SK]] for Slovakia.
+      [[LEGAL]] also contains the following jurisdictions: [[LEGAL-GB]] for Great Britain and Northern Ireland, [[LEGAL-HK]] for Hong Kong, [[LEGAL-IN]] for India, [[LEGAL-JP]] for Japan, [[LEGAL-KR]] for Republic of Korea, [[LEGAL-MO]] for Macao, [[LEGAL-MY]] for Malaysia, [[LEGAL-PH]] for the Philippines, [[LEGAL-SG]] for Singapore, [[LEGAL-TH]] for Thailand, [[LEGAL-TW]] for Taiwan, [[LEGAL-US]] for United States of America.
+      </p>
+    <p>Laws are modelled as extensions within the namespace of their respective jurisdictions. The following are extensions part of [[LEGAL-EU]]:
+      [[[EU-GDPR]]] ([[EU-GDPR]]),
+      [[[EU-DGA]]] ([[EU-DGA]]),
+      [[[EU-NIS2]]] ([[EU-NIS2]]),
+      [[[EU-AIAct]]] ([[EU-AIAct]]),
+      [[[EU-EHDS]]] ([[EU-EHDS]]),
+      [[[EU-RIGHTS]]] ([[EU-RIGHTS]]).
+    </p>
+  
+    <p>[[SECTOR]] provides extensions modelling specific sectors by using those sector-specific concepts, terms, and modelling which extends the concepts in other DPV extensions. These extensions include:
+      [[SECTOR-EDUCATION]] for Education Sector,
+      [[SECTOR-FINANCE]] for Finance Sector,
+      [[SECTOR-HEALTH]] for Health Sector,
+      [[SECTOR-INFRA]] for (Critical) Infrastructure Sector,
+      [[SECTOR-LAW]] for Law Enforcement & Justice Sector,
+      [[SECTOR-PUBLICSERVICES]] for Public Services Sector.
+    </p>
+
+    <p>The STANDARDS extensions model the core terminologies defined and used within specific forums such as ISO, CEN/CENELEC, NIST, and IEEE so that they can be used with DPV. Currently it provides the extension [[STANDARD-IEEE-7012]] to support the implementation of [[[IEEE-7012]]].</p>
+  </section>
+</section>
+
+<section id="guide-applications">
+  <h2>Guidance</h2>
+  <section>
+    <h3>Guides</h3>
+    <p>The [[[GUIDE-Consent-27560]]] [[GUIDE-Consent-27560]] provides implementation of machine-readable consent records and receipts as defined in [[ISO-27560]] by using the <a href="https://w3id.org/dpv">Data Privacy Vocabulary (DPV)</a>. Additionally, it also provides guidance on using [[ISO-27560]] for meeting [[GDPR]] requirements regarding consent.</p>
+    <p>As the default semantics in DPV use RDFS and SKOS, the [[[GUIDE-OWL2]]] [[GUIDE-OWL2]] provides guidance for the use of DPV as an OWL2 ontology, and explains how DPV can be easily encoded in a low-complexity profile of OWL2 called OWL2-PL to perform efficient semantic reasoning.</p>
+    <p>Planned guides in the near future include: ISO-29184 Privacy Notices, GDPR             Record of Processing Activities (ROPA), GDPR Data Protection Impact Assessment (DPIA), Data Breach Records and Notifications, Rights Management. Also planned is the [[GUIDE-ODRL]] to provide guidance for the use of DPV concepts with [[[ODRL-MODEL]]] and [[[ODRL-VOCAB]]] which are W3C standards for machine-readable representations of policies and agreements.</p>
+  </section>
+  <section>
+    <h3>Applications</h3>
+    <p>This section provides brief examples of how various DPV concepts and extensions are relevant to specific applications.</p>
+    <ul>
+      <li><strong>Legal Compliance:</strong> In addition to [[DPV]], specific extensions such as the [[EU-GDPR]] for GDPR and [[EU-AIAct]] for the AI Act provides concepts related to the law. The implementation details may require additional extensions such as [[PD]] for personal data categories, [[RISK]] for risk and impact assessments, and [[TECH]] and [[AI]] extensions to model the technologies.</li>
+      <li><strong>Consent Management</strong> For consent management, the [[DPV]] extension provides key concepts concerning informed consent such as the purposes and data categories, as well as to represent its states (e.g. given). The [[PD]] extension may be relevant to express specific personal data categories, the [[TECH]] extension to denote which technologies might be relevant, and [[RISK]] extensions to specify involved risks. If the consent should meet requirements from a specific law, then the relevant extension should be used for these additional concepts e.g. consent as a legal basis under the GDPR is represented in [[EU-GDPR]] extension.</li>
+      <li><strong>Rights Management:</strong> [[DPV]] defines the core concept for rights, including those related to exercise and records. Additional concepts require jurisdictional extensions, such as [[EU-GDPR]] for GDPR provided rights, or the [[EU-RIGHTS]] extension for the EU Charter of Fundamental Rights.</li>
+      <li><strong>Security &amp; Risk Management:</strong> The [[DPV]] provides core concepts regarding risk management, including technical and organisational measures. The [[RISK]] extension provides a larger set of concepts for risk management. Additional risk management concepts may be required based on the use-cases, for example as part of impact assessments required by laws such as [[EU-GDPR]], or to model risk concepts specific to a sector such as [[SECTOR-HEALTH]] for health.</li>
+      <li><strong>AI Training and Governance:</strong> The [[AI]] extension provides AI-specific concepts, and additionally the [[TECH]] extension provides concepts to represent how technology is provisioned and used. These can be combined with [[DPV]] concepts such as purposes, location, or measures to represent the necessary information.</li>
+      <li><strong>Health Data Management:</strong> The [[SECTOR-HEALTH]] extension provides concepts focused on Health sector by extending the core concepts defined in [[DPV]]. In addition, jurisdiction-specific concepts are also present which model health-specific requirements, such as the [[EU-EHDS]] extension for EU's Health Data Spaces. Depending on the use-case, core concepts may be chosen from [[DPV]] such as high-level purposes or technical measures, or from [[SECTOR-HEALTH]] such as medical purposes, or concepts defined in laws such as [[EU-EHDS]].</li>
+    </ul>
+  </section>
+</section>
+
+<section id="vocabulary">
+<h2>Vocabulary Index</h2>
+  <div id="concept-index">
+  {%  for concept in vocab.values()|sort(attribute='term') %}
+    {% if concept['_dpvterm'] and not concept['_ignored'] and concept['_type'] in ('class', 'property') %}
+    {% set module=concept['module'][0].split('-')[0] %}
+    <span class="concept-item concept-hide" id="{{ concept['term'] }}" data-type="concept" data-module="{{ module }}">
+      <dfn>{{ concept['term'] }}</dfn>
+      <span class="definition">{{ concept['skos:definition'] }}.</span>
+      <span class="additional details">See <a href="modules/{{ module }}#{{ concept['term'] }}">full definition</a> in <a href="modules/{{ module }}">{{module}}</a> module</span>
+    </span>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <p id="concept-index-message">As DPV contains a large number of concepts ({{ vocab|length }} in this version), additional documentation with guidance and examples is provided in the <a href="#dpv">specific module pages</a>. <button id="view-concept-index">Click</button> to display the full index.</p>
+  {# <section id="dpv-classes">
+   {{ index_concepts(vocab, vocab_name, filter="classes", lang=lang) }}
+  </section>
+  <section id="dpv-properties">
+   {{ index_concepts(vocab, vocab_name, filter="properties", lang=lang) }}
+  </section>
+  <section id="external-concepts">
+   <p>The following external concepts are re-used within DPV:</p>
+   {{ index_concepts(vocab, vocab_name, filter="external") }}
+  </section> #}
+</section>
+
+{% endblock VOCAB %}
+
+{% block ACKNOWLEDGEMENTS %}
+<section id="funding-acknowledgements" class="notoc">
+  <h2>Funding Acknowledgements</h2>
+
+  <h3>Funding Sponsors</h3>
+  {{ funding_acknowledgements() }}
+
+  <h3>Funding Acknowledgements for Contributors</h3>
+  <p>The contributions of Piero Bonatti and Luigi Sauro to the DPVCG have been funded by the European Union’s Horizon 2020 research and innovation programme under grant agreement N. 731601 (<a href="https://specialprivacy.ercim.eu/">project SPECIAL</a>) until 2019, and under grant agreement N. 883464 (<a href="https://trapeze-project.eu/">project TRAPEZE</a>) from 2020 until 2023.</p>
+  <p>The contributions of Beatriz Esteves, Delaram Golpayegani, and Rana Saniei have received funding through the <a href="https://protect-network.eu/">PROTECT ITN Project</a> from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497, in particular through the development of <a href="https://w3id.org/airo">AI Risk Ontology (AIRO)</a> and <a href="https://w3id.org/vair">Vocabulary of AI Risks (VAIR)</a> which have been integrated in to this extension. Beatriz Esteves also received funding from the INESData project - Infrastructure to Investigate Data Spaces in Distributed Environments at UPM, (TSI-063100-2022-0001), a project funded under the UNICO I+D CLOUD call by the Ministry for Digital Transformation and the Civil Service, in the framework of the recovery plan PRTR financed by the European Union (NextGenerationEU); and from <a href="https://solidlab.be/">SolidLab Vlaanderen</a> (Flemish Government, EWI and RRF project VV023/10), and by the imec.icon project PACSOI (HBC.2023.0752) which was co-financed by imec and VLAIO. Julian Flake received funding from the <a href="https://titan-eosc.eu/">TITAN project</a> funded under European Union’s Horizon Europe Framework Programme grant#101129822 and from the European Union’s Digital Europe Programme grant#101123471 (EDGE-Skills). </p>
+  <p>The contributions of Harshvardhan J. Pandit, Arthit Suriyawongkul, Delaram Golpayegani, and Rob Brennan have been made with the financial support of Science Foundation Ireland under Grant Agreement No. 13/RC/2106_P2 at the ADAPT SFI Research Centre. The contributions of Harshvardhan J. Pandit have been made with the AI Accountability Lab (AIAL) which is supported by grants from following groups: the AI Collaborative, an Initiative of the Omidyar Group; Luminate; the Bestseller Foundation; and the John D. and Catherine T. MacArthur Foundation.</p>
+
+</section>
+{% endblock ACKNOWLEDGEMENTS %}
+{% block PROPOSED %}
+{% if proposed %}
+<section id="proposed-terms" class="appendix">
+  <h2>Proposed Terms</h2>
+  <p>The following terms have been proposed for inclusion, and are under discussion. They are provided here for illustrative purposes and should not be considered as part of DPV.</p>
+  {% for name, terms in proposed.items() %}
+    <strong>{{name}}</strong>
+    <ul>{% for term in terms %}
+      <li>{{term}}</li>
+    {% endfor %}</ul>
+  {% endfor %}
+</section>
+{% endif %}
+{% endblock PROPOSED %}
+
+<section id="semantics-scope" class="appendix">
+  <h2>Semantics &amp; Scope</h2>
+  <section>
+      <h3>Semantics</h3>
+      <p>DPV's terms are defined using [[RDFS]] &amp; [[SKOS]] semantics where all 'classes' and 'properties' are defined as <code>skos:Concept</code> in addition to <code>rdfs:Class</code> and <code>rdf:Property</code> respectively. For taxonomies or hierarchies, concepts are defined as 'instances' of a top-concept, and relationships within the hierarchy are defined using <code>skos:broader/skos:narrower</code>. For example, [=Purpose=] is the top concept within the purposes taxonomy, and all concepts in the purpose taxonomy are instances of it, and are related to each other using <code>skos:broader/narrower</code> relations, such as [=ServiceProvision=] and its more specific form [=RequestedServiceProvision=] are both instances of [=Purpose=] while being related to each other using <code>skos:broader/narrower</code>.</p>
+      
+      <p>[[[DPV-OWL]]] is an alternate serialisation of DPV that contains the same concepts but is provided under a different namespace with the semantics defined using [[OWL]]. The conversion from SKOS to OWL follows the best practices and concerns outlined in [[[SKOS-OWL]]], e.g. by replacing <code>skos:Concept</code> with <code>owl:Class</code>, and using <code>rdfs:subClassOf</code> instead of <code>skos:broader/skos:narrower</code>. See the <a href="../primer/#example-implications-of-using-skos-vs-owl">example showing implications of using SKOS vs OWL</a> in the [[PRIMER]].</p>
+
+      <p>The table provides an overview of the expression of concepts across the three DPV serialisations. These may be expanded in the future, including to non-semantic-web serialisations. </p>
+      <table>
+        <thead>
+          <th>Concept</th>
+          <th>Default</th>
+          <th>OWL</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Semantics</td>
+            <td>[[RDF]], [[RDFS]], [[SKOS]]</td>
+            <td>[[RDF]], [[RDFS]], [[OWL]]</td>
+          </tr>
+          <tr>
+            <td>Concept/Term</td>
+            </td><td><code>skos:Concept</code></td>
+            <td><code>owl:Class</code></td>
+          </tr>
+          <tr>
+            <td>subtype relation</td>
+            </td><td><code>skos:broader</code></td>
+            <td><code>owl:subClassOf</code></td>
+          </tr>
+          <tr>
+            <td>instance/type relation</td>
+            </td><td><code>rdf:type</code></td>
+            <td><code>rdf:type</code></td>
+          </tr>
+          <tr>
+            <td>relations/association</td>
+            </td><td><code>rdf:Property</code></td>
+            <td><code>owl:ObjectProperty</code></td>
+          </tr>
+          <tr>
+            <td>relation domain</td>
+            </td><td><code>rdfs:domain</code></td>
+            <td><code>rdfs:domain</code></td>
+          </tr>
+          <tr>
+            <td>relation range</td>
+            </td><td><code>rdfs:range</code></td>
+            <td><code>rdfs:range</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <section id="scope-change">
+      <h3>Scope Change in v2.0</h3>
+      <p>In DPV v1.0, the scope of the DPV and the DPVCG was limited to 'privacy', 'data protection', and the 'processing of personal data', including technologies used to perform it. Under this scope, the DPVCG discussed and modelled regulations such as the [[EU-GDPR]] which also share the same scope. Newer laws such as the [[EU-DGA]] and [[EU-AIAct]] share a significant overlap with this scope and necessitate their inclusion in DPVCG activities. However, such laws utilise the same legal framework to model both personal and non-personal data (for DGA) or regulate a technology that goes beyond 'personal data' (DGA and AI Act). To enable their inclusion and representation as extensions to the DPV, and to enable adopters to utilise a single consistent framework to represent information, the scope of DPVCG and the DPV was expanded in v2.0 as follows:</p>
+      <ol>
+        <li>Expansion of scope to include 'data' and 'technologies' instead of only 'personal data' - this means concepts such as [=Purpose=] which were defined as purpose associated with 'personal data' are now defined as purpose associated with 'data or technologies'.</li>
+        <li>Creation of concepts to represent expanded scope - such as [=Data=] as the broader concept for both [=PersonalData=] and [=NonPersonalData=].</li>
+        <li>Changing the scope of associated extensions such as [[TECH]] and [[RISK]] to be useful for any technology and activities and not just personal data related technologies and activities.</li>
+        <li>Creating [[AI]] as a new extension to specifically provide concepts associated with AI technologies.</li>
+        <li>Creating extensions to represent concepts from laws regarding 'data and technologies' based on the new concepts and extensions created e.g. [[EU-DGA]] and [[EU-AIAct]] extensions.</li>
+        <li>Creating new namespaces such as <code>/legal/eu/gdpr</code> instead of <code>/dpv-gdpr</code> to enable consisting and unambiguous representation of legal extensions</li>
+        <li>Restructuring the <a href="https://github.com/w3c/dpv">GitHub repository</a> to accommodate the changed structure of DPV extensions</li>
+      </ol>
+      <p>In addition to the above, the v2.0 scope change also includes removal of the bespoke 'DPV serialisation' which was based on a custom extension of [[SKOS]]. Instead, the RDFS+SKOS serialisation has been made the default serialisation, and the alternate OWL2 serialisation is continued as before.</p>
+      <aside class="note" title="Focus of DPVCG on privacy and data protection">
+        <p>Though the scope of DPVCG has expanded significantly from 'personal data' to also include 'any data and technologies', the primary focus of the group remains on privacy and data protection. Therefore, while the group is developing work such as the [[AI]] and [[EU-AIAct]] extensions, it is also interested in understanding how these involve personal data and affect privacy and data protection, and how the DPV and its extensions can help address concerns - such as through taxonomies to support risk and impact assessments in [[RISK]] extension.</p>
+        <p>The DPVCG welcomes work associated with [[AI]] or [[EU-AIAct]] and other similar activities which go beyond privacy and data protection, such as AI specific risks and impacts. Such additions are useful to support the group's primary objectives as they help discuss and determine when risks and impacts involve personal data and have an effect on privacy and data protection.</p>
+      </aside>
+      <aside class="note" title="DPV v2.0 is backwards-compatible with DPV v1.0">
+        <p>The redefinition of concepts in DPV v2.0 is backwards compatible as there has only been a scope 'increase' i.e. use of [=Purpose=] in DPV v1.0 regarding 'personal data' is compatible with [=Purpose=] in DPV v2.0 regarding 'data and technologies'.</p>
+        <p>Specific changes in concepts result in limited breaking of compatibility as these concepts have been removed or remodelled. See the <a href="#changelog">Changelog</a> for more specific information.</p>
+      </aside>
+    </section>
+</section>
+
+<section id="changelog">
+  <h2>Changelog for v{{DPV_VERSION}}</h2>
+  <p><strong>total terms: 1165 ; added: 47 ; removed: 11</strong></p>
+  <p>The <a href="../changelog.html">changelog</a> provides more information on concepts that have been added/removed in this version. Below is a summary of the changes.</p>
+  <ul>
+      <li>Removed concepts include fixing typos in Contract Statuses, Rule Fulfilment Statuses, Rights Fulfilment Status and the property <code>isOrganisationalUnitOf</code>.</li>
+      <li><code>Rule</code> and <code>RuleFulfilmentStatus</code>: Added new rule types (acceptable, unacceptable, recommendation, deterrence) and associated statuses along with properties.</li>
+      <li><code>ReuseCompatibility</code>: Concepts describing reuse as primary and secondary use.</li>
+      <li><code>Location</code>: Concepts representing jurisdiction, public/private spaces and ownership, and a property to indicate locations outside a reference concept.</li>
+      <li><code>Data</code>: Concepts representing unstructured and uncategorised data.</li>
+      <li>Additional changes introduced in <code>v2.2.1</code>: fixed range of <code>dpv:hasEntityControl</code> to <code>dpv:EntityInvolvement</code></li>
+  </ul>
+</section>
+
+<p>This document is based on inspiration from the following:</p>
+    <ul>
+      <li>
+        <p>RDF 1.1 Primer <a href="https://www.w3.org/TR/rdf11-primer/"><u>https://www.w3.org/TR/rdf11-primer/</u></a></p>
+      </li>
+      <li>
+        <p>OWL 2 Primer <a href="https://www.w3.org/TR/owl2-primer/"><u>https://www.w3.org/TR/owl2-primer/</u></a></p>
+      </li>
+      <li>
+        <p>PROV Model Primer <a href="https://www.w3.org/TR/prov-primer/"><u>https://www.w3.org/TR/prov-primer/</u></a></p>
+      </li>
+    </ul>
+
+<script type="text/javascript" src="../diagrams/common.js" defer></script>
+
+<script>
+  function updateView() {
+    const id = location.hash.slice(1); if (!id) return;
+    // console.log(id);
+    const target = document.getElementById(id); if (!target) return;
+    // console.log(target);
+    // console.log(target.classList);
+    if (!target.classList.contains('concept-item')) return;
+    target.classList.remove('concept-hide');
+    target.classList.add('concepts-show');
+
+    document.getElementById("vocabulary").scrollIntoView({ behaviour: 'smooth'});
+  }
+  window.addEventListener('load', updateView);
+  window.addEventListener('hashchange', updateView);
+
+  document.getElementById('view-concept-index').addEventListener('click', () => {
+    const message = document.getElementById('concept-index-message');
+    const index = document.getElementById('concept-index');
+    index.parentNode.insertBefore(message, index);
+    document.querySelectorAll('.concept-item').forEach(e => {
+      e.classList.remove('concept-hide');
+      e.classList.add('concept-show');
+    })
+  });
+</script>
+
+</body>
+</html>

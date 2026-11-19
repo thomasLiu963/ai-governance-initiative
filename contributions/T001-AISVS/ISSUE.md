@@ -10,7 +10,7 @@ Current text in `1.02-dev/en/0x10-C09-Orchestration-and-Agentic-Action.md` at `0
 >
 > **9.5.3** Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself. Level 2.
 
-`5.2.5` isolates that decision point from the agent. `9.6.2` blocks an action when a human-approval gate is not satisfied within the defined approval time. `7.1.3` blocks an action when the model response used to decide it cannot be read. A runtime can satisfy each of those and still invoke the tool when the authorization call times out, resets, or returns an error that is not a decision.
+`5.2.5` isolates that decision point from the agent. `9.6.2` blocks an action when a human-approval gate is not satisfied within the defined approval time. `7.1.3` blocks an action when the model response used to decide it cannot be read. A runtime can satisfy each of those and still invoke the tool when the authorization call returns no decision.
 
 Appendix A still states the property. Fail-Closed / Fail-Open:
 
@@ -30,7 +30,7 @@ Appendix A still states the property. Fail-Closed / Fail-Open:
 
 ## Why this is one AISVS row
 
-ASVS 5.0 [`16.5.3`](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x25-V16-Security-Logging-and-Error-Handling.md) says the application fails securely when an exception occurs. It does not require a defined timeout on the policy decision point for an agent action, and a tool call can proceed because the decision call returned nothing and raised no exception. AISVS already states the timeout-and-block pattern for human approval in `9.6.2`. The authorization decision point has no matching row.
+ASVS 5.0 [`16.5.3`](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x25-V16-Security-Logging-and-Error-Handling.md) requires the application to fail securely, including when an exception occurs, and not to process a transaction because validation logic errored. It does not require a defined timeout on the policy decision point for an agent action. A tool call can proceed when that call returns nothing and raises no exception. AISVS already states the timeout-and-block pattern for human approval in `9.6.2`. The authorization decision point has no matching row.
 
 The former MCP requirement `10.6.1` denied a request when policy evaluation could not be completed. That row is gone from the released chapters and from `1.02-dev`, and it applied to MCP controls.
 
@@ -40,7 +40,7 @@ Append one Level 2 row. Leave C9.7 retired. Do not reuse `9.7.4`. Leave the logg
 
 > **9.5.8** Verify that when the policy decision point for an agent action does not return a decision within the defined timeout, the runtime blocks the action. Level 2.
 
-For this row, a decision is an allow, a deny, or a referral to the human-approval gate in C9.2. An error, an empty result, a dropped connection, and silence are not decisions. The runtime may block as soon as it knows no decision is coming. The proposed action must not run.
+For this row, a decision is an allow, a deny, or a referral to the human-approval gate in C9.2. The glossary PDP entry describes an allow or deny. The referral is included so a handoff to that gate is not scored as a missing decision. An error, an empty result, a dropped connection, and silence are not decisions. They are the same failed check, not extra requirements. The runtime may block as soon as it knows no decision is coming. The proposed action must not run. This row does not define a response schema, and it does not use the word "unavailable".
 
 Appendix B lists every active requirement once and adds no requirements of its own. The matching AD.2 line would be: "Runtime blocks an agent action when its policy decision point does not return a decision within the defined timeout | C9.5.8".
 
@@ -56,10 +56,10 @@ Noncompliant: the stub writes nothing, the timeout fires, the runtime invokes th
 
 Level 2, the level merged in #683 and recorded for `9.7.4` in #928. `9.5.1`, `5.2.5`, and `9.6.2` are already Level 2. An adopter who already asks a policy engine for each agent action adds a timeout and blocks when no decision arrives.
 
-[Envoy `ext_authz`](https://www.envoyproxy.io/docs/envoy/v1.35.11/intro/arch_overview/security/ext_authz_filter) is an existence proof for that behavior, not a required product. If its authorization service is unavailable, `failure_mode_allow` decides the result, and the default is false, so the request is denied. [NIST SP 800-207](https://doi.org/10.6028/NIST.SP.800-207) §5.1 says no communication between enterprise resources occurs unless the policy engine and policy administrator approve it. §5.2 treats an unreachable policy engine as an availability problem, mitigated by redundancy.
+[Envoy `ext_authz`](https://www.envoyproxy.io/docs/envoy/v1.35.11/intro/arch_overview/security/ext_authz_filter) is an existence proof for that behavior, not a required product. If its authorization service is unavailable, `failure_mode_allow` decides the result, and the default is false, so the request is denied. [NIST SP 800-207](https://doi.org/10.6028/NIST.SP.800-207) §5.1 says no communication between enterprise resources occurs unless it is approved and possibly configured by the policy engine and policy administrator. §5.2 treats an unreachable policy engine or policy administrator as an availability problem and mitigates it by replication.
 
 I have not surveyed agent-framework defaults.
 
 ## Out of scope
 
-No change to `9.5.6`. No queued-action test procedure. No logging clause on this row. No glossary edit. No edit to locked `1.0/` or `1.01/`.
+No change to `9.5.6`. No queued-action test procedure. No logging clause on this row. No glossary edit. No separate requirement for connection errors, invalid responses, or other unavailable states. No edit to locked `1.0/` or `1.01/`.

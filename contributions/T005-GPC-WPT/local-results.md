@@ -59,4 +59,10 @@ The default row is not a pass. The attribute is absent and the command is reject
 | Safari 17.6 on macOS 14.6.1 | Not run. Current WebKit source marks `WKWebpagePreferences.globalPrivacyControlEnabled` available starting in macOS 27. WebKit's test runner stores the testdriver value and applies it in `decidePolicyForNavigationAction`. That path was read and not executed. |
 | Workers | The patch does not start a worker. No worker result was collected. Issue #146 is still open and uncommented. |
 
-The handler unit checks and the Chrome runs above are the executions. They are not a Web Platform Tests dashboard result, and they are not an acceptance of the patch.
+The handler unit checks and the Chrome runs above are the DevTools-shim executions. They are not a Web Platform Tests dashboard result, and they are not an acceptance of the patch.
+
+## Separate run: ChromeDriver 157
+
+Recorded in [local-run/chromedriver-157.json](local-run/chromedriver-157.json) and explained in [upstream-check.md](upstream-check.md). ChromeDriver 157.0.8103.79 called `POST /session/{id}/privacy` and `GET /session/{id}/privacy` against the same Chrome binary. That is the WebDriver extension command. It does not load `navigation-cache.https.html`, it does not use the local `testdriver-vendor.js` shim, and `./wpt run` was not started.
+
+With `GlobalPrivacyControlApi` enabled, the set command returned `{"gpc": true}` and the already loaded document moved from attribute false and no `Sec-GPC` to attribute true and `Sec-GPC: 1` before the next navigation. With no feature flag, the command returned "Global Privacy Control is disabled." The shim table above and this session describe the same immediate update. They are two procedures.

@@ -15,7 +15,8 @@ The external artifact is a comment, not a pull request. The text to paste is [CO
 - Issue #484 API: open, no comments, no assignee, labels unchanged.
 - `master` `689d32c0f7c571d32f7f8635ae548fcc1c3ff695` (18 November 2026, minutes and index fix). `dev` `aff91c294b105d9a261ea8622350b0fc7ef0e293` (same day).
 - Public list index for November 2026, fetched again while this text was prepared: last messages are the 18 November calendar update and the Social Equation Hub enquiry. `0005.html` returns 404. There is no 25 November agenda mail.
-- Event page for 25 November 2026, fetched again: status Confirmed, 13:30–14:30 GMT. The agenda text is still the 18 November agenda. Joining instructions are restricted to logged-in W3C users.
+- Event page for 25 November 2026, fetched again while the draft was prepared: status Confirmed, 13:30–14:30 GMT. The agenda text was still the 18 November agenda. Joining instructions are restricted to logged-in W3C users. This final pass did not fetch that page again.
+- Final pass, same day: issue API still open, zero comments, `updated_at` unchanged. `master` and `dev` still the commits above. `reproduce.py` re-run with `rdflib` 7.6.0. `2.4-dev/dpv/dpv-owl.ttl` and `2.4-dev/pd/pd-owl.ttl` match the 2.3 OWL checksums. The list index still ends at `0004.html`, the Social Equation Hub enquiry, and `0005.html` is still 404.
 
 ## The gap
 
@@ -28,7 +29,7 @@ Those predicates are defined differently, and DPV emits them for different sprea
 | `rdf:type` | The subject is an instance of the object class. [RDF Schema 1.1, §3.3](https://www.w3.org/TR/rdf-schema/#ch_type). | Top category from spreadsheet `ParentType`, when that cell names a concept. Also the PD hook below. |
 | `skos:broader` | Direct hierarchical link. Not declared transitive. [SKOS Reference §§8.1 and 8.6.6](https://www.w3.org/TR/skos-reference/). A broader link does not entail `skos:inScheme` ([§4.6.4](https://www.w3.org/TR/skos-reference/)). | Spreadsheet `ParentTerm`, via `construct_parent_taxonomy` in `code/vocab_funcs.py`. |
 | `skos:broaderTransitive` | Transitive superproperty of `skos:broader` (SKOS S22, S24). Not for assertions. | Not asserted. Neither serialisation has `owl:imports`, so a reasoner does not load the SKOS axioms unless the adopter does. |
-| `rdfs:subClassOf` | Every instance of the subject class is an instance of the object class. Transitive. [RDF Schema 1.1, §3.4](https://www.w3.org/TR/rdf-schema/#ch_subclassof). | Written when `ParentType` is the token `sc`. Taxonomy rows do not get it. |
+| `rdfs:subClassOf` | Every instance of the subject class is an instance of the object class. Transitive. [RDF Schema 1.1, §3.4](https://www.w3.org/TR/rdf-schema/#ch_subclassof). | Written when `ParentType` is the token `sc`. A `ParentType` that names a concept is `rdf:type`, and its `ParentTerm` is `skos:broader`. |
 | `owl:subClassOf` | Not the OWL 2 RDF mapping. A subclass axiom is `rdfs:subClassOf`. [OWL 2 Mapping to RDF Graphs](https://www.w3.org/TR/owl2-mapping-to-rdf/#Mapping_from_the_Structural_Specification_to_RDF_Graphs), table row `SubClassOf(CE1 CE2)`. | Zero triples in the 2.3 RDFS and OWL files. `rdflib` 7.6.0 has no such term in the OWL namespace. |
 | `skos:inScheme` | Membership of a concept scheme. The range is `skos:ConceptScheme` (SKOS S4). | PD hook, and ordinary module schemes. Deleted when the OWL file is built (`code/200_serialise_RDF.py`). |
 
@@ -75,15 +76,17 @@ Shortest broader chain: Blood Type → Medical Health → Special Category Perso
 
 On `pd-owl:BloodType` / `dpv-owl:SpecialCategoryPersonalData`: `rdf:type` true, `rdfs:subClassOf+` true, `skos:broader` false, `skos:inScheme` false. The unversioned IRIs are false.
 
-The special-category type on Blood Type is the hook’s copy of the ancestor’s `ParentTerm`. It is not a second hierarchy. A rule that reads one `skos:broader` hop misses it. A rule that reads only `rdfs:subClassOf` in the RDFS file misses it. A rule that reads `skos:broader` in the OWL file misses it, because that predicate has been removed. The test that both published serialisations carry is `rdf:type` of the category IRI in that file’s namespace.
+The special-category type on Blood Type is the hook’s copy of the ancestor’s `ParentTerm`. It is not a second hierarchy. A rule that reads one `skos:broader` hop misses it. A rule that reads only `rdfs:subClassOf` in the RDFS file misses it. A rule that reads `skos:broader` in the OWL file misses it, because that predicate has been removed. The test that both published serialisations carry for the concept is `rdf:type` of the category IRI in that file’s namespace. That type sits on the concept. RDFS subclass entailment does not pass it on to an instance of `pd:BloodType`. In DPV-OWL, `rdfs:subClassOf` does. `results/report.txt` records that closure for 2.3 and `2.4-dev`.
 
 `fixture/membership-rdfs.ttl` and `fixture/membership-owl.ttl` are excerpts of those published triples. `reproduce.py` checks that the fixture preserves the four RDFS answers and the OWL subclass path.
 
 ## Primer wording
 
-Published primer section 4.2, table row “is subtype of”: RDFS cell `rdfs:subClassOf or skos:broader`, OWL cell `owl:subClassOf`. The same cells are in `primer/index.html` on `dev` (around the “is subtype of” row). Section 4.3 already says extension uses `rdf:type` of the top concept and `skos:broader` for the hierarchy, and that DPV-OWL uses `rdfs:subClassOf`. The OWL example in section 4.2 uses `rdfs:subClassOf`. `guides/dpv-skos.html` on `master` contains neither `skos:broader` nor `rdfs:subClassOf`.
+Published primer section 4.2, table row “is subtype of”: RDFS cell `rdfs:subClassOf or skos:broader`, OWL cell `owl:subClassOf`. The same cells are in `primer/index.html` on `dev`. Section 4.3 already says extension uses `rdf:type` of the top concept and `skos:broader` for the hierarchy, and that DPV-OWL uses `rdfs:subClassOf`. The OWL example in section 4.2 uses `rdfs:subClassOf`. `guides/dpv-skos.html` on `master` contains neither `skos:broader` nor `rdfs:subClassOf`.
 
-Replace the subtype row and add one row, as in [COMMENT.md](COMMENT.md). Put the Blood Type note under the table. Leave section 4.3 as it is.
+The DPV 2.3 specification, Semantics, already says taxonomies use `skos:broader` and that the OWL serialisation uses `rdfs:subClassOf`. Its table then names `owl:subClassOf` in the OWL column. The default column of that row already says `skos:broader`. Both tables are generated. The editable sources on `dev` are `code/jinja2_resources/template_dpv.jinja2` and `code/jinja2_resources/template_primer.jinja2`. `code/300_generate_HTML.py` writes the specification to the vocabulary directory and the primer to `primer/index.html` from `GUIDES` in `code/vocab_management.py`.
+
+Change two cells, as in [COMMENT.md](COMMENT.md). Specification OWL cell of “subtype relation”: `rdfs:subClassOf`. Primer “is subtype of”: `skos:broader` and `rdfs:subClassOf`. Do not add a row. The instance row is already `rdf:type`. Put the Blood Type note under the primer table. Leave section 4.3 as it is.
 
 `code/shacl_shapes/shapes.ttl` requires a preferred label on the object of `skos:broader`. It does not say which relation answers membership.
 
@@ -93,7 +96,7 @@ Transparency and AI reliability. A policy or rule engine that walks the wrong pr
 
 ## Implementation
 
-Adopters query `rdf:type` for the top category and direct `skos:broader` for the parent in the RDFS+SKOS file. In the OWL file they use the `owl` namespace, `rdf:type` for the category, and `rdfs:subClassOf` for the parent. The group edits the primer source and regenerates the published page. No vocabulary term changes. The `pd:PersonalData` type on Professional Experience is a separate data error. This comment reports it so the membership rule is not overstated. It does not propose a spreadsheet edit for that row.
+Adopters query `rdf:type` for the category recorded on the concept, and direct `skos:broader` for the parent, in the RDFS+SKOS file. In the OWL file they use the `owl` namespace, `rdf:type` for the category, and `rdfs:subClassOf` for the parent and for instance classification. The group edits the two Jinja templates and regenerates the HTML. No vocabulary term changes. The `pd:PersonalData` type on Professional Experience is a separate data error. This comment reports it so the membership rule is not overstated. It does not propose a spreadsheet edit for that row.
 
 ## 25 November 2026
 
@@ -136,6 +139,8 @@ Record a later submission only in `MASTER_TRACKER.md` and `evidence/` after it h
 - `code/200_serialise_RDF.py` OWL rewrite of `skos:broader`.
 - `code/shacl_shapes/shapes.ttl`.
 - Primer section 4.2 and 4.3 on `master` `primer/index.html`, and the same table cells on `dev`.
+- DPV 2.3 specification, Semantics, `2.3/dpv/index.html` on `master`, and the same subtype row in `2.4-dev/dpv/index.html`.
+- `code/jinja2_resources/template_dpv.jinja2` and `template_primer.jinja2` on `dev`, rendered by `code/300_generate_HTML.py`.
 - `guides/dpv-skos.html` on `master`: no matches for `skos:broader`, `rdfs:subClassOf`, or `owl:subClassOf`.
 - SKOS Reference, RDF Schema 1.1, and the OWL 2 RDF mapping, sections cited above.
 - 18 November minutes and the 25 November event page, URLs in the meeting section.
@@ -145,7 +150,7 @@ Record a later submission only in `MASTER_TRACKER.md` and `evidence/` after it h
 
 - The online spreadsheets. The repository CSV export was read. It can lag the sheet.
 - An OWL reasoner. The subclass results are SPARQL property paths over asserted triples, plus the RDFS specification of what `rdfs:subClassOf` means. They are not a reasoner trace.
-- Whether `primer/index.html` is hand-authored or generated. Both copies contain the cells. The comment proposes sentences and does not patch the file.
+- An OWL tableau reasoner. The instance result in `results/report.txt` applies RDFS rules rdfs11 and rdfs9 to asserted `rdfs:subClassOf` triples. `primer/index.html` is generated, from `template_primer.jinja2`, by `code/300_generate_HTML.py`.
 - W3C login, so the 25 November join link was not visible.
 - The Advisory Board LLM document named by the draft AI policy.
 - HTML other than the primer, the SKOS guide, and the files named above.

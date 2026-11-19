@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Reproduce DPV concept-membership queries for issue #484.
 
-Reads pinned public Turtle from the w3c-cg/dpv repository. No model API.
+Reads pinned public Turtle, the specification and primer HTML, and the two
+Jinja templates from the w3c-cg/dpv repository. No model API.
 Install: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Run:    .venv/bin/python reproduce.py
 """
@@ -10,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -32,7 +34,17 @@ FILES = {
     "m-pd-owl": (MASTER, "2.3/pd/pd-owl.ttl"),
     "d-dpv": (DEV, "2.4-dev/dpv/dpv.ttl"),
     "d-pd": (DEV, "2.4-dev/pd/pd.ttl"),
+    "d-owl": (DEV, "2.4-dev/dpv/dpv-owl.ttl"),
     "d-pd-owl": (DEV, "2.4-dev/pd/pd-owl.ttl"),
+}
+
+TEXT_FILES = {
+    "spec-html": (MASTER, "2.3/dpv/index.html"),
+    "primer-html": (MASTER, "primer/index.html"),
+    "dev-spec-html": (DEV, "2.4-dev/dpv/index.html"),
+    "dev-primer-html": (DEV, "primer/index.html"),
+    "template-dpv": (DEV, "code/jinja2_resources/template_dpv.jinja2"),
+    "template-primer": (DEV, "code/jinja2_resources/template_primer.jinja2"),
 }
 
 OWL_SUBCLASS = URIRef("http://www.w3.org/2002/07/owl#subClassOf")
@@ -47,13 +59,18 @@ PERSONAL = DPV.PersonalData
 SCHEME = PD["specialcategory-classes"]
 
 
-def fetch(name: str, commit: str, path: str) -> Path:
+def fetch(name: str, commit: str, path: str, suffix: str = ".ttl") -> Path | int:
     CACHE.mkdir(parents=True, exist_ok=True)
-    dest = CACHE / f"{name}.ttl"
+    dest = CACHE / f"{name}{suffix}"
     if not dest.exists():
         url = RAW.format(commit=commit, path=path)
         print(f"GET {url}", file=sys.stderr)
-        urllib.request.urlretrieve(url, dest)
+        request = urllib.request.Request(url, headers={"User-Agent": "dpv-membership-review"})
+        try:
+            with urllib.request.urlopen(request) as response:
+                dest.write_bytes(response.read())
+        except urllib.error.HTTPError as error:
+            return error.code
     return dest
 
 
@@ -73,6 +90,34 @@ def load(*names: str) -> Graph:
 def local(node) -> str:
     text = str(node)
     return text.rsplit("#", 1)[-1] if "#" in text else text.rsplit("/", 1)[-1]
+
+
+def superclass_closure(graph: Graph, start) -> set:
+    """RDFS rules rdfs11, then rdfs9, over asserted rdfs:subClassOf only."""
+    parents: dict = {}
+    for subject, obj in graph.subject_objects(RDFS.subClassOf):
+        parents.setdefault(subject, set()).add(obj)
+    changed = True
+    while changed:
+        changed = False
+        for subject, objs in list(parents.items()):
+            extra = set()
+            for obj in objs:
+                extra |= parents.get(obj, set())
+            if not extra <= objs:
+                objs |= extra
+                changed = True
+    found = {start}
+    changed = True
+    while changed:
+        changed = False
+        extra = set()
+        for item in found:
+            extra |= parents.get(item, set())
+        if not extra <= found:
+            found |= extra
+            changed = True
+    return found
 
 
 def ask(g: Graph, query: str) -> bool:
@@ -98,12 +143,16 @@ def main() -> None:
 
     for name, (commit, path) in FILES.items():
         dest = fetch(name, commit, path)
+        if isinstance(dest, int):
+            emit(f"FILE {name} {path} commit {commit[:12]} HTTP {dest}")
+            continue
         emit(f"FILE {name} {path} commit {commit[:12]} sha256 {sha256(dest)} bytes {dest.stat().st_size}")
 
     rdfs = load("m-dpv", "m-pd")
     pd = load("m-pd")
     owl = load("m-owl", "m-pd-owl")
     dev = load("d-dpv", "d-pd")
+    dev_owl = load("d-owl", "d-pd-owl")
 
     emit("\n== BloodType direct triples (RDFS+SKOS, 2.3 dpv+pd) ==")
     for p in (RDF.type, SKOS.broader, RDFS.subClassOf, SKOS.inScheme):
@@ -162,6 +211,10 @@ def main() -> None:
     emit("\n== same ASKs on 2.4-dev RDFS ==")
     for label, body in checks.items():
         emit(f"  {label}: {ask(dev, body)}")
+
+    emit("\n== same OWL ASKs on 2.4-dev ==")
+    for label, body in owl_checks.items():
+        emit(f"  {label}: {ask(dev_owl, body)}")
 
     emit("\n== special-category sets in pd.ttl alone ==")
     typed = set(pd.subjects(RDF.type, SPECIAL))
@@ -244,11 +297,50 @@ def main() -> None:
         broader = sorted(local(b) for b in rdfs.objects(s, SKOS.broader))
         emit(f"  {local(s)} subClassOf {local(o)} broader {broader or '(none)'}")
 
-    emit("\n== imports and disjointness (2.3 dpv+pd and owl) ==")
-    for label, graph in (("rdfs", rdfs), ("owl", owl)):
+    emit("\n== imports and disjointness ==")
+    for label, graph in (("rdfs", rdfs), ("owl", owl), ("dev-rdfs", dev), ("dev-owl", dev_owl)):
         imports = list(graph.objects(None, OWL.imports))
         disjoint = list(graph.triples((None, OWL.disjointWith, None)))
         emit(f"  {label} owl:imports {len(imports)} owl:disjointWith {len(disjoint)}")
+
+    emit("\n== RDFS rdfs11 then rdfs9: instance of BloodType ==")
+    for label, graph, start, target in (
+        ("2.3 RDFS", rdfs, BLOOD, SPECIAL),
+        ("2.4-dev RDFS", dev, BLOOD, SPECIAL),
+        ("2.3 OWL", owl, PDO.BloodType, DPVO.SpecialCategoryPersonalData),
+        ("2.4-dev OWL", dev_owl, PDO.BloodType, DPVO.SpecialCategoryPersonalData),
+    ):
+        closed = superclass_closure(graph, start)
+        emit(f"  {label}: SpecialCategory in inferred types of an instance: {target in closed}")
+
+    emit("\n== dpv type IRIs in pd.ttl with no prefLabel in dpv+pd ==")
+    for label, graph, combined in (
+        ("2.3", pd, rdfs),
+        ("2.4-dev", load("d-pd"), dev),
+    ):
+        missing = sorted({
+            (local(s), str(o))
+            for s, o in graph.subject_objects(RDF.type)
+            if str(o).startswith("https://w3id.org/dpv") and (o, SKOS.prefLabel, None) not in combined
+        })
+        emit(f"  {label} count {len(missing)}")
+        for subject, obj in missing:
+            emit(f"  {label} {subject} type {obj}")
+
+    emit("\n== documentation cells ==")
+    needles = ("owl:subClassOf", "rdfs:subClassOf or skos:broader", "subtype relation")
+    for name, (commit, path) in TEXT_FILES.items():
+        suffix = ".html" if path.endswith(".html") else ".jinja2"
+        dest = fetch(name, commit, path, suffix=suffix)
+        if isinstance(dest, int):
+            emit(f"  {name} {path} HTTP {dest}")
+            continue
+        text = dest.read_text(errors="replace")
+        found = [needle for needle in needles if needle in text]
+        emit(
+            f"  {name} {path} bytes {dest.stat().st_size} "
+            f"sha256 {sha256(dest)[:16]} cells {found or '(none of the checked cells)'}"
+        )
 
     write_fixture(rdfs, owl)
     text = "\n".join(lines) + "\n"
