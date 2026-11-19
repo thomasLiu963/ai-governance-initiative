@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>GPC value sampled by a new top-level document</title>
+<script src="/resources/testharness.js"></script>
+<script>
+const expected = new URLSearchParams(location.search).get("gpc") === "true";
+
+promise_test(async () => {
+  assert_equals(navigator.globalPrivacyControl, expected,
+    "navigator.globalPrivacyControl matches the preference from when this document began loading");
+  const response = await fetch("sec-gpc-value.py?nonce=" + Date.now() + "-" + Math.random(), {cache: "no-store"});
+  assert_equals(response.status, 200, "Sec-GPC echo status");
+  const body = await response.json();
+  assert_equals(body["sec-gpc"], expected ? "1" : null,
+    "Sec-GPC on a subresource of this new top-level document");
+}, "A new top-level document uses the preference from when it began loading");
+</script>

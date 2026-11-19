@@ -1,0 +1,95 @@
+FILE m-dpv 2.3/dpv/dpv.ttl commit 689d32c0f7c5 sha256 97bc7ce1a4544d39b9e480eeb7990693bee1155fb094f3dd50b9eb1d0c0d578f bytes 689268
+FILE m-pd 2.3/pd/pd.ttl commit 689d32c0f7c5 sha256 65d3f07a407a76c7dbf2934a386e74137e434f0b0446f93000b4fb580c641080 bytes 135022
+FILE m-owl 2.3/dpv/dpv-owl.ttl commit 689d32c0f7c5 sha256 af2aa4776ac7afe4c6c66b310fe4b7cbb4ef12bddfc2092cf30c9ebf524112a5 bytes 643228
+FILE m-pd-owl 2.3/pd/pd-owl.ttl commit 689d32c0f7c5 sha256 99308e733f9f4825ddc3783a973e94c8e005faa12bf644f103d03443126aa12a bytes 128668
+FILE d-dpv 2.4-dev/dpv/dpv.ttl commit aff91c294b10 sha256 593f6fb3668a713c0a0f691acbda9f2b3e2fd4e94c92d4b3bc98a1f6ca0b002a bytes 688128
+FILE d-pd 2.4-dev/pd/pd.ttl commit aff91c294b10 sha256 c51d434bcf7ade8d697a36c8551a831398a4423491e2e0663e05b4f4f0d1d32f bytes 133848
+FILE d-pd-owl 2.4-dev/pd/pd-owl.ttl commit aff91c294b10 sha256 99308e733f9f4825ddc3783a973e94c8e005faa12bf644f103d03443126aa12a bytes 128668
+
+== BloodType direct triples (RDFS+SKOS, 2.3 dpv+pd) ==
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> -> ['Class', 'Concept', 'PersonalData', 'SpecialCategoryPersonalData']
+  <http://www.w3.org/2004/02/skos/core#broader> -> ['MedicalHealth']
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> -> []
+  <http://www.w3.org/2004/02/skos/core#inScheme> -> ['extended-classes', 'specialcategory-classes']
+
+== broader chain from BloodType (shortest hop) ==
+  hop 1 MedicalHealth dpv-type=['PersonalData', 'SpecialCategoryPersonalData'] broader=['External', 'SpecialCategoryPersonalData']
+  hop 2 External dpv-type=['PersonalData'] broader=['PersonalData']
+  hop 2 SpecialCategoryPersonalData dpv-type=[] broader=['SensitivePersonalData']
+  hop 3 PersonalData dpv-type=[] broader=['Data']
+  hop 3 SensitivePersonalData dpv-type=[] broader=['PersonalData', 'SensitiveData']
+  hop 4 Data dpv-type=[] broader=[]
+  hop 4 SensitiveData dpv-type=[] broader=['Data']
+
+== ASK on published 2.3 RDFS+SKOS (dpv.ttl + pd.ttl) ==
+  type special: True
+  type personal: True
+  direct broader special: False
+  path broader special: True
+  path broader personal: True
+  direct subclass special: False
+  path subclass special: False
+  in scheme: True
+  predicate owl:subClassOf exists: False
+
+== ASK on published 2.3 OWL (dpv-owl.ttl + pd-owl.ttl) ==
+  type special (owl IRI): True
+  type personal (owl IRI): True
+  skos:broader any: False
+  path rdfs:subClassOf special: True
+  path rdfs:subClassOf personal: True
+  in scheme: False
+  owl:subClassOf any: False
+  unversioned dpv IRI type: False
+
+== same ASKs on 2.4-dev RDFS ==
+  type special: True
+  type personal: True
+  direct broader special: False
+  path broader special: True
+  path broader personal: True
+  direct subclass special: False
+  path subclass special: False
+  in scheme: True
+  predicate owl:subClassOf exists: False
+
+== special-category sets in pd.ttl alone ==
+  rdf:type count 32
+  inScheme count 32
+  broader+ count 32
+  direct broader count 11
+  type minus path: (none)
+  path minus type: (none)
+  type minus scheme: (none)
+  scheme minus type: (none)
+  typed but not direct child (21): BloodType, DNACode, Disability, DrugTestResult, FacialExpression, FacialPrint, FamilyHealthHistory, Fetish, Fingerprint, Genetic, Health, HealthHistory, HealthRecord, IndividualHealthHistory, MentalHealth, PhysicalHealth, Prescription, Proclivity, Retina, SexualHistory, SexualPreference
+
+== personal-data type versus broader path, in pd.ttl ==
+  rdf:type PersonalData 229
+  broader+ PersonalData 230
+  type minus path (0): (none)
+  path minus type (1): ProfessionalExperience
+
+== dpv.ttl alone, classes with prefLabel ==
+  classes 973 broader 948 subClassOf 195
+
+== pd:ProfessionalExperience uses a different PersonalData IRI ==
+  2.3 types ['https://w3id.org/dpv/pd#PersonalData']
+  2.3 pd:PersonalData has a prefLabel: False; broader+ reaches dpv:PersonalData: True
+  2.4-dev types ['https://w3id.org/dpv/pd#PersonalData']
+  2.4-dev pd:PersonalData has a prefLabel: False; broader+ reaches dpv:PersonalData: True
+
+== predicate counts, subjects with skos:prefLabel ==
+  rdfs-2.3 terms 1354 classes 1204 properties 150 class broader 1179 class subClassOf 195 prop broader 69 owl:subClassOf triples 0 skos:broader triples 1306
+  owl-2.3 terms 1354 classes 1204 properties 150 class broader 0 class subClassOf 1183 prop broader 0 owl:subClassOf triples 0 skos:broader triples 0
+
+== class subClassOf targets that are not also skos:broader targets ==
+  count 4
+  Law subClassOf Class broader (none)
+  Location subClassOf Class broader (none)
+  LocationFixture subClassOf Class broader (none)
+  PublicRegisterOfEntities subClassOf Class broader (none)
+
+== imports and disjointness (2.3 dpv+pd and owl) ==
+  rdfs owl:imports 0 owl:disjointWith 0
+  owl owl:imports 0 owl:disjointWith 0

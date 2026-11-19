@@ -1,0 +1,272 @@
+[
+  {
+    "label": "all-but-force",
+    "features": "GlobalPrivacyControl,GlobalPrivacyControlApi,UniversalOptOut,UniversalOptOutSettings",
+    "error": null,
+    "get_initial": {
+      "gpc": false
+    },
+    "loaded": {
+      "exposed": true,
+      "attribute": false,
+      "type": "boolean"
+    },
+    "set_to": true,
+    "set_reply": {
+      "gpc": true
+    },
+    "same_document": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "reloaded": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "after_navigation": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "http": [
+      [
+        "/page1",
+        null
+      ],
+      [
+        "/sub1",
+        null
+      ],
+      [
+        "/sub2",
+        "1"
+      ],
+      [
+        "/page2",
+        "1"
+      ],
+      [
+        "/sub3",
+        "1"
+      ]
+    ]
+  },
+  {
+    "label": "api-force",
+    "features": "GlobalPrivacyControlApi,GlobalPrivacyControlForce",
+    "error": null,
+    "get_initial": {
+      "gpc": false
+    },
+    "loaded": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "set_to": false,
+    "set_reply": {
+      "gpc": false
+    },
+    "same_document": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "reloaded": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "after_navigation": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "http": [
+      [
+        "/page1",
+        "1"
+      ],
+      [
+        "/sub1",
+        "1"
+      ],
+      [
+        "/sub2",
+        "1"
+      ],
+      [
+        "/page2",
+        "1"
+      ],
+      [
+        "/sub3",
+        "1"
+      ]
+    ]
+  },
+  {
+    "label": "api-optout",
+    "features": "GlobalPrivacyControlApi,UniversalOptOut,UniversalOptOutSettings",
+    "error": null,
+    "get_initial": {
+      "gpc": false
+    },
+    "loaded": {
+      "exposed": true,
+      "attribute": false,
+      "type": "boolean"
+    },
+    "set_to": true,
+    "set_reply": {
+      "gpc": true
+    },
+    "same_document": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "reloaded": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "after_navigation": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "http": [
+      [
+        "/page1",
+        null
+      ],
+      [
+        "/sub1",
+        null
+      ],
+      [
+        "/sub2",
+        "1"
+      ],
+      [
+        "/page2",
+        "1"
+      ],
+      [
+        "/sub3",
+        "1"
+      ]
+    ]
+  },
+  {
+    "label": "api",
+    "features": "GlobalPrivacyControlApi",
+    "error": null,
+    "get_initial": {
+      "gpc": false
+    },
+    "loaded": {
+      "exposed": true,
+      "attribute": false,
+      "type": "boolean"
+    },
+    "set_to": true,
+    "set_reply": {
+      "gpc": true
+    },
+    "same_document": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "reloaded": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "after_navigation": {
+      "exposed": true,
+      "attribute": true,
+      "type": "boolean"
+    },
+    "http": [
+      [
+        "/page1",
+        null
+      ],
+      [
+        "/sub1",
+        null
+      ],
+      [
+        "/sub2",
+        "1"
+      ],
+      [
+        "/page2",
+        "1"
+      ],
+      [
+        "/sub3",
+        "1"
+      ]
+    ]
+  },
+  {
+    "label": "default",
+    "features": "",
+    "error": null,
+    "get_initial": {
+      "error": "Global Privacy Control is disabled."
+    },
+    "loaded": {
+      "exposed": false,
+      "attribute": false,
+      "type": "undefined"
+    },
+    "set_to": true,
+    "set_reply": {
+      "error": "Global Privacy Control is disabled."
+    },
+    "same_document": {
+      "exposed": false,
+      "attribute": false,
+      "type": "undefined"
+    },
+    "reloaded": {
+      "exposed": false,
+      "attribute": false,
+      "type": "undefined"
+    },
+    "after_navigation": {
+      "exposed": false,
+      "attribute": false,
+      "type": "undefined"
+    },
+    "http": [
+      [
+        "/page1",
+        null
+      ],
+      [
+        "/sub1",
+        null
+      ],
+      [
+        "/sub2",
+        null
+      ],
+      [
+        "/page2",
+        null
+      ],
+      [
+        "/sub3",
+        null
+      ]
+    ]
+  }
+]

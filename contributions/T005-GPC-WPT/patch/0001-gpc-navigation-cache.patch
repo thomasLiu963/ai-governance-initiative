@@ -1,0 +1,131 @@
+diff --git a/gpc/navigation-cache.https.html b/gpc/navigation-cache.https.html
+new file mode 100644
+index 000000000000..000000000000
+--- /dev/null
++++ b/gpc/navigation-cache.https.html
+@@ -0,0 +1,69 @@
++<!DOCTYPE html>
++<meta charset="utf-8">
++<title>GPC preference is cached until the next top-level document load</title>
++<!--
++  Spec: https://www.w3.org/TR/gpc/#preference-caching
++  A preference change is not reflected in an already loaded top-level
++  document. A new top-level document samples the preference when it begins
++  loading. Workers are not covered; w3c/gpc#146 has no resolution.
++-->
++<script src="/resources/testdriver.js"></script>
++<script src="/resources/testdriver-vendor.js"></script>
++<script src="/resources/testharness.js"></script>
++<script src="/resources/testharnessreport.js"></script>
++<script>
++function expectedHeader(gpc) {
++  return gpc ? "1" : null;
++}
++
++function readSecGPC() {
++  const url = "support/sec-gpc-value.py?nonce=" + Date.now() + "-" + Math.random();
++  return fetch(url, {cache: "no-store"}).then(response => {
++    assert_equals(response.status, 200, "Sec-GPC echo status");
++    return response.json();
++  }).then(body => body["sec-gpc"]);
++}
++
++promise_test(async t => {
++  const session = await test_driver.get_global_privacy_control();
++  assert_true(session.gpc === true || session.gpc === false,
++    "Get Global Privacy Control returns a boolean session preference");
++  t.add_cleanup(() => test_driver.set_global_privacy_control(session.gpc));
++
++  const cached = navigator.globalPrivacyControl;
++  assert_equals(typeof cached, "boolean",
++    "navigator.globalPrivacyControl is a boolean in the loaded document");
++  const headerBefore = await readSecGPC();
++  assert_equals(headerBefore, expectedHeader(cached),
++    "Sec-GPC on a same-document subresource matches the cached preference");
++
++  const updated = !cached;
++  const setResult = await test_driver.set_global_privacy_control(updated);
++  assert_equals(setResult.gpc, updated,
++    "Set Global Privacy Control reports the updated session preference");
++
++  const child = window.open("support/navigation-cache-document.html?gpc=" + updated);
++  t.add_cleanup(() => {
++    if (child && !child.closed) {
++      child.close();
++    }
++  });
++  assert_not_equals(child, null, "window.open created a new top-level browsing context");
++
++  try {
++    assert_equals(navigator.globalPrivacyControl, cached,
++      "the loaded document keeps its cached navigator.globalPrivacyControl");
++    const headerAfter = await readSecGPC();
++    assert_equals(headerAfter, headerBefore,
++      "a later same-document subresource keeps the cached Sec-GPC value");
++  } finally {
++    await fetch_tests_from_window(child);
++  }
++
++  assert_equals(navigator.globalPrivacyControl, cached,
++    "loading another top-level document does not refresh this document");
++  const headerStill = await readSecGPC();
++  assert_equals(headerStill, headerBefore,
++    "this document's subresource still carries the cached Sec-GPC value");
++}, "A preference change waits for the next top-level document load");
++</script>
+
+diff --git a/gpc/support/navigation-cache-document.html b/gpc/support/navigation-cache-document.html
+new file mode 100644
+index 000000000000..000000000000
+--- /dev/null
++++ b/gpc/support/navigation-cache-document.html
+@@ -0,0 +1,17 @@
++<!DOCTYPE html>
++<meta charset="utf-8">
++<title>GPC value sampled by a new top-level document</title>
++<script src="/resources/testharness.js"></script>
++<script>
++const expected = new URLSearchParams(location.search).get("gpc") === "true";
++
++promise_test(async () => {
++  assert_equals(navigator.globalPrivacyControl, expected,
++    "navigator.globalPrivacyControl matches the preference from when this document began loading");
++  const response = await fetch("sec-gpc-value.py?nonce=" + Date.now() + "-" + Math.random(), {cache: "no-store"});
++  assert_equals(response.status, 200, "Sec-GPC echo status");
++  const body = await response.json();
++  assert_equals(body["sec-gpc"], expected ? "1" : null,
++    "Sec-GPC on a subresource of this new top-level document");
++}, "A new top-level document uses the preference from when it began loading");
++</script>
+
+diff --git a/gpc/support/sec-gpc-value.py b/gpc/support/sec-gpc-value.py
+new file mode 100644
+index 000000000000..000000000000
+--- /dev/null
++++ b/gpc/support/sec-gpc-value.py
+@@ -0,0 +1,25 @@
++import json
++
++
++def main(request, response):
++    raw = request.headers.get("sec-gpc")
++    if raw is None:
++        value = None
++    elif isinstance(raw, bytes):
++        value = raw.decode("utf-8")
++    elif isinstance(raw, list):
++        value = [
++            item.decode("utf-8") if isinstance(item, bytes) else item
++            for item in raw
++        ]
++    else:
++        value = raw
++    payload = json.dumps({"sec-gpc": value}).encode("utf-8")
++    return (
++        200,
++        [
++            (b"Content-Type", b"application/json"),
++            (b"Cache-Control", b"no-store"),
++        ],
++        payload,
++    )

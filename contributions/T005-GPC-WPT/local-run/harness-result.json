@@ -1,0 +1,66 @@
+{
+  "browser": "Chrome/157.0.8103.79",
+  "navigate": {
+    "frameId": "C01B961E7059547D8A0449DD07E261CF",
+    "loaderId": "E96A03E14D1ACE50B4CA69BEE97A6CAE",
+    "isDownload": false
+  },
+  "report": {
+    "summary": "Summary\n\nHarness status: OK\n\nRerun\n\nFound 2 tests\n\n1 Pass\n1 Fail",
+    "log": "Summary\n\nHarness status: OK\n\nRerun\n\nFound 2 tests\n\n1 Pass\n1 Fail\nDetails\nResult\tTest Name\tMessage\nFail\tA preference change waits for the next top-level document load\tassert_equals: the loaded document keeps its cached navigator.globalPrivacyControl expected false but got true\n    at Test.<anonymous> (http://127.0.0.1:8771/gpc/navigation-cache.https.html:54:5)\nAsserts run\n\nPass\tA new top-level document uses the preference from when it began loading\t"
+  },
+  "http": [
+    {
+      "path": "/gpc/navigation-cache.https.html",
+      "sec-gpc": null
+    },
+    {
+      "path": "/resources/testdriver.js",
+      "sec-gpc": null
+    },
+    {
+      "path": "/resources/testdriver-vendor.js",
+      "sec-gpc": null
+    },
+    {
+      "path": "/resources/testharness.js",
+      "sec-gpc": null
+    },
+    {
+      "path": "/resources/testharnessreport.js",
+      "sec-gpc": null
+    },
+    {
+      "path": "/__gpc",
+      "sec-gpc": null
+    },
+    {
+      "path": "/gpc/support/sec-gpc-value.py",
+      "sec-gpc": null
+    },
+    {
+      "path": "/__gpc",
+      "sec-gpc": null
+    },
+    {
+      "path": "/favicon.ico",
+      "sec-gpc": null
+    },
+    {
+      "path": "/gpc/support/navigation-cache-document.html",
+      "sec-gpc": "1"
+    },
+    {
+      "path": "/resources/testharness.js",
+      "sec-gpc": "1"
+    },
+    {
+      "path": "/gpc/support/sec-gpc-value.py",
+      "sec-gpc": "1"
+    },
+    {
+      "path": "/__gpc",
+      "sec-gpc": "1"
+    }
+  ]
+}

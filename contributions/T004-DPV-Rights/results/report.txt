@@ -1,0 +1,89 @@
+FILE m-dpv 2.3/dpv/dpv.ttl commit 689d32c0f7c5 sha256 97bc7ce1a4544d39b9e480eeb7990693bee1155fb094f3dd50b9eb1d0c0d578f bytes 689268
+FILE m-owl 2.3/dpv/dpv-owl.ttl commit 689d32c0f7c5 sha256 af2aa4776ac7afe4c6c66b310fe4b7cbb4ef12bddfc2092cf30c9ebf524112a5 bytes 643228
+FILE m-html 2.3/dpv/modules/purposes.html commit 689d32c0f7c5 sha256 1175d007ca24d2702be68b5c81a3268f15b90f2b8c1d858cd44c6515bac57d91 bytes 608205
+FILE d-dpv 2.4-dev/dpv/dpv.ttl commit aff91c294b10 sha256 593f6fb3668a713c0a0f691acbda9f2b3e2fd4e94c92d4b3bc98a1f6ca0b002a bytes 688128
+FILE d-owl 2.4-dev/dpv/dpv-owl.ttl commit aff91c294b10 sha256 af2aa4776ac7afe4c6c66b310fe4b7cbb4ef12bddfc2092cf30c9ebf524112a5 bytes 643228
+FILE d-csv code/vocab_csv/Purpose.csv commit aff91c294b10 sha256 be85006327386a8256b98e07083ca358c91100e1f18132fa36c771e1412fad2c bytes 47395
+FILE d-html 2.4-dev/dpv/modules/purposes.html commit aff91c294b10 sha256 74341a7fab526723627c1cedb8f061412f4f58012d971f9338a64aefecf3c58f bytes 451208
+
+== 2.3 purpose parent guard ==
+  purpose whose broader target is not a purpose and is not dpv:Purpose: 1 pairs
+  RightsFulfilment broader LegalObligation parent-type LegalBasis
+  children of FulfilmentOfObligation:
+    FulfilmentOfContractualObligation type=['Purpose']
+    LegalCompliance type=['Purpose']
+    ProtectionOfIPR type=['Purpose']
+  children of LegalCompliance: (none)
+  children of RightsFulfilment: (none)
+  children of LegalObligation: ['RightsFulfilment']
+
+== 2.4-dev purpose parent guard ==
+  purpose whose broader target is not a purpose and is not dpv:Purpose: 1 pairs
+  RightsFulfilment broader LegalObligation parent-type LegalBasis
+  children of FulfilmentOfObligation:
+    FulfilmentOfContractualObligation type=['Purpose']
+    LegalCompliance type=['Purpose']
+    ProtectionOfIPR type=['Purpose']
+  children of LegalCompliance: (none)
+  children of RightsFulfilment: (none)
+  children of LegalObligation: ['RightsFulfilment']
+
+== definitions and scope notes (2.3) ==
+RightsFulfilment
+  type ['Purpose'] broader ['LegalObligation'] scheme ['purposes-classes']
+  definition: Purposes associated with the fulfillment of rights specified in law
+  scope: Where Rights Fulfillment includes activities that are not legal obligations, for example conducting Identity Verification, the documentation should indicate this by expressing them as separate purposes within the same activity
+LegalObligation
+  type ['LegalBasis'] broader ['LegalBasis'] scheme ['legal-basis-classes']
+  definition: Legal Obligation to conduct the specified activities
+LegalBasis
+  type [] broader [] scheme ['legal-basis-classes']
+  definition: Legal basis used to justify processing of data or use of technology in accordance with a law
+  scope: Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.
+Purpose
+  type [] broader [] scheme ['purposes-classes']
+  definition: Purpose or (broader) Goal associated with data or technology
+  scope: The purpose or goal here is intended to sufficiently describe the intention or objective of why the data or technology is being used, and should be broader than mere technical descriptions of achieving a capability. For example, "Analyse Data" is an abstract purpose with no indication of what the analyses is for as compared to a purpose such as "Marketing" or "Service Provision" which provide clarity and comprehension of the 'purpose' and can be enhanced with additional descriptions. Such modelling is in line with regulatory requirements regarding the specificity of purposes, for example in GDPR
+LegalCompliance
+  type ['Purpose'] broader ['FulfilmentOfObligation'] scheme ['purposes-classes']
+  definition: Purposes associated with carrying out data processing to fulfill a legal or statutory obligation
+  scope: This purpose only refers to processing that is additionally required in order to fulfill the obligations and requirements associated with a law. For example, the use of consent would have its own separate purposes, with this purpose addressing a legal requirement for maintaining consent record (along with RecordManagement). This purpose will typically be used with Legal Obligation as the legal basis.
+FulfilmentOfObligation
+  type ['Purpose'] broader ['Purpose'] scheme ['purposes-classes']
+  definition: Purposes associated with carrying out data processing to fulfill an obligation
+FulfilmentOfContractualObligation
+  type ['Purpose'] broader ['FulfilmentOfObligation'] scheme ['purposes-classes']
+  definition: Purposes associated with carrying out data processing to fulfill a contractual obligation
+ProtectionOfIPR
+  type ['Purpose'] broader ['FulfilmentOfObligation'] scheme ['purposes-classes']
+  definition: Purposes associated with the protection of intellectual property rights
+OrganisationComplianceManagement
+  type ['Purpose'] broader ['OrganisationGovernance'] scheme ['purposes-classes']
+  definition: Purposes associated with managing compliance for organisation in relation to internal policies
+  scope: Note that this concept relates to internal organisational compliance. The concept LegalCompliance should be used for external legal or regulatory compliance.
+
+== OWL 2.3 subclass chain ==
+  type ['Class', 'Class', 'Purpose']
+  subClassOf ['LegalObligation']
+  skos:broader any False
+  subClassOf+ LegalBasis, LegalObligation
+  owl:disjointWith triples 0
+  Purpose direct subClassOf (none)
+  Purpose subClassOf+ nodes that can reach LegalBasis: (none)
+  RightsFulfilment is typed Purpose and is a subclass of LegalBasis: True
+
+== dev Purpose.csv ParentTerm ==
+  header: Term,Label,Definition,ParentTerm,ParentType,Value,RelatedTerms,Relation,Usage,Source,Created,Modified,Status,Contributors,Resolution
+  FulfilmentOfObligation ParentTerm= ParentType=dpv:Purpose
+  LegalCompliance ParentTerm=dpv:FulfilmentOfObligation ParentType=dpv:Purpose
+  RightsFulfilment ParentTerm=dpv:LegalObligation ParentType=dpv:Purpose
+  FulfilmentOfContractualObligation ParentTerm=dpv:FulfilmentOfObligation ParentType=dpv:Purpose
+  ProtectionOfIPR ParentTerm=dpv:FulfilmentOfObligation ParentType=dpv:Purpose
+
+== generated HTML object-of-relation ==
+  2.3 RightsFulfilment: hasLegalBasis=True hasPurpose=False snippet_has_LegalObligation_parent=True
+  2.3 LegalCompliance: hasLegalBasis=False hasPurpose=True snippet_has_LegalObligation_parent=False
+  2.3 FulfilmentOfObligation: hasLegalBasis=False hasPurpose=True snippet_has_LegalObligation_parent=False
+  2.4-dev RightsFulfilment: hasLegalBasis=True hasPurpose=False snippet_has_LegalObligation_parent=True
+  2.4-dev LegalCompliance: hasLegalBasis=False hasPurpose=True snippet_has_LegalObligation_parent=False
+  2.4-dev FulfilmentOfObligation: hasLegalBasis=False hasPurpose=True snippet_has_LegalObligation_parent=False
