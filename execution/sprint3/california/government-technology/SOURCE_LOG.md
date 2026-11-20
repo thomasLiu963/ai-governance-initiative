@@ -1,0 +1,43 @@
+# Source log
+
+Research date: 2026-11-19. Nothing in this directory was mailed, filed, or sent to an agency. A web-search synthesis was not used as a fact when the underlying page did not contain it. In particular, this pass did not adopt an unsourced statement that a section 100 filing on August 4, 2026, or in Register 2026, Number 14 or Number 32, amended title 13, section 227.02. Those dates appeared in search summaries. They were not in a history note this pass retrieved.
+
+Prior project memos are cited as prior research, not as a substitute for the official page.
+
+| Source | Read on 2026-11-19 | Used for |
+| --- | --- | --- |
+| Department of Motor Vehicles, Order to Adopt, Article 3.7, https://www.dmv.ca.gov/portal/file/order-to-adopt-article-3-7-regulations-pdf/ | Full extracted text | Operative sections 227.02(v), (w), and (x); sections 227.20 and 227.42; form revision dates in that order |
+| Department of Motor Vehicles, autonomous-vehicle regulations page, https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/california-autonomous-vehicle-regulations/ | Page listing the order as a current regulation and stating the April 28, 2026 effective date in the linked rulemaking description used by the prior memo | Status of the order |
+| Department of Motor Vehicles, Order to Adopt, Article 3.8, https://www.dmv.ca.gov/portal/file/order-to-adopt-article-3-8-regulations-pdf/ | Section 228.02 | Whether the deployment article repeats the permit-name swap |
+| Westlaw display of current section 227.42, document ID481BF50488111F185A8890ED67EED18 | Search extract of the opening paragraph | Form OL 318 shown as Rev. 6/2026. History note not retrieved |
+| Westlaw display of section 227.02, document I5B40E0E35A1E11EC8227000D3A7C4BC3 | Search extract of the opening | Still the pre-2026 opening (“As used in this article”). Not used as the current article |
+| Westlaw browse of Article 3.7, guid I5B3289005A1E11EC8227000D3A7C4BC3 | Section list in the extract | Still lists the pre-2026 section numbers, including section 227.38 as the driverless-permit section |
+| Westlaw and Cornell displays of former section 227.38 | Opening paragraph and Cornell history through Register 2024, No. 12 | Pre-2026 text. OL 318 at Rev. 7/2020. Not the current article |
+| OL 311 Application Guide, https://qr.dmv.ca.gov/portal/file/ol-311-application-guide-pdf/ | Fee, safety-case, and permit-term paragraphs | Guide cites section 227.36 for the permit term. Not a regulation |
+| Driver safety notice, Register 2026, No. 40-Z (October 2, 2026), https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/2026-Notice-Register-No.-40-Z-October-2-2026.pdf | Notice text | Comment deadline November 16, 2026; digest sentence on telephone requests; repeal of section 115.06; contact |
+| Driver safety express terms, https://www.dmv.ca.gov/portal/file/driver-safety-hearings-proposed-regulatory-text-pdf/ and the reader-accessible version | Both extractions | “Proscribed”; citation to section 115.06 inside the proposal that repeals it. Strikeout and underline are reliable in the reader-accessible file. The unmarked PDF merges them |
+| Driver safety initial statement of reasons, https://www.dmv.ca.gov/portal/file/driver-safety-hearings-initial-statement-of-reasons-pdf/ | Opening and the section 115.04 discussion | Department’s stated purpose. Not a substitute for the marked text |
+| DMV rulemaking page, https://www.dmv.ca.gov/portal/about-the-california-department-of-motor-vehicles/california-dmv-rulemaking-actions/ | Current-proposals list | Comment period for driver safety ends November 16, 2026. Regulations Branch address |
+| OAL monthly notice-register pages for August, September, October, and November 2026, linked from https://oal.ca.gov/california_regulatory_notice_online/ | Tables of contents, Registers 32-Z through 46-Z | Notice scan |
+| Register 2026, No. 32-Z, https://oal.ca.gov/wp-content/uploads/sites/166/2026/08/2026-Notice-Register-No.-32-Z-August-7-2026.pdf | Extracted text searched for the Department of Motor Vehicles and section 227 | No DMV autonomous-vehicle section 100 entry in the extracted text |
+| Register 2026, No. 41-Z, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/2026-Notice-Register-No.-41-Z-October-9-2026.pdf | OAL notices | Hearing and comment dates for the two title 1 proposals |
+| Register 2026, No. 46-Z, https://oal.ca.gov/wp-content/uploads/sites/166/2026/11/2026-Notice-Register-No.-46-Z-November-13-2026.pdf | CalHR, PERB, and School Finance Authority notices | Open comment dates |
+| OAL notice-register schedule, January 2026 through July 2027, https://oal.ca.gov/wp-content/uploads/sites/166/2026/06/NR-Schedule-Jan-2026-July-2027-Final-Remediated.pdf | Publication and 45-day columns from July 2026 forward | Which noticed actions can still be open |
+| OAL rulemaking calendar page, https://oal.ca.gov/publications/rulemaking_calendar/ | Page text | 2026 calendar is incorporated in Register 2026, No. 13-Z (March 27, 2026). The 710-page compilation was not extracted agency by agency |
+| OAL rulemaking page, https://oal.ca.gov/oal-rulemaking/ | Pending list | Two open OAL proposals. Underground-regulation petition regulations approved October 31, 2022 |
+| OAL originally proposed text, file-and-print, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/02.-Originally-Proposed-Text_2026.0914.pdf | Sections 1, 6, 14, and 110 | Open-comment defect |
+| OAL notice, file-and-print, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/01.-Notice-of-Proposed-Action_2026.0928.pdf | Hearing, comment deadline, contact | Decision window |
+| OAL initial statement of reasons, file-and-print, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/03.-Initial-Statement-of-Reasons_2026.0915.pdf | Purpose of sections 1, 6, 14, and 110 | Conflict between the statement and section 6 |
+| OAL originally proposed text, section 45, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/02.-Originally-Proposed-Text_rev.-9.25.26.pdf | Full short text | Compared with Government Code sections 11346.2 and 11347.1. No comment drafted |
+| PERB proposed section 32142, https://perb.ca.gov/wp-content/uploads/regulations/Proposed-Text-Requests-for-Accommodation.pdf | Full text | Open accessibility proceeding. No packet |
+| PERB notice, https://perb.ca.gov/wp-content/uploads/regulations/Notice-of-Proposed-Rulemaking-Requests-for-Accommodation.pdf | Digest and authority note | Comment deadline in the register |
+| Government Code sections 11340.6, 11340.7, 11340.9, 11343.8, 11349, and 11400.20, official display, https://leginfo.legislature.ca.gov/ | Section text | Petition elements, 30-day decision, exemptions, file-and-print statute, clarity, hearing-regulation authority |
+| Government Code section 11545 and the following sections of Chapter 5.6, official display | Director’s duties, including maintenance of the information-technology sections of the State Administrative Manual | Department of Technology |
+| CDT, State Information Management Manual page, https://www.cdt.ca.gov/policy/simm/ | Description of the manual | Not a code title |
+| CDT Technology Letter 25-01, https://www.cdt.ca.gov/policy/technology-letters/technology-letter-25-01/ | List of SAM 4986 sections and the February 20, 2025 effective date | Policies, not regulations |
+| SAM 4986 compilation posted by the Judicial Council, https://courts.ca.gov/system/files/file/sam-4986-genai.pdf | Scope and statutory references | Same conclusion |
+| CPUC proposed decision cover, R.25-08-013, mailed September 4, 2026, https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M622/K778/622778147.pdf | Cover and the comment recitation | Not a California Code of Regulations section. Comment dates have passed |
+| Title 1, section 100, Westlaw display of the opening of subsection (a), document I840D19D0FD4311EC915FCFE498765408 | Opening sentence | “Does not materially alter any requirement, right, responsibility, condition, prescription or other regulatory element.” Later example subdivisions were not re-fetched in full |
+| Prior memos in `execution/phase1/CALIFORNIA.md` and `execution/sprint2/california/` | Read, not rewritten | Department of Technology drop; section 227.02 candidate; petition addresses |
+
+Registers opened as PDFs or as official tables of contents: 32-Z (August 7), 33-Z (August 14), 35-Z (August 28), 40-Z (October 2), 41-Z (October 9), 44-Z (October 30), and 46-Z (November 13). August, September, October, and November tables of contents were read from the Office of Administrative Law’s month pages even where the weekly PDF was not separately extracted.
