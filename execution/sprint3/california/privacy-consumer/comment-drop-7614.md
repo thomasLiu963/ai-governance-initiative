@@ -1,5 +1,7 @@
 DRAFT — NOT FILED
 
+Do not send until a named person approves this comment. Written comments close at 5:00 p.m. Pacific Time on January 6, 2027. The Agency posts formal comments. Include a name. Include a mailing address or email only if you accept that it will be public. Do not include a telephone number, an account number, or any other personal information the comment does not need.
+
 Data Broker Updates and DROP Audits
 
 Public comment on the notice published in the California Regulatory Notice Register, 2026, No. 46-Z (November 13, 2026).

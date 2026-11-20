@@ -1,283 +1,213 @@
-# California Sprint 3E — final selection
+# California Sprint 3 — integrated selection
 
-Date: 2026-11-19. Research and drafting record. Nothing in this directory has been mailed, emailed, filed, or published.
+Date: 2026-11-19. Nothing in this directory has been mailed, emailed, filed, or posted.
 
-This selection contains two petitions. A list of ten would have required issues this review did not verify. The instruction for this pass was to begin the comparison once four independent Sprint 3 reports existed, and to prefer a small number of verified outcomes over unacted filings.
+This selection replaces the earlier Sprint 3E file, which was written before the four research reports existed. All four reports are now in this directory:
 
-## What the four Sprint 3 reports were
-
-They do not exist.
-
-| Agent | Assigned directory | What the transcript shows |
+| Report | Path | Lead the report recommended |
 | --- | --- | --- |
-| Sprint 3A, civil rights, employment, education, housing | `execution/sprint3/california/civil-rights/` | One tool turn, then `composer_abort_controller_aborted`. No report. |
-| Sprint 3B, privacy, insurance, consumer rights | `execution/sprint3/california/privacy-consumer/` | Two tool turns, then the same abort. No report. |
-| Sprint 3C | Not identified | No transcript and no files. |
-| Sprint 3D | Not identified | No transcript and no files. |
+| Civil rights | `civil-rights/` | Pregnancy-accommodation statement of reasons, notice file Z2026-1006-03 |
+| Privacy and consumer | `privacy-consumer/` | DROP status citation; hold the opt-out and automated-decision comment until formal notice |
+| Health and accessibility | `health-accessibility/` | Early Start parent-notice comment |
+| Government technology | `government-technology/` | DMV permit petition and Office of Administrative Law file-and-print comment |
 
-This file is therefore a comparison of the Sprint 2 California record against primary sources re-read on 2026-11-19. It is not a synthesis of four new candidate reports. Sprint 2’s closed leads were not reopened into new filings. Reopening them without a new defect would invent work.
+No report is missing. The earlier file treated the Sprint 2 petitions as the whole record because these directories had not been written yet.
 
-## Policy goals used
+## How this ranks
 
-The November 8, 2026 text snapshot of Thomas trans v2 was read. It is an archive of planning notes, not a set of instructions for this sprint, and it does not contain a later specification titled as a policy extracurricular. The goals in that snapshot that bear on this selection are these:
+The coherent activity is a small set of filings about whether a person can understand and act on a decision California is writing into a regulation: a parent before an early-intervention change, a business reading an opt-out signal, and the state’s own filing rules so a protection can be published. A permit definition that decides which filing renews the authority to test a vehicle with no person in the driver’s seat belongs in that activity only after the current official code is read. Citation repairs are supplementary. They are not the accomplishment.
 
-- The missing kind of evidence is work inside an institution the applicant did not create, ending in a decision that institution actually makes.
-- An external constraint — a statute, a docket, a published decision — is what makes the result checkable.
-- A first-time reader has to be able to understand what happened. A denial, a hearing notice, and an amended code section are different events and have to be described as different events.
-- A modest, real government action is usable. A larger description of activity that no agency has taken is not.
+A comment in a file, a hearing, and a final statement of reasons are procedural results. An amended code section is a later result. The sentences below say which is which.
 
-Those goals are why two completed letters outrank a longer list of comments.
+| Rank | Item | If the external result happens, what is true | Policy weight | Path and February 15 prospect | Effort |
+| --- | --- | --- | --- | --- | --- |
+| 1 | DDS Early Start notice | The parent-notice rule stays “a reasonable time before,” so it can be followed with the 7-day meeting notice, the parent’s request to meet sooner, and the 45-day evaluation | Highest. Families, notice, and the ability to attend and consent | Comment window is open. A final statement of reasons by February 15 is not claimed. The comment can be in the record | One revised letter |
+| 2 | OAL file-and-print | A regulation adopted under the Administrative Procedure Act and exempt from Office review can actually be filed | Medium. It is the gate for printing other protections. It is not itself a privacy or disability rule | Hearing and comments close December 9, 2026. Adoption by February 15 is not claimed | One letter, already drafted. Text re-read this pass |
+| 3 | CalPrivacy opt-out signal | A business treats a combined `Sec-GPC` value that contains `1` as the consumer’s opt-out | Highest privacy and human-agency connection. Not fileable yet | Prepare only. The Agency’s regulations page still lists the topic as preliminary | Draft improved. Do not send |
+| 4 | DMV section 227.02 | The drivered renewal form renews the drivered permit, and the driverless forms are applications | High if the official code still says otherwise. Unconfirmed on the official-code page | Petition only after that page is read. A December receipt can produce a written decision by February 15. An amended section is not claimed | Draft exists. Do not mail yet |
+| 5 | Pregnancy statement of reasons | The qualified-employee definition is subsection (p) in the statement of reasons, matching the express terms | Low operative effect. The express terms already use (p). The statement of reasons also prints (s) | Supplementary. Comments close December 8, 2026. A final statement of reasons by February 15 is possible and is not an amended code | One short comment |
+| 6 | DROP section 7614 | The status a consumer reads cites the multiple-consumer opt-out that exists | Low. One cross-reference in an open data-broker rule | Supplementary. Comments close January 6, 2027, at 5:00 p.m. Pacific Time | One short comment |
+| — | Section 11008.1 citation | The automated-decision definition cites the subsection that defines “employment benefit” | Low. Held from Sprint 2 | Supplementary petition. No deadline. Mail only after the current subsections are re-read | Draft exists |
 
-## Selected opportunities
+## SUBMIT FOR APPROVAL NOW
 
-| Rank | ID | Portfolio | Agency | Request |
-| --- | --- | --- | --- | --- |
-| 1 | CA-DMV-227.02 | Portfolio 3 | Department of Motor Vehicles | Three definitions in title 13, section 227.02(v), (w), and (x) |
-| 2 | CA-CRC-11008.1 | Portfolio 3 | Civil Rights Council | One citation in title 2, section 11008.1(a) |
+### 1. Department of Developmental Services — Early Start parent notice
 
-Portfolios 1, 2, and 4 have no selected filing. Portfolio 3 is the classification because each request corrects an operative sentence. The correction is the strongest available result. It is not a substitute kept after a stronger amendment was set aside.
+**Primary filing.** Portfolio 2. Comment in a rulemaking that is already noticed. Not a Government Code section 11340.6 petition. The hearing is already set.
 
-If either agency opens a noticed rulemaking under Government Code section 11346 and following, that later proceeding is an Article 5 amendment. Scheduling it is a decision to proceed. The code changes only after adoption, Office of Administrative Law approval, and filing with the Secretary of State. If the agency instead uses title 1, section 100, the code changes only if the Office agrees the change has no regulatory effect and files it. Neither draft tells the agency which of those paths to use. This review did not re-fetch the full text of title 1, section 100.
+**Draft:** `health-accessibility/comment-dds-early-start.md`. This integration added the 45-day evaluation conflict, section 303.342, and the reason certified mail should remain available without becoming the definition of notice.
 
-The two letters go to different agencies. They stay separate. They can be approved and mailed in the same week.
+**What was checked on 2026-11-19.**
 
----
+- Express terms, https://www.dds.ca.gov/wp-content/uploads/2026/11/ExpressTermsOfTheProposedRegulations.pdf. Section 52161(a) replaces “a reasonable time before” with “by certified mail at least 30 days prior to.” The note still cites title 34, Code of Federal Regulations, sections 303.403(a), 303.403(b), and 303.403(c)(1) and (2). Section 52104(h) requires meeting notice “no less than seven calendar days from” the meeting “pursuant to” section 52161, and waives the seven days when the parent asks to meet sooner. Section 52086(a) still requires the initial evaluation and assessment within 45 days of referral. Section 52112 still cites 34 CFR 300.132 for the transition conference.
+- Notice for the January 7, 2027 hearing, https://www.dds.ca.gov/wp-content/uploads/2026/11/NoticeProposedRulemakingAction_2026.pdf. Hearing January 7, 2027, 10:00 a.m., 1215 O Street, Suite 110, or Zoom. The informative digest states that proposed section 52161 requires certified mail at least 30 days before the action, and that 34 CFR section 303.421 requires notice a reasonable time before the action and does not specify a 30-day period or certified mail. A second PDF, `NoticeOfProposedRulemakingAction.pdf`, states a December 17, 2026 hearing at Alta California Regional Center. The department’s regulations index and the January 7 PDF control. Do not use December 17.
+- 34 CFR section 303.421(a) and (c), eCFR, read this pass. Prior written notice a reasonable time before the proposal or refusal. Native language, or another mode of communication, unless clearly not feasible. No certified mail. Authority note: 20 U.S.C. 1439(a)(6) and (7).
+- 34 CFR section 303.342, eCFR, read this pass. Initial IFSP meeting inside the 45-day period. Meetings at times convenient for the family. Written notice early enough that the family can attend.
+- Sections 303.231 and 303.234 are the Secretary’s certified mail to a state and the mail in that federal eligibility hearing. They are not the parent-notice rule. The comment says that, without asserting that the initial statement of reasons cites them. This pass did not re-open that statement of reasons. The health report says it does. If a later reading confirms the citation, one sentence naming the statement of reasons may be added. The express terms and the January 7 notice already support the comment.
 
-## 1. CA-DMV-227.02 — drivered and driverless permit definitions
+**Why the alternative is justified.** Keeping “a reasonable time before” is the federal parent-notice rule and the current California sentence. It can be satisfied together with a seven-day meeting notice, a parent’s request to meet sooner, consent before evaluation, and the 45-day evaluation. A 30-day certified-mail minimum on every proposal or refusal, including a proposal to evaluate, cannot. Certified mail may still be sent. Making it the definition of notice treats a parent who cannot sign for or collect that mail as someone who has not been notified, including where section 52161(c) requires the notice to be translated and understood. That is a worse protection, not a stricter one.
 
-**Portfolio 3.** Fast administrative correction of three operative definitions. The public consequence is which filing renews the authority to test on a public road with no person in the driver’s seat.
+The Department may adopt a state standard above the federal minimum. This standard conflicts with the rest of the same proposal and with sections 303.342 and 303.421. The comment asks the Department not to adopt it. It does not ask for a new service.
 
-**Draft:** `drafts/petition-dmv-227.02.md`. Status: ready for a named person to read, sign, and mail. Not filed.
+The section 300.132 citation is a separate correction in the same comment. Section 300.124 is the Part C transition-conference duty. Section 300.132 is private-school services. That point was established in the health report and was not re-fetched from eCFR in this pass. Re-read section 52112 on the day of sending. If the marked text deletes the 300.132 sentence, ask only that the deletion be shown in the final text.
 
-### Source
+**Deadline.** Written comments and the hearing close January 7, 2027. There is no duty to answer before then. Government Code section 11346.9 requires the final statement of reasons to answer a timely comment. That statement is part of adoption. The notice year runs to November 6, 2027. A final statement of reasons, and an amended title 17, are not claimed by February 15, 2027.
 
-Department of Motor Vehicles, Order to Adopt, Article 3.7, Testing of Autonomous Vehicles, OAL file 2025-0415-04. The department’s autonomous-vehicle regulations page, read 2026-11-19, still lists that order as a current regulation, and the department’s rulemaking-actions page states the effective date as April 28, 2026.
+**Where.** Department of Developmental Services, Legislation and Regulations Branch, RE: Early Intervention Services Regulations, 1215 O Street, M.S. 9-10, Sacramento, CA 95814. The notice also gives a web form: https://www.dds.ca.gov/submit-comments-on-early-intervention-regulations/. Use one method, not both, so the Department does not log two comments.
 
-- Order: https://www.dmv.ca.gov/portal/file/order-to-adopt-article-3-7-regulations-pdf/
-- Regulations page: https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/california-autonomous-vehicle-regulations/
-- Rulemaking page, including the April 28, 2026 effective date and the Regulations Branch address: https://www.dmv.ca.gov/portal/about-the-california-department-of-motor-vehicles/california-dmv-rulemaking-actions/
+**Personal information.** The January 7 notice says written and oral comments become part of the public rulemaking file and should not include personal or medical information. The letter needs the commenter’s name. A mailing address is needed if the letter is mailed. Do not add a telephone number, a child’s name, a diagnosis, or a regional-center record.
 
-The order’s section 227.02, read in full for the definitions on 2026-11-19, says:
+**Decision mechanism.** Summary and response in the final statement of reasons. The code changes only if the Department adopts the text, the Office of Administrative Law approves it, and it is filed with the Secretary of State.
 
-- Subsection (r): a “Drivered Testing Permit” is form OL 315 (Rev. 9/2024). It requires an autonomous-vehicle test driver on public roads.
-- Subsection (t): a “Driverless Testing Permit” is form OL 315A (Rev. 10/2023). It does not require an autonomous-vehicle test driver in the driver’s seat.
-- Subsection (u): a “Driverless Testing Permit Application” is form OL 318 (Rev. 2/2025).
-- Subsection (v): a “Drivered Testing Permit Renewal Application” is form OL 311 (Rev. 2/2025), submitted by a manufacturer that possesses a valid drivered permit, “to renew the Driverless Testing Permit pursuant to section 227.20 (a).”
-- Subsection (w): the driverless operational-parameters modification application “means a Driverless Testing Permit, form OL 318 (Rev. 2/2025),” used for the changes in section 227.42(o)(1) through (7).
-- Subsection (x): the driverless renewal application “means a Driverless Testing Permit, form OL 318 (Rev. 2/2025),” “to renew the Driverless Testing Permit pursuant to section 227.20 (a).”
+**Admissions sentence, only after the named event.**
 
-The same order, section 227.42, states that a valid drivered permit, form OL 315, is a condition for maintenance of a driverless permit, form OL 315A. Section 227.20(b) tells the manufacturer to submit form OL 311 or form OL 318. It does not say that form OL 311 renews form OL 315A.
+- Comment received and not yet answered: “I filed a comment in the Department of Developmental Services’ Early Start rulemaking asking the Department not to require certified mail 30 days before notice to a parent of a proposed or refused change in an infant’s or toddler’s services, because that rule conflicts with the seven-day meeting notice, the parent’s right to ask for a sooner meeting, and the 45-day evaluation timeline.”
+- Final statement of reasons rejects it: “The Department’s final statement of reasons explained why prior notice would still be certified mail sent at least 30 days before the action. The regulation was not changed to the text I requested.”
+- Adopted text keeps “a reasonable time before” and cites section 303.421: “The Department of Developmental Services amended title 17, section 52161, so that notice to a parent before a proposed or refused change in early intervention services remains notice given a reasonable time before the change, rather than certified mail sent at least 30 days prior.”
 
-The authority note printed on section 227.02 cites Vehicle Code sections 1651 and 38750. Section 227.00(a) states that the article implements Division 16.6 of the Vehicle Code, commencing with section 38750.
+### 2. Office of Administrative Law — file-and-print path
 
-A Westlaw display of current section 227.42, document `ID481BF50488111F185A8890ED67EED18`, retrieved as a search extract on 2026-11-19, shows form OL 318 at Rev. 6/2026 and still states that a valid drivered permit is a condition of the driverless permit. That display is evidence of a later change without regulatory effect to a form date in section 227.42. The full current Westlaw page of section 227.02 did not load. Cornell’s section 227.02 is the pre-2026 text and was not used.
+**Second filing.** Portfolio 2. The comment window closes before the Early Start window. Approve it in the same week if both are going to be sent.
 
-### The amendment
+**Draft:** `government-technology/packets/02-oal-file-and-print-comment.md`. The requested text was re-read against the originally proposed text and left in place. It is a narrow fix.
 
-In subsection (v), replace “to renew the Driverless Testing Permit” with “to renew the Drivered Testing Permit.”
+**What was checked.** Originally proposed text, https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/02.-Originally-Proposed-Text_2026.0914.pdf, fetched 2026-11-19.
 
-In subsections (w) and (x), replace “means a Driverless Testing Permit, form OL 318” with “means a Driverless Testing Permit Application, form OL 318.”
+- Section 1(a)(4)(B) defines File and Print to include regulations adopted under some or all of the Administrative Procedure Act and expressly exempted by statute from Office of Administrative Law review.
+- Section 1(a)(7) limits Print Only to a regulation already filed with the Secretary of State.
+- Section 6(b)(3)(F)(1) still labels the section 1(a)(4)(B) category as a Print Only request.
+- Section 110(b)(2) requires every File and Print or Print Only submission to cite each applicable Administrative Procedure Act exemption and explain how the change is inside that exemption.
+- Section 110(d) says the Office will file or print the change only if it falls within a statutory exemption and conforms to subsection (b).
+- Section 14 applies the Government Code section 11349.1 authority and reference standards when the Office reviews a regulation for compliance with section 110.
 
-Leave every form revision date as it stands on the day of mailing. Do not ask to amend section 227.20 or section 227.42.
+Path (B) has no Administrative Procedure Act exemption to cite. It has an exemption from Office review. Read with section 110(d), the Office cannot complete the filing section 1(a)(4)(B) describes.
 
-### Procedure, deadline, and milestones
+**Why the narrow text fixes it.** The draft splits section 110(b)(2). Paths (A), (C), and Print Only still cite an exemption from the Act. Path (B) cites the statute that exempts the action from Office review and states which parts of the Act the agency followed. Section 110(d)(2) allows filing when that statute applies, and it says that determination is not a Government Code section 11349.1 disapproval. Section 6 stops calling path (B) Print Only. Section 14 is limited so the section 11349.1 standards are not applied to path (B); the printed authority note can still be required. Those four edits close the contradiction. They do not change the 30-working-day clock or the separate section 45 proposal.
 
-**Mechanism.** One petition under Government Code sections 11340.6 and 11340.7, mailed to the Department of Motor Vehicles. Both sections were re-read on 2026-11-19 from the official display:
+**Deadline.** Written comments close at 11:59 p.m. on December 9, 2026. Hearing the same day at 10:00 a.m. Notice file Z2026-0928-03. Email is invited: OALProposedRulemakings@oal.ca.gov. Mail: Office of Administrative Law, Attention Lindsey McNeill, 300 Capitol Mall, Suite 1250, Sacramento, CA 95814. Subject line: Standards for File and Print and Print Only Actions, notice file Z2026-0928-03.
 
-- https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11340.6.
-- https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11340.7.
+**Personal information.** The commenter’s name, mailing address, and email will be in the rulemaking file. That file is public. Do not add a telephone number.
 
-Section 11340.6 requires the substance of the amendment, the reason, and the agency’s authority. Section 11340.7(a) requires written notice of receipt and, within 30 days of receipt, a written denial with reasons or scheduling of a public hearing under Article 5. Subsection (d) requires the written decision to be sent to the Office of Administrative Law for the California Regulatory Notice Register.
+**Decision mechanism.** The Office considers the comment at the hearing and must answer it in the final statement of reasons if the comment is timely. Adoption of the requested text is a separate, later act. By February 15, 2027, the supportable result of sending the comment is that it is in the file and that the December 9 hearing has occurred.
 
-**Where.** One original to the address the rulemaking page still publishes:
+**Admissions sentence, only after the named event.**
 
-Department of Motor Vehicles, Legal Affairs Division, Regulations Branch, C-128, P.O. Box 932382, Sacramento, CA 94232-3820.
+- After sending: “I submitted a comment on the Office of Administrative Law’s proposed file-and-print rules so that a regulation which is exempt from that Office’s review can still be filed and printed. The Office has not adopted the change.”
+- If the adopted text matches the request: “The Office of Administrative Law amended title 1 so that an agency whose statute exempts a regulation from Office review cites that statute, and the Office can file the regulation without conducting the review the statute removed.”
+- If the final statement of reasons rejects it: “The Office explained, in the final statement of reasons, why a filing that is exempt from Office review must still cite an exemption from the Administrative Procedure Act. The text I requested was not adopted.”
 
-One copy, marked COPY, to the mail stop the department used for the December 3, 2025 modification comments on the same file:
+## Supplementary filings, open now, not the primary accomplishment
 
-2415 First Avenue, MS C-128, Sacramento, CA 95818.
+Send these only if the approval names them. They do not carry the activity. Missing them does not weaken the Early Start or Office of Administrative Law comments.
 
-Source of that mail stop: https://www.dmv.ca.gov/portal/file/notice-of-modification-2025-0415-04-pdf/
+### 3. Civil Rights Council — qualified employee in the statement of reasons
 
-`LADRegulations@dmv.ca.gov` is the address the 2025 notice and the modification notice gave for comments on that proposal. Government Code section 11340.85(b)(5) allows electronic delivery of a petition only when the agency has expressly said it will accept a petition that way. A comment address for a closed rulemaking is not that statement. Do not email this petition.
+**Draft:** `civil-rights/comment-crc-pregnancy-11035.md`.
 
-**Filing deadline.** None is imposed by statute. For a written decision to be able to exist by February 15, 2027, the department has to receive a completed letter in December 2026. Thirty days from a mid-December receipt falls in January. Notice Register publication follows “at the earliest practicable date” and is a separate event.
+**Proceeding.** Notice file Z2026-1006-03. Comments must be received by 5:00 p.m. Pacific Time on December 8, 2026. The notice invites email to Council@calcivilrights.ca.gov and mail to the Civil Rights Council, care of Suge Lee, 555 12th Street, Suite 2050, Oakland, CA 94607. This Oakland suite is the address on this notice. It is not the address for the separate section 11008.1 petition.
 
-**November 30, 2026.** The draft can be approved. A decision cannot exist. A letter mailed on November 30 is received after that date, and the 30 days run from receipt.
+**What the comment does.** The express terms put “qualified employee” at section 11035(p) and “self-confirmation” at section 11035(s). Proposed sections 11040(c)(3) and 11041(g) cite (p). The initial statement of reasons, under a heading for (p), prints the qualified-employee definition as subsection (s). The comment asks the Council to fix the statement of reasons and not to move the express terms onto (s). It does not add an accommodation.
 
-**February 15, 2027.** A written denial, or a written decision to schedule a hearing, can exist if the letter was received in December and the department follows section 11340.7(a). An amended section 227.02 by that date is not a supported forecast. A section 100 filing could be reviewed inside that window only if the department chooses that path and the Office receives it early enough. No example of this department doing that for a petition of this kind was established in this pass.
+**Why it is supplementary.** If the Council adopts the express terms, the code already uses (p). The public result of a successful comment is a corrected statement of reasons, or a final statement of reasons that does not adopt the wrong letter. That is worth a short letter because the deadline is December 8 and a mistaken move of the express terms to (s) would put the accommodation definition on the self-confirmation letter. It is not the lead.
 
-### What can be said at each stage
+**Personal information.** Name, mailing address, email, and telephone if the blanks are filled. The rulemaking file is public. Leave the telephone blank.
 
-| Stage | Truthful statement |
+**Admissions sentence, only after the event.** “The Civil Rights Council corrected the statement of reasons in its pregnancy-accommodation rulemaking so that the qualified-employee definition is section 11035(p), the subsection the proposed accommodation rules cite.” Do not use that sentence for a mere receipt. Do not say the Council adopted a new accommodation rule because of this comment.
+
+### 4. CalPrivacy — data-broker status citation
+
+**Draft:** `privacy-consumer/comment-drop-7614.md`.
+
+**Proceeding.** Data Broker Updates and DROP Audit Regulations. Formal comments are open from November 13, 2026, through January 6, 2027, at 5:00 p.m. Pacific Time. Confirmed on https://cppa.ca.gov/regulations/ the same day. The comment asks proposed section 7614(b)(2)(B) to cite section 7613(a)(2)(B), the multiple-consumer opt-out, instead of section 7613(b)(2)(B), which the privacy report found does not exist, and to change “data of birth” to “date of birth” in the hashing example. This pass did not re-open the proposed DROP text. Re-read section 7614(b)(2)(B) and section 7632(e)(6)(E) on the day of sending. If the status sentence already cites (a)(2)(B), do not send the comment.
+
+**Personal information.** Name, and a mailing address or email only if it may be public. The Agency posts formal comments. No telephone number.
+
+**Admissions sentence, only if the adopted text uses (a)(2)(B).** “The California Privacy Protection Agency’s data-broker regulation cites the multiple-consumer opt-out in the status that tells a consumer the broker opted the matched records out of sale rather than deleted them.” A summary in the final statement of reasons that rejects the comment is the rejection, not that sentence.
+
+## PREPARE FOR UPCOMING COMMENT WINDOW
+
+### 5. CalPrivacy — opt-out preference signals and automated-decision text
+
+**Do not send.** On 2026-11-19, https://cppa.ca.gov/regulations/ still places Opt-out Preference Signals under preliminary rulemaking. The only formal proposal on that page is the data-broker package. There is no Notice Register deadline and no Government Code section 11346.9 duty.
+
+**Draft:** `privacy-consumer/comment-oops.md`. This integration replaced the `Sec-GPC` sentence.
+
+**Technical change, and why.** The October 8, 2026 proposed text, read from the Agency’s packet, says a business must process an HTTP header such as Global Privacy Control and does not say how to read the field after repeated lines are combined. The header’s defined value is the single character `1`. A user agent is not supposed to send more than one `Sec-GPC` line. When processing nevertheless combines repeated lines, a comparison that accepts only a field value equal to `1` drops `1, 1`. The revised sentence says:
+
+- A field line whose value is exactly `1`, after surrounding whitespace is removed, is the signal.
+- If repeated lines have already been combined into one comma-separated value, any item that is exactly `1` is the signal.
+- Another item in that combined value does not cancel the `1`.
+- A value of only `0`, and an empty value, are not the signal.
+- The sentence does not incorporate a W3C specification and does not regulate the browser.
+
+That is narrower than calling the string `1, 0` a signal in every case. It covers the combination case, which is the case in which a real opt-out disappears. It matches the multiple-field-line rule a receiver has to apply, stated in the regulation’s own words.
+
+The rest of the draft stays: section 7025(h) forwarding duty for a browser feature that makes its own request, operative no earlier than Civil Code section 1798.136 on January 1, 2027; section 7026(g)’s citation of section 7025(b)(6), which the October 8 text still contains at the requests section while section 7025(c)(6) is the display rule; the leftover words “ability to performance” in section 7221(b)(2)(A); and the joined example “to make a significant decision improve our services” in section 7222(b)(1). Those last three were read in the October 8, 2026 proposed-text PDF. On the day a notice is published, open the colored text and delete any paragraph the Agency has already fixed.
+
+**When it may be sent.** The day the notice appears in the California Regulatory Notice Register. Set the deadline and the email subject from that notice. A preliminary-docket email is not this comment.
+
+**February 15.** If a notice is published in December 2026, a timely comment can be in the file by February 15. Adoption by that date is not claimed. The draft notice’s 45 days, a possible 15-day revision, and Office of Administrative Law review run past a late-November notice.
+
+**Admissions sentence, only if the adopted receiver rule matches.** “The California Privacy Protection Agency adopted a rule that a business receiving the `Sec-GPC` header must treat a combined field value containing `1` as the consumer’s opt-out, and must not drop the opt-out because the combined value is not exactly the single character `1`.” Do not say a browser’s failure of a draft W3C test violated California law.
+
+**Personal information, when the notice exists.** The same public-comment rule as the data-broker filing. Name, and contact information only if it may be public.
+
+## FILE ONLY IF VERIFIED
+
+### 6. Department of Motor Vehicles — section 227.02(v), (w), and (x)
+
+**Draft:** `drafts/petition-dmv-227.02.md`. Do not mail it on the present record.
+
+**What is confirmed.** The Department’s Order to Adopt for Article 3.7, OAL file 2025-0415-04, effective April 28, 2026, and still posted as a current regulation, contains the three sentences. Subsection (v) defines the drivered renewal application as the application used “to renew the Driverless Testing Permit.” Subsections (w) and (x) define the driverless modification and renewal applications as “a Driverless Testing Permit, form OL 318.” Subsection (u) defines form OL 318 as the application. Subsection (t) defines the driverless permit as form OL 315A. Section 227.42 makes a current drivered permit a condition of the driverless permit.
+
+**What is not confirmed.** The current official-code page of section 227.02. The Westlaw document that search still returns for section 227.02 is the pre-2026 text, opening “As used in this article.” A different, current Westlaw document for section 227.42 shows form OL 318 at Rev. 6/2026 and still states the drivered-permit condition. A later form-date change therefore exists. It was not shown, on a loaded page of section 227.02, whether that change also corrected the three nouns. Cornell’s section 227.02 is the pre-2026 text. Do not use it.
+
+**Rule.** Mail the petition only after subsections (v), (w), and (x) are read in the current official code and the nouns are still wrong. Leave the revision dates as they then stand. One original to Regulations Branch, C-128, P.O. Box 932382, Sacramento, CA 94232-3820. One copy, marked COPY, to 2415 First Avenue, MS C-128, Sacramento, CA 95818. Do not email it.
+
+**If it is mailed and received in December.** Government Code section 11340.7(a) requires a written denial or a decision to schedule a hearing within 30 days of receipt. That writing can exist before February 15, 2027. It is not an amended section. The Notice Register publication follows at the earliest practicable date.
+
+**Personal information.** The petitioner’s name and mailing address. Section 11340.7(d) requires the published decision to identify the party. The Notice Register is public. Do not add a telephone number or email unless it is acceptable in that register.
+
+**Admissions sentence, only after a written decision or an amended code.** Use the matching sentence in `EVIDENCE_AND_ATTRIBUTION.md`. A mailed petition is a mailed petition.
+
+### 7. Section 7026(g), only if the opt-out notice does not appear
+
+**Draft:** `privacy-consumer/petition-7026-hold.md`. On the morning of December 12, 2026, if no opt-out notice is in the Notice Register, decide whether to complete the name and address. If the notice has appeared, the citation goes in the opt-out comment and this petition is not sent. A petition and a noticed rulemaking on the same words should not run together.
+
+### 8. Section 11008.1(a), supplementary petition
+
+**Draft:** `drafts/petition-crc-11008.1.md`. Preserved, not prioritized. Mail to 651 Bannon Street, Suite 200, Sacramento, CA 95811, and only after section 11008(h), section 11008(i), and section 11008.1(a) are re-read in the current code. Do not combine it with the pregnancy comment. Do not describe it as a new employment protection. The truthful completed-code sentence is that the definition of an automated-decision system cites the subsection that defines “employment benefit.”
+
+## DEFER / DROP
+
+| Item | Disposition |
 | --- | --- |
-| Now | Two definitions in the department’s adopted autonomous-vehicle testing rules were drafted for correction. The letter has not been sent. The department has not acted. |
-| After mailing, before a decision | A petition was mailed asking the department to correct three definitions in title 13, section 227.02. The department has not decided it. |
-| Written denial, especially once it is in the Notice Register | The department denied the petition in writing and gave its reasons. Section 227.02 is unchanged. |
-| Written decision to schedule a hearing | The department scheduled a public hearing on the correction under the Administrative Procedure Act. The section is unchanged until the department adopts text, the Office of Administrative Law approves it, and it is filed with the Secretary of State. |
-| Amended code | The Department of Motor Vehicles amended title 13, section 227.02, so that the application renewing the permit which requires a person in the driver’s seat is defined as renewing that permit, and so that the driverless application forms are defined as applications. |
+| DMV driver-safety hearing text (“proscribed,” telephone request, repealed section 115.06) | Comment period closed November 16, 2026. Draft `government-technology/packets/03-dmv-driver-safety-comment.md` is sent only if the Department publishes a 15-day notice that still contains the sentences. |
+| Department of Insurance workshop, December 15, 2026 | The Department has said it is not a notice of proposed action. No comment. |
+| Title 11, sections 7010 and 7200 | The delayed-compliance seam ends January 1, 2027 by the regulation’s own text. |
+| A general comment on the DROP audit cycle, ZIP codes, or the 45-day list lock | The privacy report found those sentences consistent with the statement of reasons and Assembly Bill 883. Not reopened. |
+| Fair Political Practices Commission section 18450.12 | Sections 11340.6 and 11340.7 are not that Commission’s petition statute. |
+| Department of Technology manuals | Not in the code. |
+| Title 13, section 227.20(b) grammar and fee clause | Real damage in the order. Left out because repairing the fee sentence would choose a meaning. |
+| Hospice notice, comments due December 14, 2026 | The proposed text was not read. No defect is asserted. |
+| Vital-records diacritical marks | The Department denied a petition on October 20, 2026. The January 18, 2027 hearing belongs to that petitioner. |
+| Education, CalHR drug testing, housing automated-decision article, workers’ compensation network | Closed in the civil-rights report. No new defect was found in this integration. |
+| Medi-Cal software denial, Knox-Keene section 1367.01, language-access policy | Closed in the health report. The duties sit in statute or in a non-regulatory policy. |
 
-A staff email, a docket receipt, or silence after 30 days is not one of those stages. The statute requires a written decision. Failure to issue one is noncompliance with the statute. It is not approval of the amendment.
+## What an approval must say
 
-### Evaluation
+`approve DDS` sends the Early Start comment.
 
-| Factor | Judgment |
-| --- | --- |
-| A. Admissions-facing strength if the institution acts | Strong if the code is amended, because a reader can open the section and see the change. Moderate if the result by February 15 is a written denial in the Notice Register: that is a real, named, published decision about a safety permit, and it is not a regulatory amendment. |
-| B. Substance and public benefit | Strong relative to a citation fix. The driverless permit is the authority to operate on a public road with no person in the driver’s seat. Section 227.42 makes a current drivered permit a condition of keeping that authority. Subsection (v) tells a manufacturer that the drivered renewal form renews the driverless permit. |
-| C. Authority and legal defensibility | Strong as a petition. The department adopted the definitions under Vehicle Code sections 1651 and 38750. The request amends those definitions. It does not ask the department to regulate a subject section 38750 does not cover. Whether title 1, section 100, is available is for the department and the Office of Administrative Law. |
-| D. Evidence an official will consider it | The evidence is the statutory duty to answer in writing. There has been no pre-filing contact and no statement by a named official that this defect will be fixed. |
-| E. Binding procedural deadline | Yes. Thirty days from receipt, under section 11340.7(a), if the letter is a complete petition. The duty is statutory. Compliance is not guaranteed by the existence of the duty. |
-| F. Feasible favorable result by February 15 | A written decision is feasible if the letter is received in December. Adoption of amended text by February 15 is not a claim this record supports. |
-| G. Incremental effort | Low. The research and the letter exist. Remaining human work is reading the three subsections in the current code, signing, addressing, and mailing, then calendaring 30 days from receipt. |
-| H. Public attribution and independent verification | The Notice Register decision must name the petitioner and the section. That is the public attribution. The amended code, if it happens, is independently checkable. The department’s reply does not make the petitioner a partner, employee, or sponsored actor. |
-| I. Replication | The method can be reused wherever an adopted sentence cannot be followed together with another adopted sentence and the agency is inside section 11340.6. These three nouns are one filing. They are not a pattern already shown in other DMV sections. |
-| J. Fit with the project themes | Human oversight and authorization. The correction keeps the name of the permit aligned with whether a person must be in the driver’s seat. It does not add a new testing standard. |
+`approve OAL` sends the file-and-print comment.
 
-### Red team
+`approve supplementary CRC` sends the pregnancy statement-of-reasons comment.
 
-**Is the regulation operative?** The department posts the Order to Adopt as current and dates it effective April 28, 2026. The full official-code page of section 227.02 was not loaded. A section 100 change has already updated the OL 318 revision date in section 227.42 to Rev. 6/2026. It was not shown to have changed the three nouns. The letter is mailed only if, on that day, subsection (v) still says the drivered renewal renews the driverless permit and subsections (w) and (x) still call form OL 318 the permit.
+`approve supplementary DROP` sends the data-broker citation comment.
 
-**Does the agency have the authority?** The authority note on section 227.02 cites Vehicle Code sections 1651 and 38750. The request stays inside definitions the department has already adopted.
+`approve both primary California comments` sends Early Start and the Office of Administrative Law comment, and does not send the supplementary comments or any petition.
 
-**Does existing law already supply the safeguard?** Section 227.20(b) lists both forms and both permits. It does not state that form OL 311 renews the drivered permit. Subsection (v) is the sentence that states a purpose, and the purpose it states is the driverless permit. The defined term’s title and the operative clause are both in the adopted sentence.
-
-**Is the request outside the Administrative Procedure Act?** The definitions apply to every manufacturer seeking these permits. They are not a form’s layout, an internal staff manual, or an order to one named company. Government Code section 11340.9(c) exempts a form and its instructions. It does not exempt a definition of which operating authority the form renews. The petition changes the definition, not the boxes on the form.
-
-**Unintended consequences.** The request does not change a mileage requirement, a fee, a remote-driver duty, or which vehicles may operate. If the department actually intended form OL 311 to renew the driverless permit, the petition asks for a written denial that says so. That intent would still have to be reconciled with subsection (x), with section 227.42, and with the name of subsection (v).
-
-**Is another proceeding already doing this?** The Article 3.7 rulemaking that produced the order is closed. Effective date April 28, 2026. The comment periods of June 9, 2025, December 18, 2025, and February 5, 2026 are over. No open notice on these three nouns was found.
-
-**Too vague or too broad.** Three specified word changes. No other section.
-
-**Merely cosmetic.** The words decide which filing a reader uses to renew authority to test with nobody in the driver’s seat. That is the substance. The revision-date mismatch between Rev. 2/2025 in the order and Rev. 6/2026 in section 227.42 is a related housekeeping fact. The petition deliberately does not ask to freeze or update revision dates, because a date change without the noun change would leave the conflict in place.
-
-**A recent amendment already fixed it.** The Rev. 6/2026 change in section 227.42 updated a form date. It was not shown to amend section 227.02(v), (w), or (x). This remains the open factual check on the day of mailing.
-
-**Adjacent defect, not included.** Section 227.20(b) of the same order is ungrammatical: the permit, rather than the renewal application, is the subject of “shall be made.” The fee clause is also compressed. A PDF page number sits in the extracted line (“at 15 / least 60 days”) and is not part of the regulation. Rewriting subsection (b) would require choosing what the fee sentence means. That choice is not made here. The petition does not mention section 227.20 as a requested amendment.
-
----
-
-## 2. CA-CRC-11008.1 — automated-decision system citation
-
-**Portfolio 3.** One-citation correction in an operative employment regulation. The sentence uses “employment benefit” and cites the subsection that defines “employment practice.”
-
-**Draft:** `drafts/petition-crc-11008.1.md`. Status: ready for a named person to read, sign, and mail. Not filed. Separate from the DMV letter.
-
-### Source
-
-Title 2, California Code of Regulations, section 11008.1(a), adopted in OAL matter 2025-0515-01, effective October 1, 2025. On 2026-11-19 a search extract of the current Westlaw document `I4A91F7C055BF11F0BAA4DBEB9270F801` still displayed:
-
-> “Automated-Decision System.” A computational process that makes a decision or facilitates human decision making regarding an employment benefit, as defined in section 11008(i) of these regulations.
-
-The same day’s search extracts of current section 11008, Westlaw document `I6EE1BBC055BE11F0B3D8D0F9B0B67B62`, displayed:
-
-- Subsection (a), “Agent.”
-- Subsection (h), “Employment Benefit.”
-- Subsection (i), “Employment Practice.” Any act, omission, policy or decision of an employer or other covered entity affecting any of an individual’s employment benefits or consideration for an employment benefit.
-
-The full Westlaw HTML pages timed out. The quotes above are from the search extracts of those current document URLs, not from a downloaded official-code PDF. The Council’s June 2025 final-text PDF and notice of approval were downloaded and are image-based; they were not independently OCR’d in this pass. The matter number and October 1, 2025 effective date are taken from the search extract of the notice of approval and from the phase 1 memo’s same-day reading. They should be confirmed against the PDF or the Westlaw history note before mailing if either is available that day.
-
-Cornell and Justia still display the pre-shift letters, with “Employment Benefit” at (g) and “Employment Practice” at (h). Justia’s banner says the copy is current through Register 2025, No. 26 (June 27, 2025), which is the filing register of this rulemaking, not a later correction. Those copies were not used as the current code.
-
-The March 17, 2025 unmodified proposal, https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2025/03/Attachment-B-Final-Unmodified-Text-of-Proposed-Employment-Regulations-Regarding-Automated-Decision-Systems.pdf, marked “Employment Benefit” as moving from (g) to (i) and “Employment Practice” as moving from (h) to (j). The final statement of reasons uses “section 11008(i)” in describing the automated-decision definition. That letter matched the March proposal’s placement of “Employment Benefit.” The current Westlaw extract places “Employment Benefit” at (h) and “Employment Practice” at (i). The citation in section 11008.1(a) remained (i).
-
-Authority is Government Code section 12935(a), which is the authority under which the Council adopted the automated-decision regulations. No statute found in the phase 1 research, and none found in this pass, restricts who may petition the Council or replaces section 11340.6 for it.
-
-### The amendment
-
-Replace “section 11008(i)” with “section 11008(h)” in section 11008.1(a). Change no other word.
-
-### Procedure, deadline, and milestones
-
-**Mechanism.** A separate petition under Government Code sections 11340.6 and 11340.7. Same 30-day duty as the DMV letter. Same distinction between a written decision and an amended code section.
-
-**Where.** One original to the address on the Council’s current page and on the letterhead of the October 5, 2026 meeting notice:
-
-Civil Rights Council, Civil Rights Department, 651 Bannon Street, Suite 200, Sacramento, CA 95811.
-
-Sources:
-
-- https://calcivilrights.ca.gov/civilrightscouncil/
-- https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2025/04/Notice-and-Agenda-2026.10.05-CRC-Meeting-1.pdf
-
-The October 5, 2026 meeting was held at 555 City Center, Amenity Space 200, 555 12th Street, Oakland. That was a meeting room. The letterhead of that notice is the Sacramento address. Do not mail the petition to Suite 2050 at 555 12th Street. That suite appeared on an older notice and was not confirmed as a current mailing address.
-
-`council@calcivilrights.ca.gov` is the address the meeting notice gives for comments during a virtual meeting. It is not an express statement that the Council accepts a section 11340.6 petition by email. Mail the letter.
-
-**Filing deadline.** None by statute. Same December-receipt target as the DMV letter if a written decision is to be possible by February 15, 2027.
-
-**November 30.** Draft and approval only.
-
-**February 15, 2027.** A written denial or a written decision to schedule a hearing can exist. The Council’s last full proceeding on automated-decision systems ran from a May 17, 2024 notice to an October 1, 2025 effective date. That duration is a reason not to forecast a code change inside this checkpoint. It is not a reason to skip a one-citation petition. A section 100 correction, if the Office accepts it, is shorter, and it is not promised.
-
-The October 5, 2026 agenda, as extracted, concerned employment protections for victims of violence and modifications to leave and pregnancy-accommodation regulations. It was not a proceeding on section 11008.1. Attachment B of that agenda was not read in full.
-
-### What can be said at each stage
-
-| Stage | Truthful statement |
-| --- | --- |
-| Now | A one-citation petition to the Civil Rights Council was drafted. It has not been sent. |
-| After mailing | A petition was mailed asking the Council to make section 11008.1(a) cite the subsection that defines “employment benefit.” The Council has not decided it. |
-| Written denial | The Council denied the petition in writing and stated whether “employment benefit” in that sentence is the term in section 11008(h). The code is unchanged. |
-| Hearing scheduled | The Council scheduled a public hearing on that citation. The code is unchanged. |
-| Amended code | The Civil Rights Council amended title 2, section 11008.1(a), so that the definition of an automated-decision system cites section 11008(h), the subsection that defines “employment benefit.” |
-
-Do not describe this as adding a new worker protection, a new right to human review, or a ban on employment algorithms. The regulation already covers automated-decision systems. The petition asks the citation to name the term the sentence already uses.
-
-### Evaluation
-
-| Factor | Judgment |
-| --- | --- |
-| A. Admissions-facing strength if the institution acts | Moderate. A published one-citation amendment is real and checkable. It is easier for a first-time reader to understate than the permit correction, because the public effect is which employment decisions the definition reaches. A written denial is still a published agency decision and has to be described as a denial. |
-| B. Substance and public benefit | Moderate. Employers, vendors, applicants, and the department use this definition to decide which automated tools the employment rules cover. “Employment benefit” and “employment practice” are different terms. The words “employment benefit” may already control under section 11008’s preface, “unless the context otherwise requires,” which is why the Council could deny the petition as unnecessary. Two readers who follow different halves of the sentence still reach different sets of decisions. |
-| C. Authority and legal defensibility | Strong as a petition to correct a citation in a regulation the Council adopted under Government Code section 12935(a). Weaker as a claim that the Council must agree the citation is wrong. The final statement of reasons shows the drafters once pointed at (i) on purpose, at a time when the draft placed “Employment Benefit” at (i). |
-| D. Evidence an official will consider it | The statutory duty to answer. No contact with a councilmember or staff lawyer. The October 5, 2026 meeting is over and was not this subject. |
-| E. Binding procedural deadline | Yes, the same 30-day duty, if the letter is complete. |
-| F. Feasible favorable result by February 15 | A written decision is feasible on a December receipt. An amended section is not forecast. |
-| G. Incremental effort | Low, and independent of the DMV letter. One additional mailing after the same kind of day-of re-read. |
-| H. Attribution and verification | Same Notice Register mechanics. The petitioner is named. The Council is not a partner. |
-| I. Replication | One citation. The employment automated-decision article may contain other cross-references. None was verified in this pass, and none is included. |
-| J. Themes | Transparency of the rule that governs automated employment decisions, and human oversight of those decisions, because a reader can tell which decisions the definition covers. Privacy and accessibility are not what this citation changes. |
-
-### Red team
-
-**Operative?** Yes, if the Westlaw extracts are the current code. Effective date used here is October 1, 2025. The full current page was not loaded. Re-read section 11008(h), section 11008(i), and section 11008.1(a) on the day of mailing. If “Employment Benefit” is at (i), or if section 11008.1(a) already cites (h), do not mail.
-
-**Authority?** Government Code section 12935(a) is the Council’s rulemaking authority for Fair Employment and Housing Act regulations. The petition asks to amend a regulation adopted under that authority. It does not ask the Council to enforce the law in a case.
-
-**Already supplied by existing law?** Section 11008’s preface allows context to control the defined term. A denial that says the words “employment benefit” already identify subsection (h) is a possible, lawful outcome. The petition asks for that position in writing if it is the Council’s position. The citation and the words still point at different subsections until one of them is changed.
-
-**Outside the Administrative Procedure Act?** The definition applies generally to employers and other covered entities. It is not internal management and not an order to one company.
-
-**Unintended consequences.** Pointing the citation at (h) aligns it with the term the sentence uses. If the Council meant the broader “employment practice” definition to set the scope, granting the petition narrows the cross-reference to “employment benefit.” The petition states that conflict and asks for a written denial if the broader reading was intended. It does not add recordkeeping, notice, or a new prohibition.
-
-**Another proceeding?** The October 5, 2026 agenda extract does not show a pending correction of section 11008.1. A 2026 section 100 change that already fixed the letter was not found. Absence from this search is not a certificate that no such filing exists. The day-of re-read is the check.
-
-**Too vague.** One letter, (i) to (h).
-
-**Cosmetic.** The two subsections define different conduct. The change is small. The ambiguity is not empty, because sections that use “automated-decision system” inherit this definition. This review did not re-read sections 11009(f), 11013, 11016, and 11017(e) on 2026-11-19. The mailed letter does not cite those four sections. Do not add them to a public description until they are re-read.
-
-**Recent amendment already resolved it?** The June 27, 2025 filing created the shift. The current extract still cites (i). No later correction was found.
-
----
-
-## What was not selected
-
-Sprint 2 closed these leads on stated grounds. This pass did not produce a new defect in any of them, and the Sprint 3 agents that were assigned to re-examine them did not file reports. They are not in the approval queue.
-
-| Lead | Why it is not a filing in this package |
-| --- | --- |
-| Privacy Protection Agency, sections 7010 and 7200 | Sprint 2 closed it because the compliance-date seam ends January 1, 2027 by the regulation’s own text. Not re-litigated here. |
-| Privacy Protection Agency DROP audit notice, comments due January 6, 2027 | Sprint 2 found the 30-day cycle and the ZIP-code example consistent with Assembly Bill 883 and the statement of reasons. No new conflict was verified in this pass. No comment is drafted. |
-| Fair Political Practices Commission, section 18450.12 | Sprint 2 found both a merits problem and a procedure problem: sections 11340.6 and 11340.7 are not the Commission’s petition statute. Not reopened. |
-| Department of Insurance workshop, December 15, 2026 | Sprint 2 recorded the department’s statement that the workshop is not a notice of proposed action. A workshop comment does not create the section 11340.7 duty. |
-| Department of Managed Health Care, section 1300.70, and Senate Bill 1120 | Sprint 2 found the physician-determination rule in the statute and no conflicting sentence in the quality-assurance regulation. |
-| Housing, section 11135, and the 2026 statutes Sprint 2 listed | No broken adopted sentence was carried forward. |
-| Department of Technology manual | Not shown to be in the code. |
-| Section 227.20(b) grammar and fee clause | Real drafting damage in the same order. Left out because repairing the fee clause would choose a meaning. See the DMV red team. |
-| Section 227.42’s reference to section 227.22 | Sprint 2 closed it. The drivered-permit condition already requires pull-notice enrollment. Not reopened. |
+The DMV petition, the section 11008.1 petition, the section 7026 hold letter, and the opt-out comment are not sent by any of those phrases.
 
 ## Next action
 
-Read `APPROVAL_QUEUE.md`. Do not mail either letter until the named petitioner has read the current subsections and signed the letter. The day-of-mailing re-read is part of that approval, not a step that happens after the letter is in the box.
+Read `APPROVAL_QUEUE.md`. Sign only a letter whose current text you have read. For Early Start, use the January 7 notice. For the Office of Administrative Law, the written deadline is December 9, 2026.

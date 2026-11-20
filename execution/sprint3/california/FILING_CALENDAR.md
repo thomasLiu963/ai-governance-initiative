@@ -1,78 +1,33 @@
-# Filing calendar — California Sprint 3E
+# Filing calendar — California Sprint 3 integration
 
-Date: 2026-11-19. Dates are deadlines for a completed, signed letter or for an agency duty that starts at receipt. They are not a forecast that the code will change.
+Date: 2026-11-19. A date in this table is either a comment deadline or the start of an agency’s duty to answer. It is not a date on which the code will have changed.
 
-November 30, 2026 is the early checkpoint for having the letters ready. February 15, 2027 is the later checkpoint for a written agency decision, if a completed letter is received in December 2026. An amended code section is a later event on either petition.
+November 30, 2026 can be a set of approved, unsent or just-sent drafts. It cannot be an agency decision. February 15, 2027 can include a written petition decision, if a completed DMV or Civil Rights Council petition is later verified and received in December, and it can include comments sitting in open rulemaking files. It is not a forecast of amended code sections.
 
-## Before either letter is mailed
+## Open dates
 
-1. Put the petitioner’s legal name and mailing address in the letter. Government Code section 11340.7(d) requires the published decision to identify the party. A blank name is not a completed petition.
-2. Date the letter with the date it is signed.
-3. Re-read the current code that day.
-   - DMV: title 13, section 227.02(v), (w), and (x). Mail only if (v) still says the drivered renewal renews the driverless permit and (w) and (x) still define form OL 318 as the permit. Leave whatever revision date is then in the code. Cornell’s section 227.02 is the pre-2026 text. Do not use it for this check.
-   - Council: title 2, section 11008(h), section 11008(i), and section 11008.1(a). Mail only if (h) is still “Employment Benefit,” (i) is still “Employment Practice,” and section 11008.1(a) still cites section 11008(i).
-4. Sign in ink. Keep a complete copy. Use a mailing method that shows the date of mailing. The 30 days run from receipt, not from mailing.
-5. When the agency writes that it received the letter, calendar 30 days from the receipt date it states. If it states no date, calendar 30 days from a reasonable delivery date and keep the proof of mailing.
-
-## CA-DMV-227.02 — one petition, two envelopes
-
-Original:
-
-Department of Motor Vehicles
-Legal Affairs Division
-Regulations Branch, C-128
-P.O. Box 932382
-Sacramento, CA 94232-3820
-
-Copy, with the word COPY on the first page:
-
-Department of Motor Vehicles
-Legal Affairs Division
-2415 First Avenue, MS C-128
-Sacramento, CA 95818
-
-The copy is the same letter. It is not a second petition. The Regulations Branch box is the address on the department’s current rulemaking page. The First Avenue mail stop is the address on the December 3, 2025 modification notice for OAL file 2025-0415-04.
-
-Do not email `LADRegulations@dmv.ca.gov`.
-
-## CA-CRC-11008.1 — one petition, one envelope
-
-Civil Rights Council
-Civil Rights Department
-651 Bannon Street, Suite 200
-Sacramento, CA 95811
-
-That is the address on the Council’s site and on the letterhead of the October 5, 2026 meeting notice. Do not use 555 12th Street, Suite 2050. Do not email `council@calcivilrights.ca.gov`.
-
-Mail this letter by itself. Do not put it in the DMV envelope.
-
-## Calendar
-
-| Date | Event | What can be said |
+| Date | Item | Action if approved |
 | --- | --- | --- |
-| 2026-11-19 | Drafts exist in this directory. | The petitions are written. They have not been sent. |
-| 2026-11-30 | Early checkpoint. | A signed letter can exist. An agency decision cannot. A letter mailed that day is received in December. |
-| December 2026 | Target receipt window. | Mail in the first half of the month if a January decision is the aim. Receipt in the last week of December pushes the 30th day into late January, which is still before February 15. |
-| 30 days after receipt | Statutory date for a written denial or a decision to schedule a hearing. Government Code section 11340.7(a). | Record the writing. A hearing date is not an amended regulation. |
-| Earliest practicable date after the decision | Office of Administrative Law publication in the California Regulatory Notice Register. Section 11340.7(d). | Publication can fall before or after February 15. Do not treat a missing register entry, by itself, as a grant or a denial. |
-| 2027-02-15 | Later checkpoint. | A written decision can exist. Amended text in the code is not the planned result. |
-| 60 days after the decision date | Last day to request reconsideration under section 11340.7(c). | A reconsideration is a new petition. It is not automatic and it is not approved by this calendar. |
+| 2026-12-08, 5:00 p.m. Pacific Time | Civil Rights Council pregnancy rulemaking, notice file Z2026-1006-03 | Supplementary comment. Email Council@calcivilrights.ca.gov or mail to Suge Lee, 555 12th Street, Suite 2050, Oakland, CA 94607. Received by the deadline. |
+| 2026-12-09, 11:59 p.m. | Office of Administrative Law file-and-print, notice file Z2026-0928-03 | Primary comment. Email OALProposedRulemakings@oal.ca.gov or mail to Lindsey McNeill, 300 Capitol Mall, Suite 1250, Sacramento, CA 95814. Hearing the same day at 10:00 a.m. |
+| 2026-12-09, 2:00 p.m. | Office of Administrative Law section 45 hearing | No comment from this package. Do not attach the file-and-print comment to that hearing. |
+| 2026-12-12 morning | Section 7026(g) hold | If an opt-out notice is in the Notice Register, do not mail the petition. If it is not, a separate approval is required before `petition-7026-hold.md` is completed. |
+| 2026-12-14 | Hospice comments | No letter. The text was not read. |
+| 2026-12-15 | Insurance workshop | No letter. |
+| 2027-01-06, 5:00 p.m. Pacific Time | CalPrivacy data-broker and DROP audit hearing and written comments | Supplementary comment, after the status citation is re-read. One submission. |
+| 2027-01-07, 10:00 a.m. | Department of Developmental Services Early Start hearing, 1215 O Street, Suite 110, or Zoom. Written comments close the same day | Primary comment. Use this date. Do not use the December 17 date in the other PDF. One submission, mail or the web form, not both. |
+| 2027-01-18 | Vital-records reconsideration hearing | Another petitioner’s hearing. Do not file. |
 
-## After the decision
+## After a comment is in the file
 
-If the agency denies in writing, stop. Do not send a reconsideration unless a later approval names the error in the denial.
+The agency’s answer is the final statement of reasons under Government Code section 11346.9. That document is prepared when the agency adopts and submits the rulemaking. For the Office of Administrative Law notice of September 28, 2026, and the Early Start notice of November 6, 2026, the one-year notice life in Government Code section 11346.4(b) runs past February 15, 2027. A hearing before February 15 is evidence that the hearing occurred. It is not evidence that the requested text was adopted.
 
-If the agency schedules a hearing, the next text is a comment in that noticed proceeding, after the notice is read. This calendar does not pre-approve that comment.
+## Petition clock, only if a later approval sends one
 
-If the agency files a section 100 change, the result is the text that appears in the code after the Office of Administrative Law approves and files it. Track that filing. Do not describe the petition as the amendment.
+The 30 days in Government Code section 11340.7(a) run from receipt. A petition received in December 2026 can produce a written denial, or a written decision to schedule a hearing, before February 15, 2027. Notice Register publication is “at the earliest practicable date” after that decision. An amended code section is later: either an Article 5 proceeding or a title 1, section 100 filing that the Office of Administrative Law accepts.
 
-## Dates that belong to other proceedings
+Reconsideration of a petition denial is a new petition and is due no later than 60 days after the decision. This calendar does not approve a reconsideration.
 
-These are not filings in this package. They are listed so they are not mistaken for deadlines of these two letters.
+## What to record when something is sent
 
-| Date | Proceeding | This package |
-| --- | --- | --- |
-| 2026-12-12 | Department of Insurance workshop comments, for a December 15, 2026 workshop that the department said is not a notice of proposed action | No letter |
-| 2026-12-15 | That workshop | Do not attend or write on the authority of this calendar |
-| 2027-01-06, 5:00 p.m. Pacific Time | Close of comments on the Privacy Protection Agency’s data-broker and DROP audit notice | No comment |
-| 2027-01-01 | Date on which title 11, section 7200(b), as read in Sprint 2, ends the delayed compliance period for businesses already using automated decisionmaking technology | No petition aimed at that seam |
+Date, method, and the address or form used. Keep the copy that was sent. When an agency writes that it received the document, keep that writing. Do not describe the entry as an approval of the requested text.
