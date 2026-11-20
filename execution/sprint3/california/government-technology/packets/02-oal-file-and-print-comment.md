@@ -12,7 +12,7 @@ Do not describe a sent comment as an adopted regulation.
 [DATE]
 
 Office of Administrative Law
-Attention: Lindsey McNeill
+Attention: Mark Storm
 300 Capitol Mall, Suite 1250
 Sacramento, CA 95814
 
@@ -70,7 +70,7 @@ Revise the opening of section 14 so that the Government Code section 11349.1 sta
 
 The statement of reasons says these sections are meant to distinguish the filings and to let the Office see the exemption the agency claims. The current draft distinguishes the filings in section 1 and then imposes one exemption test on all three. The revisions above keep the documentation the statement of reasons asks for. They match the citation to the kind of exemption the filing actually has.
 
-Government Code section 11343.8, which the proposal cites as reference for section 110, says the Office may file and publish a regulation that is not required to be filed. It is the authority for paths (A) and (C) and for Print Only. It is not the authority that exempts a path (B) regulation from Office review. Path (B) depends on the agency-specific statute. The requested text cites that statute instead of treating section 11343.8 as if it were every path.
+Government Code section 11343.8, which the proposal cites as reference for section 110, says the Office may file and publish a regulation that is not required to be filed. The proposed text names that section in path (A) and in the Print Only definition. Path (C) depends on the agency-specific statute that exempts the action from the APA and requires its submission. Path (B) depends on the agency-specific statute that exempts the action from Office review. The requested text cites that path (B) statute instead of treating section 11343.8 as if it were every path.
 
 4. What I am not asking
 

@@ -21,16 +21,17 @@ Neither agenda was posted. Regular-meeting agendas are posted on Friday evenings
 
 **Not in the draft.** No sentence says a detection output is not the sole basis for a grade penalty, a disciplinary decision, or a change in placement. No sentence requires notice of the rule, the tool, the date, and the output, or a chance to respond, before those consequences. No sentence points the student or parent to the existing complaint procedure and requires the reviewer to state the other evidence. No sentence bars an upload to a detector the district has not approved. Discipline and placement are outside the grading sentence the draft already has.
 
-**Who can act.** Kimberly Kenne chairs the Board Policy Committee and can move the sentences. Tina Fredericks and Scott Harden sit on that committee. Dr. Cham Hill is the named submitter of the draft and is the staff person who can insert the sentences before it returns. The published comment address, from the board-meetings page, is publiccomment@pusd.us. The board office phone is 626.396.3600. No separate email for Kenne or Hill was verified.
+**Who can act.** Kimberly Kenne chairs the Board Policy Committee and can move the sentences. Her published board contact, from the board-members page, is kenne.kimberly@pusd.us and 626-794-0325. Tina Fredericks and Scott Harden sit on that committee. The October 2026 exhibit names Dr. Cham Hill as the submitter. The exhibit prints no email. The published Chief Academic Officer is Helen Chan Hill, Ed.D., hill.helen@pusd.us, 626-396-3600 extension 88087. No separate “Cham Hill” address is published. The direct staff address is hill.helen@pusd.us. Written comments emailed to publiccomment@pusd.us are archived with the agenda and are not read aloud. A request to place a new matter on an agenda goes to the Office of the Board of Education at least 12 days before the meeting, and the Superintendent decides whether to agendize it. This item already had a first reading, so the email asks for the returning draft rather than a new agenda item.
 
 ### Email — do not send
 
-To: publiccomment@pusd.us
-Subject: Public Comment — add four sentences to the second reading of Board Policy 0441
+To: kenne.kimberly@pusd.us, hill.helen@pusd.us
+Cc: publiccomment@pusd.us
+Subject: Public Comment — add six sentences to the second reading of Board Policy 0441
 
 Members of the Board,
 
-Board Policy 0441 had its first reading on November 19. I am asking Board Member Kimberly Kenne to move the four sentences below at the second reading, and I am asking Dr. Cham Hill to include them in the draft that returns. A comment does not itself amend the policy.
+Board Policy 0441 had its first reading on November 19. I am asking Board Member Kimberly Kenne to move the six sentences below at the second reading, and I am asking Dr. Cham Hill to include them in the draft that returns. A comment does not itself amend the policy.
 
 Please do not change the sentences already in the draft that keep grading with qualified staff, treat AI output on those duties as advisory, provide a non-AI alternative for enrichment or intervention, and let a guardian request human review. Please add:
 

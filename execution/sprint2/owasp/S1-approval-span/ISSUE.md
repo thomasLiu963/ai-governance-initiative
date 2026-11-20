@@ -35,7 +35,3 @@ And one sentence on the existing testing bullet "Human oversight as a social sur
 No new control name.
 
 The stated rationale stays on screen. It is labelled as model output, because a matching rationale is not evidence of a clean cause. The span comes from the trace (retrieved passage, tool output, or agent message), not from the model's summary. Plain text stops the span from drawing buttons, hiding itself, or restyling the page. Secrets are masked. Personal data the reviewer is not allowed to have is not dumped onto a screen they can approve from: either they can see the span, or they are not the approver. The body is not written into the long-term retrieval log.
-
-### AI assistance
-
-AI was used. Cursor, using Grok 4.7, read the oversight and testing text at commit `bde8cc6f` and drafted this issue and the two-file patch. I have read both sentences against that commit.

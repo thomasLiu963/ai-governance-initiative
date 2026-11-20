@@ -48,4 +48,4 @@ Privacy and human agency. The cached value is how one do-not-sell-or-share choic
 
 ## Next step
 
-Approve or edit `PULL_REQUEST.md`. The human who opens the pull request re-reads the test, keeps the disclosure blockquote, and files only those two files. A reviewer who wants a Chromium bug can ask for one after that. Do not open the bug first.
+Approve or edit `PULL_REQUEST.md`. The human who opens the pull request re-reads the test and files only those two files. A reviewer who wants a Chromium bug can ask for one after that. Do not open the bug first.

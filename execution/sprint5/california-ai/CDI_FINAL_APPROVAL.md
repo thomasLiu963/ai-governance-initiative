@@ -4,7 +4,7 @@ DRAFT — NOT FILED. Prepared 2026-11-20. Nothing in this file has been emailed.
 
 Send only the letter below the line marked “Letter.” Leave this cover off the email. Do not send until `ACTION_QUEUE.md` records an approval that names this letter, and until a name is on the letter.
 
-A person checks every quotation against the cited source before sending. This draft was prepared with AI assistance.
+A person checks every quotation against the cited source before sending.
 
 ## What would be sent
 
@@ -37,7 +37,7 @@ The earlier letter is `execution/sprint4/california-ai/CDI_SUBMISSION.md`. This 
 - The record attaches when a covered output was a basis for the action. An unused score in the file does not trigger it.
 - A covered output is a prediction, score, classification, or recommendation from a machine-based system. A factor the filed manual states in full, and applies by arithmetic the manual states, is outside the definition. A medical-necessity determination already made under section 10123.135 is outside it.
 - The comparison names an outcome that is not the system’s output and is not a restatement of the action, and it names the population, the time window, and the result. There is still no passing score.
-- A statement that no outcome is yet observable names one date. Use after that date, without the comparison, fails.
+- A statement that no outcome is yet observable names one date. The insurer may replace that date once, before it arrives. Use after the replacement date, without the comparison, fails, and no further date may be recorded.
 - The letter says in terms that sections 2648.4 and 2648.5 remain the rate-application path, and that a rate exhibit does not satisfy the consumer-file record.
 
 ## The agency action that would make this an accomplishment
@@ -113,7 +113,7 @@ Before an insurer uses a version of a system as a basis for an action described 
 
 (A) A comparison, performed on data not used to build that version, of the version’s output to an outcome the insurer can observe. The outcome is not the output itself and is not a restatement of the action. The record names the outcome, the population, the time window, the method, and the result.
 
-(B) A statement that no such outcome is yet observable, and one date. If the insurer uses the version as a basis for an action described in item 1 after that date, and the record does not yet contain the comparison in (A), the file fails. A later date is a new record, made before the continued use, and that record names its own date. A statement with no date fails.
+(B) A statement that no such outcome is yet observable, and one date. If the insurer uses the version as a basis for an action described in item 1 after that date, and the record does not yet contain the comparison in (A), the file fails. Before that date, the insurer may replace it once with one later date. Use after the replacement date without the comparison in (A) fails. The insurer may not record a further date. A statement with no date fails.
 
 The insurer makes a new record before it uses a changed version as a basis for an action described in item 1.
 

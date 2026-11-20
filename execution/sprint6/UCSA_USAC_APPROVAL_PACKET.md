@@ -58,11 +58,9 @@ Subject: Introduce a UCSA resolution for the January 9 board meeting
 
 External Vice President Choy,
 
-You are UCLA’s voting member of the UCSA board and its University Affairs Vice Chair. I am asking you to introduce the attached resolution at the January 9, 2027 virtual board meeting, if that meeting is still on the calendar.
+Would you introduce the attached resolution at the January 9 virtual board meeting, if that date is still on the calendar? You are UCLA’s voting member, so you can put it before the board. I will not file the agenda form unless you want to introduce it.
 
-The resolution does not repeat UCSA’s January 2, 2025 syllabus resolution. It asks the systemwide Senate and the Office of the President to consider one rule: a person reviews a conduct finding, grade penalty, or placement change that uses an artificial-intelligence output; the output is not the sole basis; the student receives the output and a chance to respond; and the existing appeal is how the student challenges an error. A UCSA vote would be the Board’s position. It would not change a campus code.
-
-The current bylaws let a board member introduce a resolution and require a majority of members present. I can submit the Agenda Item Request form if you want it on file. I will not submit it unless you agree to introduce the resolution. If January 9 is not the meeting, I will not ask you to use a later date that falls after February 15.
+The resolution asks the systemwide Senate and the Office of the President to consider one rule: a person reviews a conduct finding, a grade penalty, or a placement change that uses an artificial-intelligence output; the output is not the sole basis; the student gets the output and a chance to respond; and the existing appeal is how the student challenges an error. It does not repeat the January 2, 2025 syllabus resolution. A passed UCSA resolution would be the board’s position. It would not be a campus regulation or a University policy.
 
 [NAME]
 

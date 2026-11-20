@@ -6,14 +6,14 @@ A row is an action with a decision, a person who can take it, and a public recor
 
 | When | Action, if approved | What success is by February 15 |
 | --- | --- | --- |
-| This week, before Friday, December 4 | Send the Pasadena email in `SCHOOL_BOARD_OUTREACH.md` so staff can put the four missing sentences into the draft that returns | The email is in the December 10 record. Adoption is the later board vote |
+| This week, before Friday, December 4 | Send the Pasadena email in `SCHOOL_BOARD_OUTREACH.md` so staff can put the six missing sentences into the draft that returns | The email is in the December 10 record. Adoption is the later board vote |
 | Monday, November 30, 2026 | Decide the UCSA email to Cecilia Choy, the USAC email to Angela Ledesma-Grattarola, the Tulare emails, and the OAL and insurance name blocks | An approval note. Not a filing |
 | Before Friday, December 4, 2026, evening | Pasadena posts the December 10 regular-meeting agenda. Read it. If Board Policy 0441 is absent, do not speak as if it is up for adoption | A posted agenda |
 | Monday, December 7, 2026, 5:00 p.m. | Pasadena organizational meeting. Use it for Board Policy 0441 only if the posted agenda contains that policy | Not the planned amendment vote |
 | Received by 5:00 p.m. Pacific Time, Tuesday, December 8, 2026 | Pregnancy comment, only if the statement of reasons still prints the wrong subsection | Comment in file Z2026-1006-03 |
 | Mail arrives before 3:00 p.m., Tuesday, December 8, 2026 | Tulare letter, after the November 4 exhibit is opened and duplicate sentences are removed. The staff and president emails can go earlier | Correspondence in the December 11 record, if the policy is on the agenda |
 | Wednesday, December 9, 2026, 11:59 p.m. | OAL comment, after the morning modified-text check | Comment in file Z2026-0928-03, and the 10:00 a.m. hearing has occurred |
-| Thursday, December 10, 2026, 5:00 p.m. | Pasadena regular meeting. A trustee has to move the four sentences | Adopted policy, if this meeting is the second reading and the board votes the sentences |
+| Thursday, December 10, 2026, 5:00 p.m. | Pasadena regular meeting. A trustee has to move the six sentences | Adopted policy, if this meeting is the second reading and the board votes the sentences |
 | Friday, December 11, 2026, 3:00 p.m. | Tulare meeting. A trustee has to move the sentences, and only if Board Policy 0441 is on the agenda | County-office policy, if the second reading carries the sentences |
 | Saturday, December 12, 2026 | Insurance comment. One email of the final letter, not the earlier draft | Email received. The December 15 workshop is the next public event. A regulation is later, and only if the comment is resubmitted after a future notice |
 | Wednesday, January 6, 2027 | Circulate the UCSA resolution if Choy has confirmed a January 9 meeting. Two business days before that Saturday | An agenda item only if a board member has introduced it |
