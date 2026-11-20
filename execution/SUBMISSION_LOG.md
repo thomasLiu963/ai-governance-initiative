@@ -20,6 +20,15 @@ The SSH key on this Mac still authenticates as `thomasRespan`. It was not used. 
 - DPV comment `6999347608` is on issue #484 and is authored by `thomasLiu963`.
 - GPC issue #165 is open, authored by `thomasLiu963`. Its body starts with the Working Draft paragraph. The local preamble was not posted. No Web Platform Test pull request and no Chromium bug were opened.
 
+## 2026-11-20
+
+Filed by `thominator1011` (user id 125628460). Neither body contains an assistance section.
+
+| Item | Channel | Public URL | What was checked first | Next action |
+| --- | --- | --- | --- | --- |
+| S1 approval span | GitHub issue | https://github.com/OWASP/www-project-ai-security-and-privacy-guide/issues/291 | Exchange `main` still `bde8cc6f`. Review-interface bullet still line 660. Testing bullet still line 95. No open issue asked for the span. | Wait. No pull request unless a maintainer asks. Do not mention pull request 287. |
+| GPC navigation-cache test | Pull request on `web-platform-tests/wpt` | https://github.com/web-platform-tests/wpt/pull/65548 | `master` `edb50e8` had no `navigation-cache` file. The five existing `gpc/` blobs were unchanged. Published section 3.2, 3.3, 3.4, and 8.1 were unchanged. Issue 165 stayed closed. | Wait. Two files only. No Chromium bug. Reviewer request was refused: this account cannot request reviews. |
+
 ## Not sent
 
-T004, the FCC comment, the USAC resolution, incident-database reports, and D1/D2.
+T004, the FCC comment, the USAC resolution, incident-database reports, and D1/D2. The S1 patch was not sent.

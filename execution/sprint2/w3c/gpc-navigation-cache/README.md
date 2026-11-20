@@ -1,6 +1,6 @@
 # GPC navigation-cache test
 
-Status: suitable for a Web Platform Tests pull request. Not submitted. Do not open the pull request, a `w3c/gpc` pull request, or a Chromium bug from this packet.
+Status: filed 2026-11-20 as https://github.com/web-platform-tests/wpt/pull/65548. Do not open a second pull request, a `w3c/gpc` pull request, or a Chromium bug from this packet.
 
 ## Decision
 
@@ -48,4 +48,4 @@ Privacy and human agency. The cached value is how one do-not-sell-or-share choic
 
 ## Next step
 
-Approve or edit `PULL_REQUEST.md`. The human who opens the pull request re-reads the test and files only those two files. A reviewer who wants a Chromium bug can ask for one after that. Do not open the bug first.
+Pull request 65548 is the filing. It adds only the two files. A reviewer who wants a Chromium bug can ask for one. Do not open the bug first.

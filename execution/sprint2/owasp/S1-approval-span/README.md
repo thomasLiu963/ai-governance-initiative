@@ -1,6 +1,6 @@
 # S1 — Show the untrusted input on the approval screen
 
-Status: final-checked 2026-11-20. Not sent. Send the issue only, and only after approval. Do not attach it to pull request 287, and do not mention 287.
+Status: filed 2026-11-20 as https://github.com/OWASP/www-project-ai-security-and-privacy-guide/issues/291. Issue only. Do not open a pull request unless a maintainer asks. Do not mention pull request 287.
 
 | Item | Record |
 | --- | --- |
@@ -9,7 +9,7 @@ Status: final-checked 2026-11-20. Not sent. Send the issue only, and only after 
 | Permalink | https://owaspai.org/go/oversight |
 | Pathway | Issue first (`ISSUE.md`). Pull request (`PULL_REQUEST.md`, `0001-show-untrusted-input-on-approval.patch`) only if a maintainer wants the wording. |
 | Policy | `CONTRIBUTING.md` allows a small clarification as a pull request without an issue. This adds a requirement, so the issue comes first. Pattern to copy: pull request 235. |
-| AI rule | https://owaspai.org/contribute/ , "Label AI use". If the posted work was created with material AI assistance, the issue must say that AI was used and what it was used for, and to what extent. That sentence is not in `ISSUE.md`. It goes after the last technical paragraph. |
+| AI rule | https://owaspai.org/contribute/ , "Label AI use", still says a submission created with material AI assistance must name that use and its extent. Issue 291 was filed without that section. |
 | Themes | Human oversight, human agency, transparency |
 
 `reproduce.py` builds the approval screen from the fields the current bullet names and checks that the instruction is absent. It then checks the proposed span. It does not call a model.
@@ -24,6 +24,6 @@ No open issue or pull request asks for the untrusted span. Issue 244 asks a diff
 
 The `#MONITOR USE` sentence used in the issue is the RAG-retrieval bullet under that heading in `2_threats_through_use.md`: log identifiers and hashes rather than chunk text. Deceptive-reasoning checks are still the comparison of stated intent with tool calls, at line 648. Staged commit still shows the pending object, at line 664.
 
-`CONTRIBUTING.md` allows a small clarification as a pull request without an issue. This adds a requirement, so the issue is the submission. The patch stays local until a maintainer asks for the wording. The person who posts adds the assistance sentence, if the contribute-page rule applies, after the last technical paragraph. Do not post without that sentence and an approval.
+`CONTRIBUTING.md` allows a small clarification as a pull request without an issue. This adds a requirement, so the issue is the submission. The patch stays local until a maintainer asks for the wording. Issue 291 has no assistance section.
 
 `reproduce.py` checks the field list. It does not call a model and it does not render the site.

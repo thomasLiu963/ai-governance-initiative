@@ -34,7 +34,7 @@ Draft C-001 through C-005 under `contributions/`, one directory per ID. Leave ev
 | C-002 | `submitted` | `contributions/T002-Exchange/` (`pull-request.md`, `0001-unreachable-policy-engine-denies-the-action.patch`). Pull request https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287. | Merge that removes the fail-open choice and denies the action when the policy engine is unreachable. |
 | C-003 | `submitted` | `contributions/T003-DPV-Membership/` (`COMMENT.md`, `README.md`, `reproduce.py`). Comment https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608. | Published primer text stating the membership relation for each serialisation, with the `pd:BloodType` example. |
 | C-004 | `candidate` | `contributions/T004-DPV-Rights/` (`COMMENT.md`, `README.md`, `reproduce.py`). Not sent. Recommends the 9 September action: parent `dpv:FulfilmentOfObligation`. | Vocabulary commit that parents `dpv:RightsFulfilment` on a purpose. |
-| C-005 | `submitted` | `contributions/T005-GPC-WPT/ISSUE.md`. Issue https://github.com/w3c/gpc/issues/165. WPT patch held. | An editor decision on whether an already loaded document keeps `gpcAtNavigation`. A later merged test, or a later spec edit, follows that decision. |
+| C-005 | `submitted` | `contributions/T005-GPC-WPT/ISSUE.md`. Issue https://github.com/w3c/gpc/issues/165, closed by the editor without a specification edit. Test pull request https://github.com/web-platform-tests/wpt/pull/65548. | A merge of that test, or a later specification edit that changes the cache rule. |
 | C-006 | `candidate` | Existing USAC resolution draft. Read it. Do not mail it. | Council minutes showing adoption of that resolution. |
 | C-007 | `in-review` | `contributions/C-007-FCC/` (`COMMENT.md`, `APPENDIX.md`, `reproduce.py`). Not sent. | A later order in CG Docket No. 02-278 that defines honoring as a permission record, cancellation of communications still in the caller's control, and a send-time read, or that conditions a category-limited informational revocation on a same-interaction all-categories method. |
 
@@ -48,7 +48,7 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 | C-002 | `audits/owasp-exchange` | `submitted` | `community-guidance` | OWASP AI Exchange, commit `c68371ed56051a3d7c894e36c20c3bcbc22eb441` (2026-11-16), `#LEAST MODEL PRIVILEGE`. https://owaspai.org/go/leastmodelprivilege | checked | authorization, AI reliability | 2026-11-30 | 2026-11-18, GitHub pull request, https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287 | none | `execution/SUBMISSION_LOG.md` |
 | C-003 | `audits/w3c-dpv` | `submitted` | `community-guidance` | DPV 2.3 Final Community Group Report, 25 February 2026, primer section 4, issue #484. https://w3c-cg.github.io/dpv/primer | checked | transparency, privacy, AI reliability | 2026-11-30 | 2026-11-18, comment on issue #484, https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608 | none | `execution/SUBMISSION_LOG.md` |
 | C-004 | `audits/w3c-dpv` | `candidate` | `community-guidance` | DPV 2.3, `dpv:RightsFulfilment` parent, issue #486, still present in `2.4-dev` on 2026-11-18. https://github.com/w3c-cg/dpv/issues/486 | checked | privacy, authorization | 2026-11-30 | none | none | none |
-| C-005 | `audits/w3c-gpc` | `submitted` | `draft` | GPC Working Draft, 24 September 2026, caching rule; WPT `gpc/` as read 2026-11-18. https://www.w3.org/TR/2026/WD-gpc-20260924/ | checked | privacy, human agency | 2026-11-30 | 2026-11-18, GitHub issue, https://github.com/w3c/gpc/issues/165 | none | `execution/SUBMISSION_LOG.md` |
+| C-005 | `audits/w3c-gpc` | `submitted` | `draft` | GPC Working Draft, 24 September 2026, caching rule; WPT `gpc/` as read 2026-11-20. https://www.w3.org/TR/2026/WD-gpc-20260924/ | checked | privacy, human agency | 2026-11-30 | 2026-11-18 issue https://github.com/w3c/gpc/issues/165; 2026-11-20 test https://github.com/web-platform-tests/wpt/pull/65548 | none | `execution/SUBMISSION_LOG.md` |
 | C-006 | `audits/university-policy` | `candidate` | `proposed-change` | Interim 2026 UCLA Student Conduct Code and Divisional Regulation A-306, read 2026-11-18. Draft: `audits/university-policy/usac-resolution-draft.md` | checked for USAC; UCSA vote threshold `not-checked` | human oversight, AI reliability, transparency, privacy, authorization | 2026-11-30 | none | none | none |
 | C-007 | `audits/fcc` | `in-review` | `proposed-change` | FCC 26-67, released 2026-10-01; Further Notice, 91 FR 67239, comments due 2026-11-25. https://docs.fcc.gov/public/attachments/FCC-26-67A1.pdf | checked | human agency, authorization, human oversight, privacy, transparency, AI reliability | 2026-11-23 | none | none | none |
 
@@ -169,11 +169,11 @@ Incident-evidence work and D1/D2 designs have no ID. They are recorded under Tra
 - **Effort:** The issue is drafted. No paid API.
 - **Review path:** A new issue on `w3c/gpc`. The held WPT pull request is a second step, and only if an editor keeps § 3.2. Closest later sample would be wpt#54446: opened 2025-08-21, first human comment 2025-09-04, approved and merged 2025-09-22 by `jgraham`, for a Mozilla author.
 - **Internal review:** Approved and sent 2026-11-18.
-- **External submission:** 2026-11-18, GitHub issue by `thomasLiu963`, https://github.com/w3c/gpc/issues/165. The WPT patch was not submitted.
+- **External submission:** 2026-11-18, GitHub issue by `thomasLiu963`, https://github.com/w3c/gpc/issues/165. The editor closed it on 2026-11-19 by quoting the cache rule. 2026-11-20, Web Platform Tests pull request by `thominator1011`, https://github.com/web-platform-tests/wpt/pull/65548. Two files. No specification pull request.
 - **External feedback:** none
 - **External result criterion:** A comment by an editor on the filed issue that either keeps § 3.2 for an already loaded top-level document or replaces that caching rule. A merged WPT file is a later result, and only if the editor keeps the rule. An encouraging comment that does not choose is not acceptance. The local ChromeDriver session is not acceptance.
 - **Acceptance:** none
-- **Next action:** Wait for an editor. Do not open a Web Platform Test pull request or a Chromium bug until an editor answers. Do not reply automatically.
+- **Next action:** Wait on https://github.com/web-platform-tests/wpt/pull/65548, opened 2026-11-20. Do not open a second test pull request, a specification pull request, or a Chromium bug. Do not comment again on issue 165.
 - **Evidence:** `execution/SUBMISSION_LOG.md`
 - **Not verified:** `./wpt run` was not started. Firefox and WebKit were not launched. `PrefChangeIsReflectedImmediately` was read and not executed. Why wpt.fyi Chrome 158 accepts the existing testdriver command when local Chrome 157, with no flag, rejects it. The Chromium code review linked from GPC #151.
 
@@ -267,7 +267,9 @@ External submissions require explicit approval before they are sent. The four Wa
 | 2026-11-18 | C-001 | GitHub issue, `thomasLiu963` | approved, whole batch | https://github.com/OWASP/AISVS/issues/1232 | Open. No maintainer reply. `1.02` label not applied; the account cannot add labels. |
 | 2026-11-18 | C-002 | GitHub pull request, `thomasLiu963` | approved, whole batch | https://github.com/OWASP/www-project-ai-security-and-privacy-guide/pull/287 | Open. One line in one file. No review yet. |
 | 2026-11-18 | C-003 | Comment on existing issue, `thomasLiu963` | approved, whole batch | https://github.com/w3c-cg/dpv/issues/484#issuecomment-6999347608 | Posted. No reply. |
-| 2026-11-18 | C-005 | GitHub issue, `thomasLiu963` | approved, whole batch | https://github.com/w3c/gpc/issues/165 | Open. No editor reply. WPT patch not sent. |
+| 2026-11-18 | C-005 | GitHub issue, `thomasLiu963` | approved, whole batch | https://github.com/w3c/gpc/issues/165 | Closed 2026-11-19 by an editor comment that quoted the cache rule. No specification edit. |
+| 2026-11-20 | C-005 test | Web Platform Tests pull request, `thominator1011` | approved, this pull request | https://github.com/web-platform-tests/wpt/pull/65548 | Open. Two new files. No assistance section. Reviewer request refused. |
+| 2026-11-20 | S1 | GitHub issue, `thominator1011` | approved, this issue | https://github.com/OWASP/www-project-ai-security-and-privacy-guide/issues/291 | Open. Issue only. No pull request. No assistance section. |
 
 ## Evidence index
 

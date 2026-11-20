@@ -1,6 +1,6 @@
 # Proposed pull request
 
-Not opened. Do not file, push, or comment until this specific pull request is approved. The person who opens it has to understand the test and be the author of record. The description below has no disclosure line. A commit-message note about how a tool was used is optional under the Web Platform Tests policy.
+Opened 2026-11-20 as https://github.com/web-platform-tests/wpt/pull/65548 by `thominator1011`. Do not open a second pull request. The description has no disclosure line. A commit-message note is optional under the Web Platform Tests policy and was not added. GitHub refused a reviewer request from this account.
 
 Repository: `web-platform-tests/wpt`, branch `master`. Directory: `gpc/`. This is not a pull request to `w3c/gpc`.
 

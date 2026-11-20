@@ -1,4 +1,4 @@
-Open only after an explicit approval. Do not attach this to pull request 287, and do not open it on the same day as that pull request.
+Filed 2026-11-20 as https://github.com/OWASP/www-project-ai-security-and-privacy-guide/issues/291 by `thominator1011`. Do not open a second issue. Do not attach this to pull request 287.
 
 **Title:**
 
@@ -16,7 +16,7 @@ The review interface must show "the action requested, stated rationale, relevant
 
 A person can approve a payment, an email, or a merge while the only explanation on screen was written by the model that followed a hidden instruction.
 
-Two nearby sentences do not close that.
+Nearby sentences do not close that.
 
 - Deceptive-reasoning checks compare stated intent with tool calls. A hidden instruction that produces a matching rationale and a matching call passes.
 - Staged commit shows the pending object. It does not show why the agent drafted it.
