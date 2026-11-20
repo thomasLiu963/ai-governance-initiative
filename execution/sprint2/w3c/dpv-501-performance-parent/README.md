@@ -1,12 +1,12 @@
 # DPV parent of PersonnelPerformanceManagement
 
-Status: ready to post as one comment on issue 501, after explicit approval. Not posted.
+Status: rechecked 2026-11-20. Do not post. The extra parent is still present, and issue 501 already asks the chair whether to remove it.
 
 ## Source
 
 | Item | Locator |
 | --- | --- |
-| Issue | https://github.com/w3c-cg/dpv/issues/501. Open, no assignee, zero comments, opened 2026-11-16. |
+| Issue | https://github.com/w3c-cg/dpv/issues/501, opened 2026-11-16 by `Daham-Mustaf`. Open, no assignee, zero comments. The issue already proposes removing this parent and asks the chair whether the placement was intended. |
 | Published vocabulary | DPV 2.3, `master` `689d32c0`. |
 | Development tree | `dev` `aff91c29`, `2.4-dev`. |
 | Document status | Community-group vocabulary. Not a W3C Standard and not on the Standards Track. |

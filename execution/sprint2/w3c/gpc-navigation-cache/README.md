@@ -9,7 +9,7 @@ The two-file test is correct, meaningful, and not a duplicate. It is the right n
 | Question | Answer |
 | --- | --- |
 | Does it encode a requirement that is actually in the draft? | Yes. Section 3.2 is a MUST. Sections 3.3 and 3.4 bind the header and `navigator.globalPrivacyControl` to `gpcAtNavigation`. Section 8.1 does not refresh an already loaded document. |
-| Do the current `gpc/` tests already cover it? | No. They set the preference and then open a new document. None reads the document that was already loaded. Confirmed against `master` `221a7fea` on 2026-11-20. Open pull request 64623 edits only `getGPC.py`. |
+| Do the current `gpc/` tests already cover it? | No. They set the preference and then call `window.open`. None reads the document that was already loaded. Re-read on `master` `8971ee02` (2026-11-20). The five `gpc/` blobs named in `RESULTS.md` are unchanged. There is no `navigation-cache.https.html`. Open pull request 64623 edits only `getGPC.py`. |
 | Did an official run exercise it? | Yes, on 2026-11-19, as recorded in `RESULTS.md`. Lint passed. Chrome 157 with the API flag failed the attribute assertion. This sprint did not re-run the runner. |
 | Is a Chrome failure a reason to drop it? | No. The failure is the discrepancy the test exists to show. Chrome updates the loaded document immediately. The draft says the change waits for the next top-level navigation. |
 | Does the editor's close of issue 165 adopt the test? | No. He quoted the existing rule and closed the issue. He did not edit the specification. |

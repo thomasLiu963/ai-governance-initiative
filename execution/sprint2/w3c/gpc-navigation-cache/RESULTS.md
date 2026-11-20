@@ -20,6 +20,16 @@ The run is the one recorded in `execution/phase1/MASTER_RANKING.md` and `executi
 
 `master` was still `221a7fea449dcd9a42d5f249d5e4cf359a619d74` when re-queried on 2026-11-20T02:19:21Z, the same commit the run used. The `gpc/` blobs were still `META.yml` `e9bbee032d85`, `global_privacy_control.testdriver.html` `138bba2eb452`, `navigator-globalPrivacyControl.https.html` `6ddc7ffca419`, `sec-gpc.https.html` `6acc350d241c`, and `idlharness.any.js` `7a7305eb6235`. There is still no `navigation-cache.https.html`.
 
+## Recheck, 2026-11-20
+
+`master` moved later that day to `8971ee02ffe8be3fa02862e0b07e1e37f34ab7a7` ("Implement additional `<selectedcontent>` spec changes", committer date 2026-11-20T15:12:01Z). The same five `gpc/` blobs were still those SHAs. `support/` is still `getGPC.py`, `navigator-globalPrivacyControl.html`, and `navigator-globalPrivacyControl.js`. A code search found no `navigation-cache` file. Pull request 64623 was still open and still changed only `gpc/support/getGPC.py`.
+
+The two existing document tests were re-read at those blobs. Each calls `set_global_privacy_control` and then `window.open`. Neither reads `navigator.globalPrivacyControl` in the already loaded document. `resources/testdriver.js` on that master still returns `{gpc}` from both the get and the set command.
+
+https://www.w3.org/TR/gpc/ still contains the section 3.2 cache rule, the section 3.3 header rule, the section 3.4 attribute rule, and the section 8.1 session command. `w3c/gpc` `main` is still `09013acfed7820dc967489514a156e2ced827289`. Issue 165 is still closed by the 2026-11-19 editor comment. No new specification sentence was added.
+
+`./wpt lint` and `./wpt run` were not repeated against `8971ee02`. The 2026-11-19 run remains the execution record. `gpc/META.yml` still names AramZS, bvandersloot-mozilla, j-br0, pes10k, and SebastianZimmeck. `WEB_FEATURES.yml` still maps `**` to `gpc`.
+
 ## Earlier runs, which are not this result
 
 These agree with the official failure. They are different procedures.

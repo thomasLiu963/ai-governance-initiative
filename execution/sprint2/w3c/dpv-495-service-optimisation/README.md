@@ -1,12 +1,12 @@
 # DPV ServiceOptimisation scope note
 
-Status: ready to post as one comment on issue 495, after explicit approval. Not posted.
+Status: rechecked 2026-11-20. Do not post. The defect is still in both serialisations, and issue 495 already asks the chair for this sentence.
 
 ## Source
 
 | Item | Locator |
 | --- | --- |
-| Issue | https://github.com/w3c-cg/dpv/issues/495. Open, no assignee, zero comments, `updated_at` 2026-10-29. |
+| Issue | https://github.com/w3c-cg/dpv/issues/495, opened by `Daham-Mustaf`. Open, no assignee, zero comments. The issue already proposes the sentence in `COMMENT.md` and cc's the chair. |
 | Published vocabulary | DPV 2.3 Final Community Group Report, 25 February 2026. `master` `689d32c0f7c571d32f7f8635ae548fcc1c3ff695`. |
 | Development tree | `dev` `aff91c294b105d9a261ea8622350b0fc7ef0e293`, directory `2.4-dev`. |
 | Document status | Community-group vocabulary. The report says it is not a W3C Standard and is not on the W3C Standards Track. |

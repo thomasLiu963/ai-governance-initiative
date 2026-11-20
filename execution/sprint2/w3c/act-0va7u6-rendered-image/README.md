@@ -1,14 +1,14 @@
 # ACT rule 0va7u6, rendered image resource
 
-Status: ready as a comment on issue 2408, with the glossary file written locally. Not posted. A pull request waits for a separate approval after the comment, or for an approval that explicitly includes the pull request.
+Status: rechecked 2026-11-20. Ready as a comment on issue 2408. Not posted. A pull request waits for a separate approval after the comment, or for an approval that explicitly includes the pull request.
 
 ## Source
 
 | Item | Locator |
 | --- | --- |
-| Issue | https://github.com/act-rules/act-rules.github.io/issues/2408. Opened 2026-04-16 by `Jym77`. No assignee. Zero comments. |
+| Issue | https://github.com/act-rules/act-rules.github.io/issues/2408. Opened 2026-04-16 by `Jym77`. No assignee. Zero comments. Still true on 2026-11-20. |
 | Rule | `_rules/image-no-text-0va7u6.md` on `develop` `50d2bede1ee705be6840d06f356a6ae2fd94cb2c`. Published proposed rule: https://www.w3.org/WAI/standards-guidelines/act/rules/0va7u6/proposed |
-| Glossary | `pages/glossary/rendered-image-resource.md` and `pages/glossary/embedded-image.md` at that commit. |
+| Glossary | `pages/glossary/rendered-image-resource.md` and `pages/glossary/embedded-image.md` at that commit. `develop` was still `50d2bede` on 2026-11-20. The glossary sentence still limits the resource to HTML's image-source list. The embedded-image definition still lists the five cases. |
 | HTML | https://html.spec.whatwg.org/multipage/images.html#image-source defines an image source for `img` and `link`, not for `input`, `object`, `svg`, or CSS. |
 | Document status | ACT Rules Community Group source. A proposed rule on the WAI site is W3C accessibility testing guidance maintained with the ACT Task Force. It is not WCAG, and it is not a W3C Recommendation. Merging a glossary edit does not approve the rule. The repository says an ACT Task Force facilitator sets a rule to approved with a separate action. |
 

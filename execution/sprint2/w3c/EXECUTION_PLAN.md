@@ -4,10 +4,9 @@ Written 2026-11-19. Checkpoint 2026-11-30. Deadline 2027-02-15. No issue, commen
 
 ## What is ready
 
-1. **GPC test.** `gpc-navigation-cache/` is a two-file Web Platform Tests pull request. Lint and `./wpt run chrome` were recorded on 2026-11-19 against `master` `221a7fea`. That commit was still `master` on 2026-11-20. Chrome 157 with `GlobalPrivacyControlApi` failed the cache assertion. The pull request is not a change to the Global Privacy Control specification.
-2. **DPV issue 495.** `dpv-495-service-optimisation/COMMENT.md` asks for one scope-note sentence. The stale sentence and the contradicting ServiceProvision note were re-read in 2.3 and in `2.4-dev`.
-3. **DPV issue 501.** `dpv-501-performance-parent/COMMENT.md` asks to remove one parent. Both serialisations still have it.
-4. **ACT rule 0va7u6.** `act-0va7u6-rendered-image/` has the comment and the glossary diff. The first external step is the comment. The pull request is a second approval.
+1. **GPC test.** `gpc-navigation-cache/` is a two-file Web Platform Tests pull request. Lint and `./wpt run chrome` were recorded on 2026-11-19 against `master` `221a7fea`. On 2026-11-20 `master` was `8971ee02`; the `gpc/` blobs were unchanged and the run was not repeated. Chrome 157 with `GlobalPrivacyControlApi` failed the cache assertion. The pull request is not a change to the Global Privacy Control specification. Rewrite the opening sentence of `PULL_REQUEST.md` before filing.
+2. **ACT rule 0va7u6.** `act-0va7u6-rendered-image/` has the comment and the glossary diff. Rechecked 2026-11-20: issue 2408 is still unanswered, and `develop` is still `50d2bede`. The first external step is the comment. The pull request is a second approval.
+3. **DPV issue 495 and issue 501.** The defects are still present on `dev` `aff91c29` and `master` `689d32c`. Do not post. Each issue already asks the chair for the change.
 
 ## Approval gate
 
@@ -22,9 +21,8 @@ If only one send is approved before 30 November, send the GPC pull request. It i
 If more than one is approved:
 
 1. Open the WPT pull request from `gpc-navigation-cache/PULL_REQUEST.md`. Request the five reviewers named in `gpc/META.yml`. Do not open a Chromium bug in the same step.
-2. Post the issue 495 comment. It is the DPV change that does not ask the group to reconsider an intentional parent.
-3. Post the issue 501 comment as a separate comment. Do not combine it with 495, with the existing comment on 484, or with issue 486.
-4. Post the ACT comment. Wait for `Jym77` or another maintainer before opening the glossary pull request, unless the approval explicitly includes that pull request.
+2. Post the ACT comment on issue 2408. Wait for `Jym77` or another maintainer before opening the glossary pull request, unless the approval explicitly includes that pull request.
+3. Do not post the issue 495 or issue 501 comments. Rechecked 2026-11-20: both defects are still in the vocabulary, and both issues already ask the chair for the change. A second comment would repeat that request.
 
 Do not comment again on GPC issue 165, DPV issue 484, or DPV issue 486.
 
