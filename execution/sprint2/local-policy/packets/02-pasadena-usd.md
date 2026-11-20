@@ -1,0 +1,81 @@
+# Packet 2 — Pasadena Unified School District, Board Policy 0441
+
+**DRAFT. Not sent. Do not email the district until Thomas approves that specific send.**
+
+Research date: 2026-11-19.
+
+## Why this board, this week
+
+Pasadena Unified has a new Board Policy 0441, Artificial Intelligence, on its November 19, 2026 agenda as a first reading. Two local news accounts of that agenda, both published before the meeting, describe the item as an initial review of guidelines for responsible use by students and employees, not as the adoption vote.
+
+- Pasadena Now, November 17, 2026, https://pasadenanow.com/main/school-board-to-consider-district-transformation-plan-budget-and-term-limits-thursday
+- Pasadena Ledger, https://pasadenaledger.com/articles/pusd-board-to-weigh-district-transformation-plan-nov-19-mwl634z5
+
+The official agenda PDF was not opened. The news accounts say the agenda and packet are at https://www.pusd.us/board and that written comments go to publiccomment@pusd.us, become part of the archived materials, and are not read aloud. Confirm both points on the posted agenda before using the address.
+
+The Board Policy Committee discussed a draft in August and September 2026, according to the Ledger's account of committee minutes. A June 2025 Pasadena policy-review coversheet, opened through Granicus, describes a new BP 0441 triggered by the California School Boards Association sample and attaches the sample's "should" principles. The coversheet's "Status: ADOPTED / Original Adopted Date: 06/01/2025" is the CSBA sample legend, which also appears on the Laguna Beach policy. It is not a Pasadena adoption date. The November 19 item is described by the Ledger as a first reading of a new policy.
+
+The district board page opened on November 19, https://www.pusd.us/about/board-of-education/board-meetings, says the board holds one regular meeting a month, on a Thursday, at 351 S. Hudson Avenue, Room 236, and schedules study sessions as needed on the second Thursday. The same fetch did not list the December 2026 or January 2027 dates. The governance calendar PDF is a topic calendar, not a meeting-date calendar. The next regular meeting is therefore a real meeting and an unpublished date. Under the Brown Act a regular-meeting agenda is posted at least 72 hours ahead. The amendment has to reach the board before that packet is closed if it is going to be in the materials for the second reading.
+
+## Authority and effect
+
+The Governing Board adopts board policy for the district. BP 0441, once adopted, is the board's rule on AI use by students and staff. The CSBA sample, which the June 2025 coversheet reproduces, directs the superintendent to keep that use consistent with the technology plan, employee and student technology rules, academic honesty, homework, and assessment policies. Those cross-references are how a short amendment reaches grades and discipline without rewriting those other policies.
+
+A written comment does not place an amendment on the motion. A board member moves the change. The comment is the record the member can use. Adoption is a board vote recorded in the minutes, at the second reading if the district follows the two-reading practice this first-reading item implies. This research did not open a Pasadena bylaw that states the two-reading rule in those words.
+
+The policy governs Pasadena Unified. It does not govern UCLA or Los Angeles Unified.
+
+## The gap in the text they already have
+
+The sample attached to the June 2025 coversheet has nine principles: student-centered, staff-centered, ethical use and transparency, accountability, equity and access, security and privacy, professional development, community engagement, and continuous improvement. Each uses "should." None says what a detection score is worth, who makes a grade or a disciplinary decision, or whether student work may be uploaded to a detector the district has not approved.
+
+The amendment below adds those sentences and leaves the nine principles in place.
+
+## Draft letter
+
+DRAFT — NOT SENT
+
+[NAME]
+[MAILING ADDRESS]
+[DATE]
+
+Board of Education
+Pasadena Unified School District
+351 S. Hudson Avenue
+Pasadena, CA 91109
+
+By email to publiccomment@pusd.us, after that address is confirmed on the posted agenda
+
+Subject: Written comment for the second reading of Board Policy 0441, Artificial Intelligence
+
+Members of the Board,
+
+Please add the following sentences to Board Policy 0441 before the Board adopts it. The sentences belong after the nine principles and before the sentence that begins "The Superintendent shall ensure."
+
+"A grade, a disciplinary decision, or a change in a student's placement or program is made by a person. An artificial-intelligence output may inform that person, and that person can reach a different result. The output does not itself assign the grade, impose the discipline, or change the placement.
+
+A score, percentage, highlight, or other output of a tool that classifies student work as generated by artificial intelligence is not the sole basis for a grade penalty or a disciplinary decision. Before either consequence, the student receives the applicable rule, the name of the tool, the date it was used, the output, and a meaningful chance to respond. The written decision states the evidence other than the output.
+
+Student work is not submitted to a generative-AI detection service the district has not approved for that purpose.
+
+When the district requires a student to use an artificial-intelligence tool for an assignment and the student cannot use that tool, the district provides a way to complete the same assignment without it. A student or parent may use the district's existing complaint and appeal procedures to challenge a grade penalty or disciplinary decision that relied on an artificial-intelligence output."
+
+These sentences do not ban a tool. They state who decides, what a detection output cannot do by itself, what the student receives, and which existing appeal applies. The nine principles can remain as they are.
+
+Please include this letter in the materials for the second reading.
+
+[NAME]
+
+DRAFT — NOT SENT
+
+## Steps, after approval to send
+
+1. Open the November 19 agenda on https://www.pusd.us/about/board-of-education/agendas-minutes-video and confirm the item number, that the action was a first reading, and the comment address.
+2. Open the packet's BP 0441 text. If the draft already contains a sole-basis sentence, delete the duplicate from the letter and keep the sentences that are still missing. If the board waived a second reading and adopted the policy on November 19, this letter is no longer a second-reading comment. Stop and recast it as a request that a board member agendize an amendment. That request does not itself create an agenda item.
+3. Find the next regular meeting date on the same agendas page. Send the letter before that meeting's agenda is posted. Seventy-two hours before the meeting is the latest public posting, not a promise that staff will still insert a letter.
+4. Address the Board Policy Committee as well if its agenda is posted before the board's second reading. The committee page, https://www.pusd.us/about/board-of-education/board-committees/board-policy-committee, was identified on November 19. Its membership was not re-read from the full page during this sprint. The board page names the seven trustees: Kimberly Kenne, Jennifer Hall Lee, Michelle Richardson Bailey, Scott Harden, Patrice Marshall McKenzie, Tina Fredericks, and Yarma Velázquez.
+5. Adoption is the second-reading vote in the minutes, with the added sentences in the policy that is posted afterward. A first reading, a committee discussion, and a filed comment are not adoption.
+
+## What was not verified
+
+The official November 19 agenda and packet. Whether the meeting, which was underway or finished on the evening of November 19, voted, continued the item, or left it for a later reading. The December or January meeting date. Whether Pasadena requires two readings. The email address, except as reported by Pasadena Now from the agenda. Any staff commitment to include a letter in the next packet.

@@ -1,0 +1,5 @@
+--- a/1.02-dev/en/0x10-C09-Orchestration-and-Agentic-Action.md
++++ b/1.02-dev/en/0x10-C09-Orchestration-and-Agentic-Action.md
+@@ -89 +89 @@
+-| **9.5.7** | **Verify that** authority derived through delegation never exceeds the delegating agent's current authority. | 2 |
++| **9.5.7** | **Verify that** authority derived through delegation does not exceed the delegating agent's authority at the time the delegated action is authorized for execution. | 2 |

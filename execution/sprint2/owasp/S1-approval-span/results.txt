@@ -1,0 +1,7 @@
+commit: bde8cc6f17a8f14107bd8eb962c13216bd8b5ccb
+today_fields: action, stated_rationale, prior_actions, estimated_impact, reversibility
+instruction_visible_today: false
+rationale_visible_today: true
+instruction_visible_with_proposed_span: true
+secret_masked_in_proposed_span: true
+result: pass

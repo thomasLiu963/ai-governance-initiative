@@ -1,0 +1,4 @@
+commit: bde8cc6f17a8f14107bd8eb962c13216bd8b5ccb
+current_releases_after_role_removed: true
+proposed_freezes: true
+result: pass

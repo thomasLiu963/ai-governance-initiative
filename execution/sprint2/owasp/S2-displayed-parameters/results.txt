@@ -1,0 +1,7 @@
+commit: abcb87056c2a39ae04422abef90c278f43cb4ac8
+displayed: {'recipient': 'alice', 'amount': '10'}
+executed: {'recipient': 'bob', 'amount': '10'}
+level2: {'9.2.1': True, '9.2.2': True}
+9.2.8_level3_passes: False
+proposed_9.2.12_passes: False
+result: pass

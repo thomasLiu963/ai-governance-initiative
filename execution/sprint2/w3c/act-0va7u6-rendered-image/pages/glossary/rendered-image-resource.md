@@ -1,0 +1,26 @@
+---
+title: Rendered Image Resource
+key: rendered-image-resource
+unambiguous: true
+objective: true
+input_aspects:
+  - DOM tree
+  - CSS Styling
+---
+
+A _rendered image resource_ in a [web page][] is any resource with [visible pixels][] presented by an [embedded image][], as follows:
+
+- for an `img` element, any resource in its list of [image sources][];
+- for an `input` element with a `type` [attribute value][] of `image`, the resource referenced by its `src` [attribute value][];
+- for an `object` element, the resource referenced by its `data` [attribute value][] when that resource has an [image MIME type][];
+- for an `image` element inside an `svg` element, the resource referenced by its `href` [attribute value][];
+- for an element with a computed [`background-image`][background-image], each resource referenced by a [url reference][url-reference] in that value.
+
+[attribute value]: #attribute-value 'Definition of Attribute Value'
+[background-image]: https://drafts.csswg.org/css-backgrounds-3/#background-image
+[embedded image]: #embedded-image 'Definition of Embedded Image'
+[image MIME type]: https://mimesniff.spec.whatwg.org/#image-mime-type
+[image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
+[url-reference]: https://www.w3.org/TR/css-images-3/#url-notation
+[visible pixels]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of web page (HTML)'

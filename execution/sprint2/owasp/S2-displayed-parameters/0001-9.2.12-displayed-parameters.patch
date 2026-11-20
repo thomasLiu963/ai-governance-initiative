@@ -1,0 +1,20 @@
+--- a/1.02-dev/en/0x10-C09-Orchestration-and-Agentic-Action.md
++++ b/1.02-dev/en/0x10-C09-Orchestration-and-Agentic-Action.md
+@@ -35,6 +35,7 @@
+ | **9.2.9** | **Verify that** cryptographic key material or credentials used to issue approvals are isolated from the agent runtime, and that the runtime can neither read them nor use them to issue approvals. | 3 |
+ | **9.2.10** | **Verify that** approval gates for multi-step or multi-agent action chains enforce the highest-impact reversibility classification present anywhere in the chain, where the chain is established by a component outside the control of the agent being gated. | 3 |
+ | **9.2.11** | **Verify that** agent execution which would exceed the approved action chain is blocked until a new approval is obtained, and that the new approval enforces the highest-impact reversibility classification present across the cumulative chain. | 3 |
++| **9.2.12** | **Verify that** the runtime executes a privileged or irreversible action only when its parameters are the parameters displayed in the approval request that authorized the action. | 2 |
+ 
+ ---
+ 
+--- a/1.02-dev/en/0x91-Appendix-B_AI_Security_Controls_Inventory.md
++++ b/1.02-dev/en/0x91-Appendix-B_AI_Security_Controls_Inventory.md
+@@ -425,6 +425,7 @@
+ | Isolation of approval-issuing key material or credentials so the agent runtime can neither read them nor use them to issue approvals | C9.2.9 |
+ | Approval gates enforcing the highest-impact reversibility classification across action chains established outside the gated agent's control | C9.2.10 |
+ | Blocking execution beyond an approved action chain until new approval enforces the highest-impact reversibility classification across the cumulative chain | C9.2.11 |
++| Privileged or irreversible action executed only with the parameters displayed in the approval request that authorized it | C9.2.12 |
+ | Manual kill-switch to immediately halt model inference and outputs | C9.6.1 |
+ | Fail-closed blocking of a pending action when a human-approval gate is not satisfied within the defined time | C9.6.2 |
+ | Kill-switch commands delivered through an out-of-band channel isolated from the agent runtime | C9.6.3 |
