@@ -1,12 +1,11 @@
 # Master execution calendar
 
-Date: 2026-11-20. Nothing below has been sent. November 30 is the internal checkpoint for items that are still open that day. It is not a reason to wait on the November 25 or December 4 actions.
+Date: 2026-11-20. Nothing below has been sent. The FCC comment is dropped and is not an action on this calendar. November 30 is the internal checkpoint for items that are still open that day. It is not a reason to wait on the December 4 Pasadena email.
 
 A row is an action with a decision, a person who can take it, and a public record if it succeeds. Passage of a student-government resolution is that body’s position. A school-board adoption is that district’s or county office’s policy. An agency comment is in the file when it is filed. Adoption of the requested rule is a later event.
 
 | When | Action, if approved | What success is by February 15 |
 | --- | --- | --- |
-| On or before Tuesday, November 25, 2026 | File the FCC comment in `FCC_DECISION.md` if the filer accepts a public name and mailing address | The comment is in CG Docket No. 02-278. An order is a later event |
 | This week, before Friday, December 4 | Send the Pasadena email in `SCHOOL_BOARD_OUTREACH.md` so staff can put the four missing sentences into the draft that returns | The email is in the December 10 record. Adoption is the later board vote |
 | Monday, November 30, 2026 | Decide the UCSA email to Cecilia Choy, the USAC email to Angela Ledesma-Grattarola, the Tulare emails, and the OAL and insurance name blocks | An approval note. Not a filing |
 | Before Friday, December 4, 2026, evening | Pasadena posts the December 10 regular-meeting agenda. Read it. If Board Policy 0441 is absent, do not speak as if it is up for adoption | A posted agenda |

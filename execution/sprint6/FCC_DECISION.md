@@ -1,3 +1,7 @@
+# DROPPED — 2026-11-20
+
+Not in the active queue. Do not file, revise, or reopen unless the request names the FCC item again.
+
 # FCC decision — one page
 
 Date: 2026-11-20. Do not file until the approval phrase is used. This page does not authorize the filing.
