@@ -1,6 +1,8 @@
 # ACT rule 0va7u6, rendered image resource
 
-Status: rechecked 2026-11-20. Ready as a comment on issue 2408. Not posted. A pull request waits for a separate approval after the comment, or for an approval that explicitly includes the pull request.
+Status: rechecked 2026-11-20, including the rule examples. Ready as a comment on issue 2408. Not posted. A pull request waits for a separate approval after the comment, or for an approval that explicitly includes the pull request.
+
+The comment no longer says the rule has both a passed and a failed example for every non-`img` case. `object` and the SVG `image` have passed examples. `input type="image"` and `background-image` have passed and failed examples. That distribution is not the defect.
 
 ## Source
 

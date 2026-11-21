@@ -7,7 +7,7 @@ The person who posts this is responsible for every sentence. An LLM drafted the 
 ## Body
 
 ```markdown
-The definition still points only at HTML's image-source list. That list is defined for `img` (and `link`). Rule 0va7u6 already has passed and failed examples for `input type="image"`, `object`, an `svg` `image`, and `background-image`. Under the current sentence those examples are not rendered image resources, so the rule does not apply to them.
+The definition still points only at HTML's image-source list. That list is defined for `img` (and `link`). Rule 0va7u6 already includes examples for `input type="image"`, `object`, an `svg` `image`, and `background-image`. Under the current sentence those examples are not rendered image resources, so the rule does not apply to them.
 
 `pages/glossary/rendered-image-resource.md` on `develop` `50d2bede1ee705be6840d06f356a6ae2fd94cb2c` says a rendered image resource is a resource with visible pixels "specified in the list of image sources of an embedded image." `embedded-image` already lists the five cases separately.
 
