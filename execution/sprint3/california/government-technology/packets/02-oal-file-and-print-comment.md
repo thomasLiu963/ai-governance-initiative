@@ -6,6 +6,8 @@ This comment is about that rulemaking only. It is not a comment on the separate 
 
 Do not describe a sent comment as an adopted regulation.
 
+The initial statement of reasons, pages 1 and 10, treats an exemption from Office review as a partial exemption from the Administrative Procedure Act: the agency may be required to comply with some or all of the Act, while a statute exempts the action from Office review. This draft asks the Office to say that in the text. It does not say that a path (B) filing cannot be completed.
+
 [NAME]
 [MAILING ADDRESS]
 [EMAIL]
@@ -18,9 +20,9 @@ Sacramento, CA 95814
 
 Re: Notice file Z2026-0928-03, Standards for File and Print and Print Only Actions. Comment on proposed title 1, sections 1(a)(4), 1(a)(7), 6(b)(3)(F), 14, and 110.
 
-I am an interested person. I ask the Office to revise the proposed text so that a regulation adopted under the Administrative Procedure Act, and expressly exempted by statute from Office of Administrative Law review, can be submitted and filed under the name the proposal gives that submission.
+I am an interested person. I ask the Office to revise the proposed text so that each filing names the kind of exemption it uses, names the statute that supplies the citation for that filing, and uses the section 1 name for that filing on Form 400.
 
-1. The sentences that do not work together
+1. The sentences that need to be distinguished
 
 Proposed section 1(a)(4) defines “File and Print” as any of three submissions:
 
@@ -32,49 +34,51 @@ Proposed section 1(a)(4) defines “File and Print” as any of three submission
 
 Proposed section 1(a)(7) defines “Print Only” as a regulation or order of repeal submitted only for printing, under Government Code section 11343.8, after the agency has already filed it with the Secretary of State.
 
-Proposed section 110(b)(2) requires every File and Print or Print Only submission to include a citation to each applicable Administrative Procedure Act exemption, and an explanation of how each proposed change is within the scope of that exemption.
+Proposed section 110(b)(2) requires every File and Print or Print Only submission to include a written explanatory statement. Paragraph (A) requires a citation to each applicable Administrative Procedure Act exemption. Paragraph (B) requires an explanation of how each proposed change is within the scope of that exemption. Paragraphs (B)1 and (B)2 add the citation or the confirmation that applies when the exemption depends on alignment with other standards or on a stated condition.
 
 Proposed section 110(d) states that the Office will file the regulation with the Secretary of State, print it, or both, only if the Office determines that the submitted change falls within a statutory exemption and conforms to subsection (b).
 
-Path (B) is not an exemption from the Administrative Procedure Act. It is an exemption from Office review of a regulation that was adopted under the Act. An agency making a path (B) submission cannot cite “each applicable APA exemption” for a filing that has none. Section 110(d), read with section 110(b)(2), then forbids the Office to file or print that submission. The definition in section 1(a)(4)(B) describes a filing that section 110 does not allow the Office to complete.
+The initial statement of reasons describes these exemptions as whole or partial. It says that some actions are wholly or partially exempt from the rulemaking provisions of the Administrative Procedure Act. It says that a special exemption may exempt an agency from some or all of the Act, and that a special exemption may also require compliance with the Act while exempting the action from Office review, from filing with the Secretary of State, or from publication. Proposed section 1(a)(4)(B) is that last category. The action is adopted under some or all of the Act, and a statute exempts it from Office review. The statement treats that Office-review exemption as a partial exemption from the Act.
 
-Proposed section 6(b)(3)(F)(1) still describes “regulations adopted pursuant to the requirements of the APA, but which are expressly exempted by statute from OAL review” as a Print Only request on Form 400. Section 1(a)(4)(B) gives that same category the name File and Print. Section 1(a)(7) gives Print Only a narrower meaning. The initial statement of reasons says the Print Only definition is removed from section 6 because it belongs in section 1. The originally proposed text of section 6(b)(3)(F)(1) and (2) still contains the old categories.
+The same statement says the Office determines whether the submitted change falls within the scope of the exemption the agency claims. It says that limited review is consistent with Government Code section 11343.8 and does not infringe the exemption the agency relies on. That scope determination is the review section 110 assigns. This comment leaves that determination in place.
 
-Proposed section 14 applies the authority and reference standards, including Government Code section 11349.1, when the Office reviews a regulation for compliance with section 110. Applied to a path (B) filing, that sentence conducts the review that the exemption statute tells the Office not to conduct.
+The text still uses one instruction, “each applicable APA exemption,” for three different citations. Path (A) and the Print Only definition already name Government Code section 11343.8. Path (B) depends on the statute that exempts the action from Office review while the agency followed some or all of the Act. Path (C) depends on the statute that exempts the action from the Act and requires the submission. Section 110(b)(2)(A) should say which of those statutes the agency cites, and, for path (B), which provisions of the Act the agency followed and which provisions the cited statute excuses.
+
+Proposed section 14 applies the authority and reference standards, including Government Code section 11349.1, when the Office reviews a regulation for compliance with section 110. The statement of reasons says the Office reads the authority and reference notes in order to identify the claimed exemption and to determine whether the change falls within it. That reading is the exemption-scope check. The opening sentence of section 14 also applies section 11349.1 to every section 110 review. It does not say whether the statute cited for a path (B) filing removes that review, leaves part of it, or leaves all of it. The sentence should separate those two operations.
+
+Proposed section 6(b)(3)(F)1. still describes “regulations adopted pursuant to the requirements of the APA, but which are expressly exempted by statute from OAL review” as a Print Only request on Form 400. Section 1(a)(4)(B) gives that same category the name File and Print, and it says “some or all” of the requirements of the Act. Section 1(a)(7) gives Print Only a narrower meaning. The initial statement of reasons says the Print Only definition is removed from section 6 because it belongs in section 1. The originally proposed text of section 6(b)(3)(F)1. and 2. still contains the old categories.
 
 2. The text I ask the Office to adopt
 
-Revise section 110(b)(2) so that it reads:
+Revise section 110(b)(2)(A) so that it reads:
 
-(2) a written explanatory statement including the following:
+(A) a citation to the statute that applies to the submission, as follows:
 
-(A) for a submission under section 1(a)(4)(A) or (C), or under section 1(a)(7), a citation to each applicable exemption from the APA, and an explanation of how each proposed change is within the scope of the cited exemption;
+(i) for a submission under section 1(a)(4)(A), or under section 1(a)(7), Government Code section 11343.8;
 
-(B) for a submission under section 1(a)(4)(B), a citation to the statute that exempts the action from OAL review, and a statement of which provisions of the APA the agency followed.
+(ii) for a submission under section 1(a)(4)(B), the statute that exempts the action from OAL review, together with a statement of which provisions of the APA the agency followed and which provisions that statute excuses;
 
-Keep section 110(b)(2)1. and 2. as conditions that apply when the exemption cited under paragraph (A) depends on alignment with other standards or on a stated condition. They do not apply to a submission under paragraph (B).
+(iii) for a submission under section 1(a)(4)(C), the statute that exempts the action from the APA and requires its submission to OAL.
+
+Keep section 110(b)(2)(B), including paragraphs 1 and 2. Those paragraphs stay the explanation of how each proposed change is within the scope of the statute cited under paragraph (A). They apply when the cited statute, including a statute cited under paragraph (A)(ii), depends on alignment with other standards or on a stated condition. The markers under paragraph (A) are (i), (ii), and (iii) so they are not the same series as paragraphs (B)1 and (B)2.
 
 Revise section 110(d) so that it reads:
 
-(d) OAL will file the regulation with the Secretary of State and/or print it in the CCR, as appropriate for the type of action, only if the submission conforms to subsection (b) and one of the following applies:
-
-(1) for a submission under section 1(a)(4)(A) or (C), or under section 1(a)(7), OAL determines that the submitted change falls within the cited exemption from the APA;
-
-(2) for a submission under section 1(a)(4)(B), OAL determines that the cited statute exempts the action from OAL review. Paragraph (2) does not authorize OAL to disapprove the action under Government Code section 11349.1 when the cited statute exempts the action from that review.
+(d) OAL will file the regulation with the Secretary of State and/or print it in the CCR, as appropriate for the type of action, only if the submission conforms to subsection (b) and OAL determines that the submitted change falls within the scope of the statute cited under subsection (b)(2)(A). For a submission under section 1(a)(4)(B), that determination is the exemption-scope check under this section. Where the cited statute exempts the action from review under Government Code section 11349.1, the determination does not include the review that statute removes. Where the cited statute leaves a part of section 11349.1 in place, the determination includes that part.
 
 Revise section 6(b)(3)(F) so that it no longer lists, as Print Only, regulations that were adopted under the Administrative Procedure Act and are exempt from Office review. That category is section 1(a)(4)(B). Print Only remains the category in section 1(a)(7): the agency has already filed the regulation with the Secretary of State and asks the Office to print it.
 
-Revise the opening of section 14 so that the Government Code section 11349.1 standards are not applied to a submission under section 1(a)(4)(B). Section 110(b)(1)(B) can still require an authority and reference note so the printed code shows the citation. Checking that the note is present is not the review section 11349.1 describes.
+Revise the opening of section 14 so that a review for compliance with section 110 states the two operations separately. The Office reads the authority and reference notes and determines whether the change falls within the statute cited under section 110(b)(2)(A). Review under Government Code section 11349.1 applies to the extent the statute cited for that submission leaves that review in place. On a submission under section 1(a)(4)(B), the scope check remains. Section 11349.1 applies to the extent the statute cited under section 110(b)(2)(A)(ii) leaves it in place. Checking that an authority or reference note is present, under section 110(b)(1)(B), remains part of the scope check.
 
-3. Why the change is the one the statement of reasons already describes
+3. Why this is the distinction the statement of reasons already draws
 
-The statement of reasons says these sections are meant to distinguish the filings and to let the Office see the exemption the agency claims. The current draft distinguishes the filings in section 1 and then imposes one exemption test on all three. The revisions above keep the documentation the statement of reasons asks for. They match the citation to the kind of exemption the filing actually has.
+The statement of reasons says these sections distinguish the filings, show the Office the exemption the agency claims, and let the Office decide whether the change is inside that exemption. It describes an Office-review exemption as partial. The agency follows some or all of the Act, and the statute exempts Office review. The revisions above keep the scope determination. They name the statute for each path, so the determination has a citation to measure. They apply Government Code section 11349.1 to the extent the cited statute leaves that review in place.
 
-Government Code section 11343.8, which the proposal cites as reference for section 110, says the Office may file and publish a regulation that is not required to be filed. The proposed text names that section in path (A) and in the Print Only definition. Path (C) depends on the agency-specific statute that exempts the action from the APA and requires its submission. Path (B) depends on the agency-specific statute that exempts the action from Office review. The requested text cites that path (B) statute instead of treating section 11343.8 as if it were every path.
+Government Code section 11343.8, which the proposal cites as reference for section 110, says the Office may file and publish a regulation that is not required to be filed. The proposed text names that section in path (A) and in the Print Only definition. Path (C) depends on the agency-specific statute that exempts the action from the APA and requires its submission. Path (B) depends on the agency-specific statute that exempts the action from Office review while the action is adopted under some or all of the APA. The requested text cites the path (B) statute for path (B), and it cites section 11343.8 for the paths that already name section 11343.8.
 
 4. What I am not asking
 
-I am not asking the Office to lengthen or shorten the 30-working-day period in proposed section 110(c). I am not asking the Office to change proposed section 45. I am not asking the Office to treat this comment as an adopted amendment. If the Office believes path (B) was intended to require an Administrative Procedure Act exemption after all, the response should say so, and section 1(a)(4)(B) should be rewritten so that it no longer describes a filing that has no such exemption.
+I am not asking the Office to lengthen or shorten the 30-working-day period in proposed section 110(c). I am not asking the Office to change proposed section 45. I am not asking the Office to treat this comment as an adopted amendment. An exemption from Office review can be cited under section 110. The initial statement of reasons already treats that exemption as a partial exemption from the Act. This comment leaves the exemption-scope check in place.
 
 [SIGNATURE]
 [PRINTED NAME]

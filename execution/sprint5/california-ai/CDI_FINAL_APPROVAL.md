@@ -14,6 +14,8 @@ A person checks every quotation against the cited source before sending.
 
 **Deadline:** December 12, 2026. The November 13, 2026 invitation states that date. It states no hour.
 
+**Comment address.** Checked on November 20, 2026, against the invitation PDF and the November 13 press release. The invitation says to submit written comments to CDIRegulations@insurance.ca.gov by December 12, 2026. The press release gives that same address for written workshop comments, in the media notes and in the answer on how to participate. The press release also prints cdipress@insurance.ca.gov beside “Email Inquiries.” That line is the press contact on the release. The written-comment address in both documents is CDIRegulations@insurance.ca.gov. This letter uses that address.
+
 **What the email is.** A pre-rulemaking comment, and a public record under Government Code section 7920.000 and following. The invitation, final page, states that the invitation is not a Notice of Proposed Action, that comments may not be included in a later rulemaking record, that the Department is not required to respond, and that a comment is considered in a later proceeding if it is resubmitted after a future notice. The same page states that the Commissioner will consider workshop comments while contemplating regulatory changes that may be proposed in a future notice.
 
 ## Novelty
@@ -37,7 +39,7 @@ The earlier letter is `execution/sprint4/california-ai/CDI_SUBMISSION.md`. This 
 - The record attaches when a covered output was a basis for the action. An unused score in the file does not trigger it.
 - A covered output is a prediction, score, classification, or recommendation from a machine-based system. A factor the filed manual states in full, and applies by arithmetic the manual states, is outside the definition. A medical-necessity determination already made under section 10123.135 is outside it.
 - The comparison names an outcome that is not the system’s output and is not a restatement of the action, and it names the population, the time window, and the result. There is still no passing score.
-- A statement that no outcome is yet observable names one date. The insurer may replace that date once, before it arrives. Use after the replacement date, without the comparison, fails, and no further date may be recorded.
+- If no outcome is yet observable, the version record contains an evaluation schedule before the version is used. The schedule identifies the event that makes the outcome observable, and the comparison date is the last day of that window or a stated interval after the outcome is observable. A postponement is recorded before the date then in effect. It names the person who accepted it, the condition that still prevents observation, and the date that condition is expected to end. The new date is tied to that end date. A later postponement that repeats the preceding condition and end date does not move the date. A later end date moves the date only when a stated change in the outcome, the population, or the time window makes the earlier end date inapplicable. Use after the date then in effect, without the comparison, fails. A postponement recorded on or after that date does not cure the failure.
 - The letter says in terms that sections 2648.4 and 2648.5 remain the rate-application path, and that a rate exhibit does not satisfy the consumer-file record.
 
 ## The agency action that would make this an accomplishment
@@ -113,7 +115,19 @@ Before an insurer uses a version of a system as a basis for an action described 
 
 (A) A comparison, performed on data not used to build that version, of the version’s output to an outcome the insurer can observe. The outcome is not the output itself and is not a restatement of the action. The record names the outcome, the population, the time window, the method, and the result.
 
-(B) A statement that no such outcome is yet observable, and one date. If the insurer uses the version as a basis for an action described in item 1 after that date, and the record does not yet contain the comparison in (A), the file fails. Before that date, the insurer may replace it once with one later date. Use after the replacement date without the comparison in (A) fails. The insurer may not record a further date. A statement with no date fails.
+(B) An evaluation schedule, recorded before the version is used, stating all of the following:
+
+(i) The outcome, the population, the time window, and the method that the comparison in (A) will use. The schedule identifies the event that makes the outcome observable. The time window has a last day, and that last day is the date of that event or a date after it. A schedule that names a last day and does not identify the event fails.
+
+(ii) The date by which that comparison will be in the record. That date is the last day of the time window, or a later date that the schedule identifies as the time required to complete the comparison after the outcome is observable. A schedule with no date, or with a date that is neither of those, fails.
+
+(iii) The name of the person who set the schedule.
+
+The insurer may postpone the date in (ii) only by a postponement recorded before the date then in effect. The postponement states the new date, the name of the person who accepted the postponement, the condition that still prevents observation of the named outcome, and the date that condition is expected to end. The new date is the date that condition is expected to end, or a later date that the postponement identifies as the time required to complete the comparison after the outcome is observable. A postponement that omits any of those items, or whose new date is neither of those dates, does not change the date. A postponement whose stated condition is not a condition of observing the named outcome does not change the date.
+
+A later postponement does not change the date if it repeats the condition and the end date in the preceding postponement. It also does not change the date if it names a later end date, unless it states a change since the preceding postponement in the outcome, the population, or the time window, and states a fact about when the named outcome becomes observable that makes the earlier end date inapplicable.
+
+If the insurer uses the version as a basis for an action described in item 1 after the date then in effect, and the record does not contain the comparison in (A), the file fails. A postponement recorded on or after that date does not cure the failure.
 
 The insurer makes a new record before it uses a changed version as a basis for an action described in item 1.
 
@@ -125,7 +139,7 @@ Section 10123.135(j)(1)(I) continues to require periodic review of a utilization
 
 This responds to the invitation’s questions on third-party systems and on identifying, investigating, and correcting problems.
 
-If a person other than the insurer supplies the system, the insurer still keeps the records in items 1 and 2. Those records are in the insurer’s possession. A contract term that places responsibility for the system on the supplier is not a substitute. The insurer may obtain the version identifier, the data elements, and the comparison or the dated statement from the supplier. The insurer does not need the supplier’s model weights or source code. If the supplier does not provide the version identifier, the data elements, and either the comparison or the dated statement, the insurer does not use that version as a basis for an action described in item 1.
+If a person other than the insurer supplies the system, the insurer still keeps the records in items 1 and 2. Those records are in the insurer’s possession. A contract term that places responsibility for the system on the supplier is not a substitute. The insurer may obtain the version identifier, the data elements, and the comparison or the evaluation schedule from the supplier. The insurer does not need the supplier’s model weights or source code. If the supplier does not provide the version identifier, the data elements, and either the comparison or the evaluation schedule, the insurer does not use that version as a basis for an action described in item 1.
 
 An examiner looks in the insurer’s file.
 
@@ -145,8 +159,8 @@ Authority for a future regulation on these records: Insurance Code section 790.1
 
 ## Sources opened for this draft
 
-- Invitation REG-2026-00007, November 13, 2026. https://www.insurance.ca.gov/0250-insurers/0500-legal-info/0300-workshop-insurers/upload/Responsible-Use-of-Artificial-Intelligence-in-Insurance-Discussion-Workshop-Invitation.pdf
-- Press release, November 13, 2026. https://www.insurance.ca.gov/0400-news/0100-press-releases/2026/release042-2026.cfm
+- Invitation REG-2026-00007, November 13, 2026. https://www.insurance.ca.gov/0250-insurers/0500-legal-info/0300-workshop-insurers/upload/Responsible-Use-of-Artificial-Intelligence-in-Insurance-Discussion-Workshop-Invitation.pdf The contact page directs written comments to CDIRegulations@insurance.ca.gov. The logistical and substantive contacts on that page use the same address.
+- Press release, November 13, 2026. https://www.insurance.ca.gov/0400-news/0100-press-releases/2026/release042-2026.cfm The media notes and the participation answer direct written comments to CDIRegulations@insurance.ca.gov. The line “Email Inquiries: cdipress@insurance.ca.gov” is the press contact.
 - Bulletin 2022-5, June 30, 2022.
 - Insurance Code sections 790.10, 791.02, 791.09, and 791.10, as displayed on the official site and cited in the bulletin. Section 791.10 was read from the official display on this pass, including the 21-business-day response and the fraud exception.
 - Insurance Code section 10123.135(j), as returned from the official display, including paragraphs (1)(D), (1)(G), (1)(I), (2), and (5).
